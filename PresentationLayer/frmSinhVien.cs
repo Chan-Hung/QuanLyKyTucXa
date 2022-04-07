@@ -40,7 +40,10 @@ namespace QuanLyKyTucXa.PresentationLayer
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-
+            string err = "";
+            if (!bll.insertSinhVien(ref err, txtMasv.Text, txtTensv.Text, cbGioitinh.Text, txtSDT.Text, txtMaTruong.Text, txtMaPhong.Text))
+                MessageBox.Show(err);
+            else frmSinhVien_Load(sender, e);
         }
     }
 }

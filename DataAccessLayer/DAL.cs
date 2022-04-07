@@ -11,9 +11,18 @@ namespace QuanLyKyTucXa.DataAccessLayer
 {
     public class DAL
     {
+        SqlConnection cnn;
+        SqlCommand cmd;
+        SqlDataAdapter adp;
+        String connString = @"Data Source=(local);Initial Catalog=QuanLyKTX;Integrated Security=True";
+
+        public DAL()
+        {
+            cnn = new SqlConnection(connString);
+            cmd = cnn.CreateCommand();
+        }
         public SqlConnection GetConnection()
         {
-            String connString = @"Data Source=(local);Initial Catalog=QuanLyKTX;Integrated Security=True";
             try
             {
                 SqlConnection conn = new SqlConnection(connString);
@@ -56,7 +65,41 @@ namespace QuanLyKyTucXa.DataAccessLayer
             }
             */
         }
+        
+        public bool MyExecuteNonQuery(string strSQL,
+            CommandType ct, ref string error,
+            params SqlParameter[] param)
+        {
 
+            //Co f la gia tri tra ve
+            bool f = false;
+            if (cnn.State == ConnectionState.Open)
+                cnn.Close();
+            cnn.Open();
+            // cmd
+            cmd.Parameters.Clear();
+            cmd.CommandText = strSQL;
+            cmd.CommandType = ct;
+            // add parameters
+            foreach (SqlParameter p in param)
+                cmd.Parameters.Add(p);
+            // run command
+            try
+            {
+                cmd.ExecuteNonQuery();
+                //THuc thi tot
+                f = true;
+            }
+            catch (SqlException ex)
+            {
+                error = ex.Message;
+            }
+            finally
+            {
+                cnn.Close();
+            }
+            return f;
+        }
         public Boolean login(string sql)
         {
             SqlConnection conn = GetConnection();
@@ -69,5 +112,6 @@ namespace QuanLyKyTucXa.DataAccessLayer
             else
                 return false;
         }
+
     }
 }
