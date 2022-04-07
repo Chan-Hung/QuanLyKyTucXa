@@ -3,41 +3,71 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-//ADO.NET
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace QuanLyKyTucXa.DataAccessLayer
 {
     public class DAL
     {
-        SqlConnection cnn;
-        SqlCommand cmd;
-        SqlDataAdapter adp;
-
-        string strConnect = "Data Source = (local); Initial Catalog = QuanLyKTX; Intergrated Security = True";
-
-        public DAL()
+        public SqlConnection GetConnection()
         {
-            cnn = new SqlConnection(strConnect);
-            cmd = cnn.CreateCommand();
+            String connString = @"Data Source=(local);Initial Catalog=QuanLyKTX;Integrated Security=True";
+            try
+            {
+                SqlConnection conn = new SqlConnection(connString);
+                return conn;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+        public DataTable GetTable(String sql)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlConnection con = GetConnection();
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dt);
+                return dt;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return dt;
+        }
+        public void ExecNonQuery(String sql)
+        {
+            SqlConnection conn = GetConnection();
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            /*
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            */
         }
 
-        public DataSet ExecuteQueryDataSet(string strSQL, CommandType ct, params SqlParameter[] p)
+        public Boolean login(string sql)
         {
-            cmd.CommandText = strSQL;
-            cmd.CommandType = ct;
-            adp = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            adp.Fill(ds);
-            return ds;
+            SqlConnection conn = GetConnection();
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read() == true)
+                return true;
+            else
+                return false;
         }
-
-        public boo
-
-
     }
-
-
 }
