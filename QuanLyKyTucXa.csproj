@@ -115,5 +115,9 @@
   <ItemGroup>
     <None Include="Images\logologin2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\calendar.png" />
+    <Content Include="Images\clock.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
