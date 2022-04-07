@@ -81,5 +81,11 @@ namespace QuanLyKyTucXa.PresentationLayer
         {
             openChildForm(new PresentationLayer.frmSinhVien());
         }
+
+        private void ClockTimer_Tick(object sender, EventArgs e)
+        {
+            ClockLabel.Text = DateTime.Now.ToString("HH:mm:ss");
+            DateLabel.Text = DateTime.Now.ToString("ddd, d MMMM yyyy");
+        }
     }
 }
