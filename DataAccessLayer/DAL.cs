@@ -87,7 +87,7 @@ namespace QuanLyKyTucXa.DataAccessLayer
             try
             {
                 cmd.ExecuteNonQuery();
-                //THuc thi tot
+                //Thuc thi tot
                 f = true;
             }
             catch (SqlException ex)
