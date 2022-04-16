@@ -43,14 +43,17 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.lblMaSV = new System.Windows.Forms.Label();
             this.btnThem = new System.Windows.Forms.Button();
             this.txtMaPhong = new System.Windows.Forms.TextBox();
+            this.lblSDT = new System.Windows.Forms.Label();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.masv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tensv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.matruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblSDT = new System.Windows.Forms.Label();
-            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhvien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,14 +95,14 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.masv,
             this.tensv,
             this.gioitinh,
-            this.SoDienThoai,
-            this.matruong,
-            this.maphong});
+            this.SDT,
+            this.MaTruong,
+            this.MaPhong});
             this.dgvSinhvien.Location = new System.Drawing.Point(7, 207);
             this.dgvSinhvien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvSinhvien.Name = "dgvSinhvien";
             this.dgvSinhvien.RowHeadersWidth = 51;
-            this.dgvSinhvien.Size = new System.Drawing.Size(747, 383);
+            this.dgvSinhvien.Size = new System.Drawing.Size(748, 383);
             this.dgvSinhvien.TabIndex = 33;
             // 
             // txtMaTruong
@@ -186,7 +189,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThem.Location = new System.Drawing.Point(802, 207);
+            this.btnThem.Location = new System.Drawing.Point(825, 207);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
@@ -204,6 +207,56 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtMaPhong.Name = "txtMaPhong";
             this.txtMaPhong.Size = new System.Drawing.Size(159, 22);
             this.txtMaPhong.TabIndex = 38;
+            // 
+            // lblSDT
+            // 
+            this.lblSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSDT.Location = new System.Drawing.Point(401, 66);
+            this.lblSDT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSDT.Name = "lblSDT";
+            this.lblSDT.Size = new System.Drawing.Size(97, 21);
+            this.lblSDT.TabIndex = 39;
+            this.lblSDT.Text = "Số điện thoại";
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(528, 65);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(159, 22);
+            this.txtSDT.TabIndex = 40;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(825, 317);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.button1.Size = new System.Drawing.Size(80, 74);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "Sửa";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(825, 431);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.button2.Size = new System.Drawing.Size(80, 74);
+            this.button2.TabIndex = 42;
+            this.button2.Text = "Xóa";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // masv
             // 
@@ -227,48 +280,38 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.gioitinh.HeaderText = "Giới tính";
             this.gioitinh.MinimumWidth = 6;
             this.gioitinh.Name = "gioitinh";
-            this.gioitinh.Width = 80;
+            this.gioitinh.Width = 50;
             // 
-            // SoDienThoai
+            // SDT
             // 
-            this.SoDienThoai.HeaderText = "Số điện thoại";
-            this.SoDienThoai.MinimumWidth = 6;
-            this.SoDienThoai.Name = "SoDienThoai";
-            this.SoDienThoai.Width = 125;
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "Số điện thoại";
+            this.SDT.MinimumWidth = 6;
+            this.SDT.Name = "SDT";
+            this.SDT.Width = 125;
             // 
-            // matruong
+            // MaTruong
             // 
-            this.matruong.DataPropertyName = "matruong";
-            this.matruong.HeaderText = "Mã trường";
-            this.matruong.MinimumWidth = 6;
-            this.matruong.Name = "matruong";
-            this.matruong.Width = 80;
+            this.MaTruong.DataPropertyName = "matruong";
+            this.MaTruong.HeaderText = "Mã trường";
+            this.MaTruong.MinimumWidth = 6;
+            this.MaTruong.Name = "MaTruong";
+            this.MaTruong.Width = 50;
             // 
-            // maphong
+            // MaPhong
             // 
-            this.maphong.DataPropertyName = "maphong";
-            this.maphong.HeaderText = "Mã phòng";
-            this.maphong.MinimumWidth = 6;
-            this.maphong.Name = "maphong";
-            this.maphong.Width = 125;
+            this.MaPhong.DataPropertyName = "maphong";
+            this.MaPhong.HeaderText = "Mã phòng";
+            this.MaPhong.MinimumWidth = 6;
+            this.MaPhong.Name = "MaPhong";
+            this.MaPhong.Width = 50;
             // 
-            // lblSDT
+            // panel1
             // 
-            this.lblSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSDT.Location = new System.Drawing.Point(401, 66);
-            this.lblSDT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblSDT.Name = "lblSDT";
-            this.lblSDT.Size = new System.Drawing.Size(97, 21);
-            this.lblSDT.TabIndex = 39;
-            this.lblSDT.Text = "Số điện thoại";
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(528, 65);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(159, 22);
-            this.txtSDT.TabIndex = 40;
+            this.panel1.Location = new System.Drawing.Point(728, 65);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(227, 105);
+            this.panel1.TabIndex = 43;
             // 
             // frmSinhVien
             // 
@@ -276,6 +319,9 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(979, 603);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.lblSDT);
             this.Controls.Add(this.txtMaPhong);
@@ -317,13 +363,16 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.Label lblTenSV;
         private System.Windows.Forms.Label lblMaSV;
         private System.Windows.Forms.TextBox txtMaPhong;
+        private System.Windows.Forms.Label lblSDT;
+        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn masv;
         private System.Windows.Forms.DataGridViewTextBoxColumn tensv;
         private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoDienThoai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn matruong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maphong;
-        private System.Windows.Forms.Label lblSDT;
-        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTruong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
+        private System.Windows.Forms.Panel panel1;
     }
 }

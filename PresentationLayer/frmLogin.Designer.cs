@@ -104,6 +104,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // btnDangNhap
             // 
             this.btnDangNhap.BackColor = System.Drawing.Color.Green;
+            this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangNhap.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
@@ -113,10 +114,12 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnDangNhap.TabIndex = 6;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = false;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // btnDangKy
             // 
             this.btnDangKy.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnDangKy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangKy.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDangKy.ForeColor = System.Drawing.Color.White;
