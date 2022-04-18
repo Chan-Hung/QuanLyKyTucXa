@@ -32,5 +32,13 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
                 new SqlParameter("@SoPhongToiDa", soPhongToiDa)
                 );
         }
+        public bool deleteToa(ref string err, string maToa)
+        {
+            return dal.MyExecuteNonQuery(
+                "DeleteToa",
+                CommandType.StoredProcedure,
+                ref err,
+                new SqlParameter("@MaToa", maToa));
+        }
     }
 }

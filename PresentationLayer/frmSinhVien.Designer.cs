@@ -33,6 +33,12 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnCapnhat = new System.Windows.Forms.Button();
             this.cbGioitinh = new System.Windows.Forms.ComboBox();
             this.dgvSinhvien = new System.Windows.Forms.DataGridView();
+            this.masv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tensv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMaTruong = new System.Windows.Forms.TextBox();
             this.txtTensv = new System.Windows.Forms.TextBox();
             this.txtMasv = new System.Windows.Forms.TextBox();
@@ -47,13 +53,8 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.masv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tensv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.XoaTxtBox1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhvien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnCapnhat.FlatAppearance.BorderSize = 0;
             this.btnCapnhat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCapnhat.Location = new System.Drawing.Point(1370, 276);
-            this.btnCapnhat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCapnhat.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapnhat.Name = "btnCapnhat";
             this.btnCapnhat.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
             this.btnCapnhat.Size = new System.Drawing.Size(80, 74);
@@ -80,7 +81,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             "F",
             "M"});
             this.cbGioitinh.Location = new System.Drawing.Point(129, 146);
-            this.cbGioitinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbGioitinh.Margin = new System.Windows.Forms.Padding(4);
             this.cbGioitinh.Name = "cbGioitinh";
             this.cbGioitinh.Size = new System.Drawing.Size(159, 24);
             this.cbGioitinh.TabIndex = 19;
@@ -99,16 +100,65 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.MaTruong,
             this.MaPhong});
             this.dgvSinhvien.Location = new System.Drawing.Point(7, 207);
-            this.dgvSinhvien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvSinhvien.Margin = new System.Windows.Forms.Padding(4);
             this.dgvSinhvien.Name = "dgvSinhvien";
             this.dgvSinhvien.RowHeadersWidth = 51;
             this.dgvSinhvien.Size = new System.Drawing.Size(748, 383);
             this.dgvSinhvien.TabIndex = 33;
+            this.dgvSinhvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSinhvien_CellClick_1);
+            // 
+            // masv
+            // 
+            this.masv.DataPropertyName = "masv";
+            this.masv.HeaderText = "Mã sinh viên";
+            this.masv.MinimumWidth = 6;
+            this.masv.Name = "masv";
+            this.masv.Width = 90;
+            // 
+            // tensv
+            // 
+            this.tensv.DataPropertyName = "tensv";
+            this.tensv.HeaderText = "Tên sinh viên";
+            this.tensv.MinimumWidth = 6;
+            this.tensv.Name = "tensv";
+            this.tensv.Width = 110;
+            // 
+            // gioitinh
+            // 
+            this.gioitinh.DataPropertyName = "gioitinh";
+            this.gioitinh.HeaderText = "Giới tính";
+            this.gioitinh.MinimumWidth = 6;
+            this.gioitinh.Name = "gioitinh";
+            this.gioitinh.Width = 50;
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "Số điện thoại";
+            this.SDT.MinimumWidth = 6;
+            this.SDT.Name = "SDT";
+            this.SDT.Width = 125;
+            // 
+            // MaTruong
+            // 
+            this.MaTruong.DataPropertyName = "matruong";
+            this.MaTruong.HeaderText = "Mã trường";
+            this.MaTruong.MinimumWidth = 6;
+            this.MaTruong.Name = "MaTruong";
+            this.MaTruong.Width = 50;
+            // 
+            // MaPhong
+            // 
+            this.MaPhong.DataPropertyName = "maphong";
+            this.MaPhong.HeaderText = "Mã phòng";
+            this.MaPhong.MinimumWidth = 6;
+            this.MaPhong.Name = "MaPhong";
+            this.MaPhong.Width = 50;
             // 
             // txtMaTruong
             // 
             this.txtMaTruong.Location = new System.Drawing.Point(528, 103);
-            this.txtMaTruong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaTruong.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaTruong.Name = "txtMaTruong";
             this.txtMaTruong.Size = new System.Drawing.Size(159, 22);
             this.txtMaTruong.TabIndex = 23;
@@ -117,7 +167,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // txtTensv
             // 
             this.txtTensv.Location = new System.Drawing.Point(129, 107);
-            this.txtTensv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTensv.Margin = new System.Windows.Forms.Padding(4);
             this.txtTensv.Name = "txtTensv";
             this.txtTensv.Size = new System.Drawing.Size(159, 22);
             this.txtTensv.TabIndex = 16;
@@ -125,7 +175,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // txtMasv
             // 
             this.txtMasv.Location = new System.Drawing.Point(129, 66);
-            this.txtMasv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMasv.Margin = new System.Windows.Forms.Padding(4);
             this.txtMasv.Name = "txtMasv";
             this.txtMasv.Size = new System.Drawing.Size(159, 22);
             this.txtMasv.TabIndex = 15;
@@ -190,7 +240,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnThem.Location = new System.Drawing.Point(825, 207);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
             this.btnThem.Size = new System.Drawing.Size(80, 74);
@@ -203,7 +253,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // txtMaPhong
             // 
             this.txtMaPhong.Location = new System.Drawing.Point(528, 147);
-            this.txtMaPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaPhong.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaPhong.Name = "txtMaPhong";
             this.txtMaPhong.Size = new System.Drawing.Size(159, 22);
             this.txtMaPhong.TabIndex = 38;
@@ -258,54 +308,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // masv
-            // 
-            this.masv.DataPropertyName = "masv";
-            this.masv.HeaderText = "Mã sinh viên";
-            this.masv.MinimumWidth = 6;
-            this.masv.Name = "masv";
-            this.masv.Width = 90;
-            // 
-            // tensv
-            // 
-            this.tensv.DataPropertyName = "tensv";
-            this.tensv.HeaderText = "Tên sinh viên";
-            this.tensv.MinimumWidth = 6;
-            this.tensv.Name = "tensv";
-            this.tensv.Width = 110;
-            // 
-            // gioitinh
-            // 
-            this.gioitinh.DataPropertyName = "gioitinh";
-            this.gioitinh.HeaderText = "Giới tính";
-            this.gioitinh.MinimumWidth = 6;
-            this.gioitinh.Name = "gioitinh";
-            this.gioitinh.Width = 50;
-            // 
-            // SDT
-            // 
-            this.SDT.DataPropertyName = "SDT";
-            this.SDT.HeaderText = "Số điện thoại";
-            this.SDT.MinimumWidth = 6;
-            this.SDT.Name = "SDT";
-            this.SDT.Width = 125;
-            // 
-            // MaTruong
-            // 
-            this.MaTruong.DataPropertyName = "matruong";
-            this.MaTruong.HeaderText = "Mã trường";
-            this.MaTruong.MinimumWidth = 6;
-            this.MaTruong.Name = "MaTruong";
-            this.MaTruong.Width = 50;
-            // 
-            // MaPhong
-            // 
-            this.MaPhong.DataPropertyName = "maphong";
-            this.MaPhong.HeaderText = "Mã phòng";
-            this.MaPhong.MinimumWidth = 6;
-            this.MaPhong.Name = "MaPhong";
-            this.MaPhong.Width = 50;
-            // 
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(728, 65);
@@ -313,12 +315,23 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.panel1.Size = new System.Drawing.Size(227, 105);
             this.panel1.TabIndex = 43;
             // 
+            // XoaTxtBox1
+            // 
+            this.XoaTxtBox1.Location = new System.Drawing.Point(728, 177);
+            this.XoaTxtBox1.Name = "XoaTxtBox1";
+            this.XoaTxtBox1.Size = new System.Drawing.Size(75, 23);
+            this.XoaTxtBox1.TabIndex = 44;
+            this.XoaTxtBox1.Text = "Clear";
+            this.XoaTxtBox1.UseVisualStyleBackColor = true;
+            this.XoaTxtBox1.Click += new System.EventHandler(this.XoaTxtBox1_Click);
+            // 
             // frmSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(979, 603);
+            this.Controls.Add(this.XoaTxtBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -338,7 +351,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.Controls.Add(this.lblTenSV);
             this.Controls.Add(this.lblMaSV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmSinhVien";
             this.Text = "frmSinhVien";
             this.Load += new System.EventHandler(this.frmSinhVien_Load);
@@ -374,5 +387,6 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTruong;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button XoaTxtBox1;
     }
 }

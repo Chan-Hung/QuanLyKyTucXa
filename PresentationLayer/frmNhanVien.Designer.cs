@@ -52,6 +52,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.lblTenNV = new System.Windows.Forms.Label();
             this.lblSDT = new System.Windows.Forms.Label();
             this.lblLuong = new System.Windows.Forms.Label();
+            this.XoaTextBox = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +75,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.dgvNhanVien.RowHeadersWidth = 51;
             this.dgvNhanVien.Size = new System.Drawing.Size(741, 382);
             this.dgvNhanVien.TabIndex = 34;
+            this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             // 
             // MaNV
             // 
@@ -280,12 +282,23 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.lblLuong.TabIndex = 58;
             this.lblLuong.Text = "Lương";
             // 
+            // XoaTextBox
+            // 
+            this.XoaTextBox.Location = new System.Drawing.Point(707, 32);
+            this.XoaTextBox.Name = "XoaTextBox";
+            this.XoaTextBox.Size = new System.Drawing.Size(75, 23);
+            this.XoaTextBox.TabIndex = 59;
+            this.XoaTextBox.Text = "Clear";
+            this.XoaTextBox.UseVisualStyleBackColor = true;
+            this.XoaTextBox.Click += new System.EventHandler(this.XoaTextBox_Click);
+            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(979, 603);
+            this.Controls.Add(this.XoaTextBox);
             this.Controls.Add(this.lblLuong);
             this.Controls.Add(this.lblSDT);
             this.Controls.Add(this.lblTenNV);
@@ -336,5 +349,6 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.Label lblTenNV;
         private System.Windows.Forms.Label lblSDT;
         private System.Windows.Forms.Label lblLuong;
+        private System.Windows.Forms.Button XoaTextBox;
     }
 }

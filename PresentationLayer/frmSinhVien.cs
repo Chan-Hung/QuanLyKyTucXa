@@ -45,5 +45,34 @@ namespace QuanLyKyTucXa.PresentationLayer
                 MessageBox.Show(err);
             else frmSinhVien_Load(sender, e);
         }
+
+        private void XoaTxtBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void XoaTxtBox1_Click(object sender, EventArgs e)
+        {
+            txtMasv.Clear();
+            txtTensv.Clear();
+            txtSDT.Clear();
+            txtMaTruong.Clear();
+            txtMaPhong.Clear();
+        }
+
+        private void dgvSinhvien_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvSinhvien.Rows[e.RowIndex].Cells != null)
+            {
+                dgvSinhvien.CurrentRow.Selected = true;
+                txtMasv.Text = dgvSinhvien.Rows[e.RowIndex].Cells["MaSV"].FormattedValue.ToString();
+                txtTensv.Text = dgvSinhvien.Rows[e.RowIndex].Cells["TenSV"].FormattedValue.ToString();
+                cbGioitinh.Text = dgvSinhvien.Rows[e.RowIndex].Cells["GioiTinh"].FormattedValue.ToString();
+                txtSDT.Text = dgvSinhvien.Rows[e.RowIndex].Cells["SDT"].FormattedValue.ToString();
+                txtMaTruong.Text = dgvSinhvien.Rows[e.RowIndex].Cells["MaTruong"].FormattedValue.ToString();
+                txtMaPhong.Text = dgvSinhvien.Rows[e.RowIndex].Cells["MaPhong"].FormattedValue.ToString();
+
+            }
+        }
     }
 }

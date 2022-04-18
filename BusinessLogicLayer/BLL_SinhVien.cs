@@ -35,6 +35,5 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
                 new SqlParameter("@MaPhong", maPhong)
                 );
         }
-
     }
 }

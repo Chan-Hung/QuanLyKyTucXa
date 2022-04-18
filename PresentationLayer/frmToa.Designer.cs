@@ -46,6 +46,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnThem = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.XoaTextBox = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvToa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,11 +61,13 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.SoTang,
             this.SucChua,
             this.SoPhongToiDa});
-            this.dgvToa.Location = new System.Drawing.Point(12, 168);
+            this.dgvToa.Location = new System.Drawing.Point(16, 207);
+            this.dgvToa.Margin = new System.Windows.Forms.Padding(4);
             this.dgvToa.Name = "dgvToa";
             this.dgvToa.RowHeadersWidth = 51;
-            this.dgvToa.Size = new System.Drawing.Size(556, 310);
+            this.dgvToa.Size = new System.Drawing.Size(741, 382);
             this.dgvToa.TabIndex = 33;
+            this.dgvToa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvToa_CellClick_1);
             // 
             // MaToa
             // 
@@ -100,65 +103,73 @@ namespace QuanLyKyTucXa.PresentationLayer
             // 
             // txtMaToa
             // 
-            this.txtMaToa.Location = new System.Drawing.Point(105, 56);
+            this.txtMaToa.Location = new System.Drawing.Point(140, 69);
+            this.txtMaToa.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaToa.Name = "txtMaToa";
-            this.txtMaToa.Size = new System.Drawing.Size(120, 20);
+            this.txtMaToa.Size = new System.Drawing.Size(159, 22);
             this.txtMaToa.TabIndex = 34;
             // 
             // txtSoTang
             // 
-            this.txtSoTang.Location = new System.Drawing.Point(105, 95);
+            this.txtSoTang.Location = new System.Drawing.Point(140, 117);
+            this.txtSoTang.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoTang.Name = "txtSoTang";
-            this.txtSoTang.Size = new System.Drawing.Size(120, 20);
+            this.txtSoTang.Size = new System.Drawing.Size(159, 22);
             this.txtSoTang.TabIndex = 35;
             // 
             // txtSucChua
             // 
-            this.txtSucChua.Location = new System.Drawing.Point(429, 52);
+            this.txtSucChua.Location = new System.Drawing.Point(572, 64);
+            this.txtSucChua.Margin = new System.Windows.Forms.Padding(4);
             this.txtSucChua.Name = "txtSucChua";
-            this.txtSucChua.Size = new System.Drawing.Size(120, 20);
+            this.txtSucChua.Size = new System.Drawing.Size(159, 22);
             this.txtSucChua.TabIndex = 36;
             // 
             // txtSoPhongToiDa
             // 
-            this.txtSoPhongToiDa.Location = new System.Drawing.Point(429, 95);
+            this.txtSoPhongToiDa.Location = new System.Drawing.Point(572, 117);
+            this.txtSoPhongToiDa.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoPhongToiDa.Name = "txtSoPhongToiDa";
-            this.txtSoPhongToiDa.Size = new System.Drawing.Size(120, 20);
+            this.txtSoPhongToiDa.Size = new System.Drawing.Size(159, 22);
             this.txtSoPhongToiDa.TabIndex = 37;
             // 
             // lblMaToa
             // 
             this.lblMaToa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaToa.Location = new System.Drawing.Point(38, 55);
+            this.lblMaToa.Location = new System.Drawing.Point(51, 68);
+            this.lblMaToa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMaToa.Name = "lblMaToa";
-            this.lblMaToa.Size = new System.Drawing.Size(58, 17);
+            this.lblMaToa.Size = new System.Drawing.Size(77, 21);
             this.lblMaToa.TabIndex = 39;
             this.lblMaToa.Text = "Mã tòa";
             // 
             // lblSoTang
             // 
             this.lblSoTang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoTang.Location = new System.Drawing.Point(38, 95);
+            this.lblSoTang.Location = new System.Drawing.Point(51, 117);
+            this.lblSoTang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSoTang.Name = "lblSoTang";
-            this.lblSoTang.Size = new System.Drawing.Size(61, 17);
+            this.lblSoTang.Size = new System.Drawing.Size(81, 21);
             this.lblSoTang.TabIndex = 40;
             this.lblSoTang.Text = "Số tầng";
             // 
             // lblSucChua
             // 
             this.lblSucChua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSucChua.Location = new System.Drawing.Point(350, 51);
+            this.lblSucChua.Location = new System.Drawing.Point(467, 63);
+            this.lblSucChua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSucChua.Name = "lblSucChua";
-            this.lblSucChua.Size = new System.Drawing.Size(73, 17);
+            this.lblSucChua.Size = new System.Drawing.Size(97, 21);
             this.lblSucChua.TabIndex = 41;
             this.lblSucChua.Text = "Sức chứa";
             // 
             // lblSoPhongToiDa
             // 
             this.lblSoPhongToiDa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoPhongToiDa.Location = new System.Drawing.Point(311, 98);
+            this.lblSoPhongToiDa.Location = new System.Drawing.Point(415, 121);
+            this.lblSoPhongToiDa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSoPhongToiDa.Name = "lblSoPhongToiDa";
-            this.lblSoPhongToiDa.Size = new System.Drawing.Size(112, 17);
+            this.lblSoPhongToiDa.Size = new System.Drawing.Size(149, 21);
             this.lblSoPhongToiDa.TabIndex = 42;
             this.lblSoPhongToiDa.Text = "Số phòng tối đa";
             // 
@@ -168,10 +179,11 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThem.Location = new System.Drawing.Point(617, 168);
+            this.btnThem.Location = new System.Drawing.Point(823, 207);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnThem.Size = new System.Drawing.Size(60, 60);
+            this.btnThem.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.btnThem.Size = new System.Drawing.Size(80, 74);
             this.btnThem.TabIndex = 43;
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -184,10 +196,11 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(617, 264);
+            this.button1.Location = new System.Drawing.Point(823, 325);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.button1.Size = new System.Drawing.Size(60, 60);
+            this.button1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.button1.Size = new System.Drawing.Size(80, 74);
             this.button1.TabIndex = 44;
             this.button1.Text = "Sửa";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -199,21 +212,33 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(617, 357);
+            this.button2.Location = new System.Drawing.Point(823, 439);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.button2.Size = new System.Drawing.Size(60, 60);
+            this.button2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.button2.Size = new System.Drawing.Size(80, 74);
             this.button2.TabIndex = 45;
             this.button2.Text = "Xóa";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // XoaTextBox
+            // 
+            this.XoaTextBox.Location = new System.Drawing.Point(728, 159);
+            this.XoaTextBox.Name = "XoaTextBox";
+            this.XoaTextBox.Size = new System.Drawing.Size(75, 23);
+            this.XoaTextBox.TabIndex = 46;
+            this.XoaTextBox.Text = "Clear";
+            this.XoaTextBox.UseVisualStyleBackColor = true;
+            this.XoaTextBox.Click += new System.EventHandler(this.XoaTextBox_Click);
+            // 
             // frmToa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(734, 490);
+            this.ClientSize = new System.Drawing.Size(979, 603);
+            this.Controls.Add(this.XoaTextBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnThem);
@@ -227,6 +252,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.Controls.Add(this.txtMaToa);
             this.Controls.Add(this.dgvToa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmToa";
             this.Text = "frmToa";
             this.Load += new System.EventHandler(this.frmToa_Load);
@@ -254,5 +280,6 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button XoaTextBox;
     }
 }
