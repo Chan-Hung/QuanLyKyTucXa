@@ -53,7 +53,7 @@ namespace QuanLyKyTucXa.PresentationLayer
 
         private void btnQLNhanVien_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            openChildForm(new PresentationLayer.frmNhanVien());
         }
 
         private void btnToaVaPhong_Click(object sender, EventArgs e)
