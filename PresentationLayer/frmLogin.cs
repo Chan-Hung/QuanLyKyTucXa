@@ -35,7 +35,7 @@ namespace QuanLyKyTucXa.PresentationLayer
                 string code = Convert.ToString(kq);
                 if (code == "01")
                 {
-                    MessageBox.Show("Chào mừng Admin đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Chào mừng Admin đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frmDashboard dashBoard = new frmDashboard();
                     this.Hide();
                     dashBoard.ShowDialog();

@@ -24,17 +24,39 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
         public bool insertSinhVien(ref string err, string maSV, string tenSV, string gioiTinh, string SDT, string maTruong, string maPhong)
         {
             return dal.MyExecuteNonQuery(
-                "insertSinhVienKTX", 
-                CommandType.StoredProcedure, 
-                ref err, 
-                new SqlParameter("@MaSinhVien", maSV), 
+                "insertSinhVien",
+                CommandType.StoredProcedure,
+                ref err,
+                new SqlParameter("@MaSinhVien", maSV),
                 new SqlParameter("@TenSinhVien", tenSV),
-                new SqlParameter("@GioiTinh", tenSV), 
+                new SqlParameter("@GioiTinh", tenSV),
                 new SqlParameter("@SoDienThoai", SDT),
                 new SqlParameter("@MaTruong", maTruong),
                 new SqlParameter("@MaPhong", maPhong)
                 );
         }
-
+        public bool updateSinhVien(ref string err, string maSV, string tenSV, string gioiTinh, string SDT, string maTruong, string maPhong)
+        {
+            return dal.MyExecuteNonQuery(
+                "updateSinhVien",
+                CommandType.StoredProcedure,
+                ref err,
+                new SqlParameter("@MaSinhVien", maSV),
+                new SqlParameter("@TenSinhVien", tenSV),
+                new SqlParameter("@GioiTinh", tenSV),
+                new SqlParameter("@SoDienThoai", SDT),
+                new SqlParameter("@MaTruong", maTruong),
+                new SqlParameter("@MaPhong", maPhong)
+                );
+        }
+        public bool deleteSinhVien(ref string err, string maSV)
+        {
+            return dal.MyExecuteNonQuery(
+                "deleteSinhVien",
+                CommandType.StoredProcedure,
+                ref err,
+                new SqlParameter("@MaSinhVien", maSV)               
+                );
+        }
     }
 }
