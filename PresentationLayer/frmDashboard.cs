@@ -53,9 +53,7 @@ namespace QuanLyKyTucXa.PresentationLayer
 
         private void btnQLNhanVien_Click(object sender, EventArgs e)
         {
-
-
-            hideSubMenu();
+            openChildForm(new PresentationLayer.frmNhanVien());
         }
 
         private void btnToaVaPhong_Click(object sender, EventArgs e)
@@ -86,6 +84,11 @@ namespace QuanLyKyTucXa.PresentationLayer
         {
             ClockLabel.Text = DateTime.Now.ToString("HH:mm:ss");
             DateLabel.Text = DateTime.Now.ToString("ddd, d MMMM yyyy");
+        }
+
+        private void btnQLToa_Click(object sender, EventArgs e)
+        {
+            openChildForm(new PresentationLayer.frmToa());
         }
     }
 }

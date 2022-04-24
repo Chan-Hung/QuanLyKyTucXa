@@ -51,9 +51,10 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtMaPhong = new System.Windows.Forms.TextBox();
             this.lblSDT = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
-            this.btnXoa = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSua = new System.Windows.Forms.Button();
+            this.XoaTxtBox1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhvien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,6 +105,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.dgvSinhvien.RowHeadersWidth = 51;
             this.dgvSinhvien.Size = new System.Drawing.Size(748, 383);
             this.dgvSinhvien.TabIndex = 33;
+            this.dgvSinhvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSinhvien_CellClick_1);
             // 
             // masv
             // 
@@ -277,20 +279,35 @@ namespace QuanLyKyTucXa.PresentationLayer
             // 
             // btnXoa
             // 
-            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXoa.FlatAppearance.BorderSize = 0;
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXoa.Location = new System.Drawing.Point(825, 431);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            this.btnXoa.Size = new System.Drawing.Size(80, 74);
-            this.btnXoa.TabIndex = 42;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(825, 317);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.button1.Size = new System.Drawing.Size(80, 74);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "Sửa";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(825, 431);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.button2.Size = new System.Drawing.Size(80, 74);
+            this.button2.TabIndex = 42;
+            this.button2.Text = "Xóa";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -299,22 +316,15 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.panel1.Size = new System.Drawing.Size(227, 105);
             this.panel1.TabIndex = 43;
             // 
-            // btnSua
+            // XoaTxtBox1
             // 
-            this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSua.FlatAppearance.BorderSize = 0;
-            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSua.Location = new System.Drawing.Point(825, 311);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            this.btnSua.Size = new System.Drawing.Size(80, 74);
-            this.btnSua.TabIndex = 44;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click_1);
+            this.XoaTxtBox1.Location = new System.Drawing.Point(728, 177);
+            this.XoaTxtBox1.Name = "XoaTxtBox1";
+            this.XoaTxtBox1.Size = new System.Drawing.Size(75, 23);
+            this.XoaTxtBox1.TabIndex = 44;
+            this.XoaTxtBox1.Text = "Clear";
+            this.XoaTxtBox1.UseVisualStyleBackColor = true;
+            this.XoaTxtBox1.Click += new System.EventHandler(this.XoaTxtBox1_Click);
             // 
             // frmSinhVien
             // 
@@ -322,7 +332,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(979, 603);
-            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.XoaTxtBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.txtSDT);
@@ -376,6 +386,6 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTruong;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button XoaTxtBox1;
     }
 }

@@ -15,6 +15,8 @@ namespace QuanLyKyTucXa.DataAccessLayer
         SqlCommand cmd;
         SqlDataAdapter adp;
         String connString = @"Data Source=(local);Initial Catalog=QuanLyKTX;Integrated Security=True";
+            /*"Data Source=JINKKY\\SQLEXPRESS;" +
+            "Initial Catalog=QuanLyKTX;Integrated Security=True";*/
 
         public DAL()
         {
@@ -87,7 +89,7 @@ namespace QuanLyKyTucXa.DataAccessLayer
             try
             {
                 cmd.ExecuteNonQuery();
-                //THuc thi tot
+                //Thuc thi tot
                 f = true;
             }
             catch (SqlException ex)
