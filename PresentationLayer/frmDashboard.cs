@@ -53,7 +53,7 @@ namespace QuanLyKyTucXa.PresentationLayer
 
         private void btnQLNhanVien_Click(object sender, EventArgs e)
         {
-            openChildForm(new PresentationLayer.frmNhanVien());
+            openChildForm(new frmNhanVien());
             //hideSubMenu();
         }
 
@@ -78,7 +78,7 @@ namespace QuanLyKyTucXa.PresentationLayer
 
         private void btnQLSinhVien_Click(object sender, EventArgs e)
         {
-            openChildForm(new PresentationLayer.frmSinhVien());
+            openChildForm(new frmSinhVien());
         }
 
         private void ClockTimer_Tick(object sender, EventArgs e)
@@ -89,17 +89,41 @@ namespace QuanLyKyTucXa.PresentationLayer
 
         private void btnQLToa_Click(object sender, EventArgs e)
         {
-            openChildForm(new PresentationLayer.frmToa());
+            openChildForm(new frmToa());
         }
 
         private void btnQLPhong_Click(object sender, EventArgs e)
         {
-            openChildForm(new PresentationLayer.frmPhong());
+            openChildForm(new frmPhong());
         }
 
         private void btnQLHopDong_Click(object sender, EventArgs e)
         {
-            openChildForm(new PresentationLayer.frmHopDong());
+            openChildForm(new frmHopDong());
+        }
+
+        private void panelTime_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ClockLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ClockLabel.Text = DateTime.Now.ToString("HH:mm:ss");
+            DateLabel.Text = DateTime.Now.ToString("ddd, d MMMM yyyy");
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            frmLogin dangNhap = new frmLogin();
+            this.Hide();
+            dangNhap.ShowDialog();
+            this.Close();
         }
     }
 }

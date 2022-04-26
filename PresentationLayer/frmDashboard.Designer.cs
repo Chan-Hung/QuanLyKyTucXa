@@ -29,6 +29,7 @@ namespace QuanLyKyTucXa.PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.btnDangXuat = new System.Windows.Forms.Button();
@@ -48,6 +49,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.DateLabel = new System.Windows.Forms.Label();
             this.ClockLabel = new System.Windows.Forms.Label();
             this.pnlChildForm = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelSideMenu.SuspendLayout();
             this.pnlToaPhongSubMenu.SuspendLayout();
             this.pnlTuyChonSubMenu.SuspendLayout();
@@ -92,6 +94,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnDangXuat.TabIndex = 9;
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // btnDoiMatKhau
             // 
@@ -326,6 +329,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.panelTime.Name = "panelTime";
             this.panelTime.Size = new System.Drawing.Size(292, 169);
             this.panelTime.TabIndex = 0;
+            this.panelTime.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTime_Paint);
             // 
             // DateLabel
             // 
@@ -338,8 +342,8 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.DateLabel.Size = new System.Drawing.Size(313, 50);
-            this.DateLabel.TabIndex = 2;
-            this.DateLabel.Text = "00:00";
+            this.DateLabel.TabIndex = 5;
+            this.DateLabel.Text = "ddd, d MMMM yyyy";
             this.DateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ClockLabel
@@ -349,13 +353,14 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.ClockLabel.ForeColor = System.Drawing.Color.White;
             this.ClockLabel.Image = ((System.Drawing.Image)(resources.GetObject("ClockLabel.Image")));
             this.ClockLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ClockLabel.Location = new System.Drawing.Point(-3, 50);
+            this.ClockLabel.Location = new System.Drawing.Point(0, 50);
             this.ClockLabel.Name = "ClockLabel";
             this.ClockLabel.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.ClockLabel.Size = new System.Drawing.Size(313, 50);
             this.ClockLabel.TabIndex = 0;
-            this.ClockLabel.Text = "00:00";
+            this.ClockLabel.Text = "HH:mm:ss";
             this.ClockLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ClockLabel.Click += new System.EventHandler(this.ClockLabel_Click);
             // 
             // pnlChildForm
             // 
@@ -365,6 +370,11 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.pnlChildForm.Name = "pnlChildForm";
             this.pnlChildForm.Size = new System.Drawing.Size(999, 681);
             this.pnlChildForm.TabIndex = 1;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmDashboard
             // 
@@ -406,5 +416,6 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.Panel pnlChildForm;
         private System.Windows.Forms.Label ClockLabel;
         private System.Windows.Forms.Label DateLabel;
+        private System.Windows.Forms.Timer timer1;
     }
 }
