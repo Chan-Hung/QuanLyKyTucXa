@@ -102,7 +102,7 @@ namespace QuanLyKyTucXa.PresentationLayer
         }
 
         private void dgvNhanvien_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
+            {
             int vitri = e.RowIndex;
             if (vitri >= 0)
             {

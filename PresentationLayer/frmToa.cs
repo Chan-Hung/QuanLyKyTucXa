@@ -39,18 +39,18 @@ namespace QuanLyKyTucXa.PresentationLayer
                 {
                     MessageBox.Show("Mã tòa không được trùng", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ClearBox();
-                }
-                else
+            }
+            else
                     MessageBox.Show(err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             else
             {
-                frmToa_Load(sender, e);
+                    frmToa_Load(sender, e);
                 MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                  ClearBox();
+                }
             }
-        }
         private void ClearBox()
         {
             txtMaToa.Clear();
@@ -65,16 +65,16 @@ namespace QuanLyKyTucXa.PresentationLayer
             if (!bll.updateToa(ref err, txtMaToa.Text, Convert.ToInt32(txtSoTang.Text), Convert.ToInt32(txtSucChua.Text), Convert.ToInt32(txtsptd.Text)))
             {
                 if (err.Contains("PRIMARY KEY"))
-                {
+        {
                     MessageBox.Show("Mã tòa không được trùng", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ClearBox();
-                }
+        }
                 else
                     MessageBox.Show(err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+        }
 
             else
-            {
+        {
                 frmToa_Load(sender, e);
                 MessageBox.Show("Đã sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearBox();
@@ -88,11 +88,11 @@ namespace QuanLyKyTucXa.PresentationLayer
             {
                 string err = "";
                 if (!bll.deleteToa(ref err, txtMaToa.Text))
-                {
+        {
                     MessageBox.Show(err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                {
+            {
                     frmToa_Load(sender, e);
                     MessageBox.Show("Đã xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearBox();

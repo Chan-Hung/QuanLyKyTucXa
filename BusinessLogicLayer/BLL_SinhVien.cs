@@ -29,7 +29,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
                 ref err, 
                 new SqlParameter("@MaSinhVien", maSV), 
                 new SqlParameter("@TenSinhVien", tenSV),
-                new SqlParameter("@GioiTinh", tenSV), 
+                new SqlParameter("@GioiTinh", tenSV),
                 new SqlParameter("@SoDienThoai", SDT),
                 new SqlParameter("@MaTruong", maTruong),
                 new SqlParameter("@MaPhong", maPhong)

@@ -12,6 +12,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
     class BLL_Toa
     {
         DataAccessLayer.DAL dal = new DataAccessLayer.DAL();
+
         public DataTable SelectToa()
         {
             string sql = "select * from Toa";

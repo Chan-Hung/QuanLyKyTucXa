@@ -12,6 +12,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
     class BLL_NhanVien
     {
         DataAccessLayer.DAL dal = new DataAccessLayer.DAL();
+
         public DataTable SelectNhanVien()
         {
             string sql = "select * from NhanVien";
@@ -19,8 +20,8 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
             dt = dal.GetTable(sql);
             return dt;
         }
-
-        public bool insertNhanVien(ref string err, string maNV, string maLoaiNV, string maToa,
+        
+        public bool insertNhanVien(ref string err, string maNV, string maLoaiNV, string maToa, 
             string tenNV, string soDienThoai, int Luong)
         {
             return dal.MyExecuteNonQuery(
