@@ -41,18 +41,26 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.lblSDT = new System.Windows.Forms.Label();
             this.lblTenNV = new System.Windows.Forms.Label();
             this.dgvNhanvien = new System.Windows.Forms.DataGridView();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.txtMaToa = new System.Windows.Forms.TextBox();
-            this.txtLuong = new System.Windows.Forms.TextBox();
             this.manv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maloainv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tennv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.txtMaToa = new System.Windows.Forms.TextBox();
+            this.txtLuong = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.rbSearchMaNV = new System.Windows.Forms.RadioButton();
+            this.rbSearchTenNV = new System.Windows.Forms.RadioButton();
+            this.btnTimkiem = new System.Windows.Forms.Button();
+            this.txtTimkiem = new System.Windows.Forms.TextBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanvien)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtMaLoaiNV
@@ -171,82 +179,13 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.dgvNhanvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanvien_CellClick);
             this.dgvNhanvien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanvien_CellContentClick);
             // 
-            // btnXoa
-            // 
-            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.FlatAppearance.BorderSize = 0;
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXoa.Location = new System.Drawing.Point(781, 431);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            this.btnXoa.Size = new System.Drawing.Size(80, 74);
-            this.btnXoa.TabIndex = 45;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSua.FlatAppearance.BorderSize = 0;
-            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSua.Location = new System.Drawing.Point(781, 317);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            this.btnSua.Size = new System.Drawing.Size(80, 74);
-            this.btnSua.TabIndex = 44;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThem.Location = new System.Drawing.Point(781, 207);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            this.btnThem.Size = new System.Drawing.Size(80, 74);
-            this.btnThem.TabIndex = 43;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // txtMaToa
-            // 
-            this.txtMaToa.Location = new System.Drawing.Point(139, 154);
-            this.txtMaToa.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMaToa.Name = "txtMaToa";
-            this.txtMaToa.Size = new System.Drawing.Size(159, 22);
-            this.txtMaToa.TabIndex = 46;
-            // 
-            // txtLuong
-            // 
-            this.txtLuong.Location = new System.Drawing.Point(527, 153);
-            this.txtLuong.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLuong.Name = "txtLuong";
-            this.txtLuong.Size = new System.Drawing.Size(159, 22);
-            this.txtLuong.TabIndex = 47;
-            // 
             // manv
             // 
             this.manv.DataPropertyName = "manv";
             this.manv.HeaderText = "Mã nhân viên";
             this.manv.MinimumWidth = 6;
             this.manv.Name = "manv";
+            this.manv.Width = 125;
             // 
             // maloainv
             // 
@@ -288,12 +227,176 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.luong.Name = "luong";
             this.luong.Width = 50;
             // 
+            // btnXoa
+            // 
+            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoa.FlatAppearance.BorderSize = 0;
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnXoa.Location = new System.Drawing.Point(772, 434);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.btnXoa.Size = new System.Drawing.Size(80, 74);
+            this.btnXoa.TabIndex = 45;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSua.Location = new System.Drawing.Point(772, 352);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.btnSua.Size = new System.Drawing.Size(80, 74);
+            this.btnSua.TabIndex = 44;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnThem.Location = new System.Drawing.Point(772, 270);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.btnThem.Size = new System.Drawing.Size(80, 74);
+            this.btnThem.TabIndex = 43;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // txtMaToa
+            // 
+            this.txtMaToa.Location = new System.Drawing.Point(139, 154);
+            this.txtMaToa.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaToa.Name = "txtMaToa";
+            this.txtMaToa.Size = new System.Drawing.Size(159, 22);
+            this.txtMaToa.TabIndex = 46;
+            // 
+            // txtLuong
+            // 
+            this.txtLuong.Location = new System.Drawing.Point(527, 153);
+            this.txtLuong.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLuong.Name = "txtLuong";
+            this.txtLuong.Size = new System.Drawing.Size(159, 22);
+            this.txtLuong.TabIndex = 47;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.rbSearchMaNV);
+            this.groupBox1.Controls.Add(this.rbSearchTenNV);
+            this.groupBox1.Controls.Add(this.btnTimkiem);
+            this.groupBox1.Controls.Add(this.txtTimkiem);
+            this.groupBox1.Location = new System.Drawing.Point(752, 50);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(214, 194);
+            this.groupBox1.TabIndex = 48;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "TÌM KIẾM";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(26, 83);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(160, 17);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Nhập thông tin tìm kiếm:";
+            // 
+            // rbSearchMaNV
+            // 
+            this.rbSearchMaNV.AutoSize = true;
+            this.rbSearchMaNV.Location = new System.Drawing.Point(28, 23);
+            this.rbSearchMaNV.Margin = new System.Windows.Forms.Padding(4);
+            this.rbSearchMaNV.Name = "rbSearchMaNV";
+            this.rbSearchMaNV.Size = new System.Drawing.Size(163, 21);
+            this.rbSearchMaNV.TabIndex = 0;
+            this.rbSearchMaNV.TabStop = true;
+            this.rbSearchMaNV.Text = "Tìm kiếm theo mã NV";
+            this.rbSearchMaNV.UseVisualStyleBackColor = true;
+            // 
+            // rbSearchTenNV
+            // 
+            this.rbSearchTenNV.AutoSize = true;
+            this.rbSearchTenNV.Location = new System.Drawing.Point(28, 52);
+            this.rbSearchTenNV.Margin = new System.Windows.Forms.Padding(4);
+            this.rbSearchTenNV.Name = "rbSearchTenNV";
+            this.rbSearchTenNV.Size = new System.Drawing.Size(164, 21);
+            this.rbSearchTenNV.TabIndex = 1;
+            this.rbSearchTenNV.TabStop = true;
+            this.rbSearchTenNV.Text = "Tìm kiếm theo tên NV";
+            this.rbSearchTenNV.UseVisualStyleBackColor = true;
+            // 
+            // btnTimkiem
+            // 
+            this.btnTimkiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimkiem.FlatAppearance.BorderSize = 0;
+            this.btnTimkiem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimkiem.Location = new System.Drawing.Point(23, 135);
+            this.btnTimkiem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTimkiem.Name = "btnTimkiem";
+            this.btnTimkiem.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btnTimkiem.Size = new System.Drawing.Size(184, 46);
+            this.btnTimkiem.TabIndex = 3;
+            this.btnTimkiem.Text = "Tìm kiếm";
+            this.btnTimkiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimkiem.UseVisualStyleBackColor = true;
+            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
+            // 
+            // txtTimkiem
+            // 
+            this.txtTimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimkiem.Location = new System.Drawing.Point(23, 105);
+            this.txtTimkiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTimkiem.Name = "txtTimkiem";
+            this.txtTimkiem.Size = new System.Drawing.Size(184, 24);
+            this.txtTimkiem.TabIndex = 2;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRefresh.Location = new System.Drawing.Point(772, 516);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.btnRefresh.Size = new System.Drawing.Size(80, 74);
+            this.btnRefresh.TabIndex = 49;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(979, 603);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.txtLuong);
             this.Controls.Add(this.txtMaToa);
             this.Controls.Add(this.btnXoa);
@@ -310,10 +413,13 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.Controls.Add(this.lblMaToa);
             this.Controls.Add(this.lblMaLoaiNV);
             this.Controls.Add(this.lblMaNV);
+            this.Controls.Add(this.groupBox1);
             this.Name = "frmNhanVien";
             this.Text = "frmNhanVien";
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanvien)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,5 +448,12 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.DataGridViewTextBoxColumn tennv;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn luong;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.RadioButton rbSearchMaNV;
+        private System.Windows.Forms.RadioButton rbSearchTenNV;
+        private System.Windows.Forms.Button btnTimkiem;
+        private System.Windows.Forms.TextBox txtTimkiem;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

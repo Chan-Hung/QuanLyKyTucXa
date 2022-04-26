@@ -25,7 +25,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
             string tenNV, string soDienThoai, int Luong)
         {
             return dal.MyExecuteNonQuery(
-                "InsertNhanVien",
+                "sp_InsertNhanVien",
                 CommandType.StoredProcedure,
                 ref err,
                 new SqlParameter("@MaNV", maNV),
@@ -40,7 +40,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
            string tenNV, string soDienThoai, int Luong)
         {
             return dal.MyExecuteNonQuery(
-                "UpdateNhanVien",
+                "sp_UpdateNhanVien",
                 CommandType.StoredProcedure,
                 ref err,
                 new SqlParameter("@MaNV", maNV),
@@ -54,11 +54,28 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
         public bool deleteNhanVien(ref string err, string maNV)
         {
             return dal.MyExecuteNonQuery(
-                "deleteNhanVien",
+                "sp_deleteNhanVien",
                 CommandType.StoredProcedure,
                 ref err,
                 new SqlParameter("@MaNV", maNV)
                 );
         }
+        public DataTable searchTenNhanVien(string tennv)
+        {
+            string sql = "SELECT * FROM fn_SearchTenNV(@TenNV)";
+            DataTable dt = new DataTable();
+            dt = dal.getTableFunc(sql,
+                new SqlParameter("@TenNV", tennv));
+            return dt;
+        }
+        public DataTable searchMaNhanVien(string manv)
+        {
+            string sql = "SELECT * FROM fn_SearchMaSV(@MaNV)";
+            DataTable dt = new DataTable();
+            dt = dal.getTableFunc(sql,
+                new SqlParameter("@MaNV", manv));
+            return dt;
+        }
+
     }
 }

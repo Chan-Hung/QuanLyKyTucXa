@@ -30,6 +30,9 @@ namespace QuanLyKyTucXa.PresentationLayer
             txtTenNV.Clear();
             txtSDT.Clear();
             txtLuong.Clear();
+            txtTimkiem.Clear();
+            rbSearchTenNV.Checked = false;
+            rbSearchMaNV.Checked = false;
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -47,7 +50,7 @@ namespace QuanLyKyTucXa.PresentationLayer
 
             else
             {
-                frmNhanVien_Load(sender, e);
+                
                 MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearBox();
             }
@@ -69,9 +72,8 @@ namespace QuanLyKyTucXa.PresentationLayer
 
             else
             {
-                frmNhanVien_Load(sender, e);
+                btnRefresh_Click(sender, e);
                 MessageBox.Show("Đã sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearBox();
             }
         }
 
@@ -87,9 +89,8 @@ namespace QuanLyKyTucXa.PresentationLayer
                 }
                 else
                 {
-                    frmNhanVien_Load(sender, e);
+                    btnRefresh_Click(sender, e);
                     MessageBox.Show("Đã xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ClearBox();
                 }
             }
             else if (dlr == DialogResult.No)
@@ -112,6 +113,34 @@ namespace QuanLyKyTucXa.PresentationLayer
                 txtTenNV.Text = dgvNhanvien.Rows[vitri].Cells[3].Value.ToString();
                 txtSDT.Text = dgvNhanvien.Rows[vitri].Cells[4].Value.ToString();
                 txtLuong.Text = dgvNhanvien.Rows[vitri].Cells[5].Value.ToString();
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            frmNhanVien_Load(sender, e);
+            ClearBox();
+        }
+
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+            if (txtTimkiem.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập trường tìm kiếm", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (rbSearchMaNV.Checked)
+            {
+                dgvNhanvien.DataSource = bll.searchMaNhanVien(txtTimkiem.Text);
+            }
+            else if (rbSearchTenNV.Checked)
+            {
+                dgvNhanvien.DataSource = bll.searchTenNhanVien(txtTimkiem.Text);
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn 1 trường để tìm kiếm", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
     }
