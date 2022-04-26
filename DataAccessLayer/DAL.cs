@@ -52,6 +52,29 @@ namespace QuanLyKyTucXa.DataAccessLayer
             }
             return dt;
         }
+
+        public DataTable getTableFunc(String sql, params SqlParameter[] param )
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlConnection con = GetConnection();
+                SqlCommand cmd = new SqlCommand(sql, con);
+                
+                
+                foreach (SqlParameter p in param)
+                    cmd.Parameters.Add(p);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+                return dt;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return dt;
+        }
+
         public void ExecNonQuery(String sql)
         {
             SqlConnection conn = GetConnection();

@@ -125,5 +125,10 @@ namespace QuanLyKyTucXa.PresentationLayer
             dangNhap.ShowDialog();
             this.Close();
         }
+
+        private void btnQLTaiKhoan_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmTaiKhoan());
+        }
     }
 }

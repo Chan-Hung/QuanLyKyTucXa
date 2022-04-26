@@ -73,7 +73,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(313, 681);
+            this.panelSideMenu.Size = new System.Drawing.Size(313, 683);
             this.panelSideMenu.TabIndex = 0;
             // 
             // btnDangXuat
@@ -257,6 +257,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnQLTaiKhoan.TabIndex = 2;
             this.btnQLTaiKhoan.Text = "Quản lý tài khoản";
             this.btnQLTaiKhoan.UseVisualStyleBackColor = false;
+            this.btnQLTaiKhoan.Click += new System.EventHandler(this.btnQLTaiKhoan_Click);
             // 
             // btnQLSinhVien
             // 
@@ -368,7 +369,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.pnlChildForm.Location = new System.Drawing.Point(313, 0);
             this.pnlChildForm.Margin = new System.Windows.Forms.Padding(5);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(999, 681);
+            this.pnlChildForm.Size = new System.Drawing.Size(999, 683);
             this.pnlChildForm.TabIndex = 1;
             // 
             // timer1
@@ -380,7 +381,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1312, 681);
+            this.ClientSize = new System.Drawing.Size(1312, 683);
             this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.panelSideMenu);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

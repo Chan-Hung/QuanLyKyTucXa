@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace QuanLyKyTucXa.BusinessLogicLayer
 {
@@ -24,7 +23,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
         public bool insertSinhVien(ref string err, string maSV, string tenSV, string gioiTinh, string SDT, string maTruong, string maPhong)
         {
             return dal.MyExecuteNonQuery(
-                "insertSinhVien", 
+                "sp_InsertSinhVien", 
                 CommandType.StoredProcedure, 
                 ref err, 
                 new SqlParameter("@MaSinhVien", maSV), 
@@ -38,7 +37,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
         public bool updateSinhVien(ref string err, string maSV, string tenSV, string gioiTinh, string SDT, string maTruong, string maPhong)
         {
             return dal.MyExecuteNonQuery(
-                "updateSinhVien",
+                "sp_UpdateSinhVien",
                 CommandType.StoredProcedure,
                 ref err,
                 new SqlParameter("@MaSinhVien", maSV),
@@ -53,11 +52,29 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
         public bool deleteSinhVien(ref string err, string maSV)
         {
             return dal.MyExecuteNonQuery(
-                "deleteSinhVien",
+                "sp_DeleteSinhVien",
                 CommandType.StoredProcedure,
                 ref err,
                 new SqlParameter("@MaSinhVien", maSV)
                 );
         }
+
+        public DataTable searchTenSinhVien(string tensv)
+        {
+            string sql = "SELECT * FROM fn_SearchTenSV(@TenSinhVien)";
+            DataTable dt = new DataTable();
+            dt = dal.getTableFunc(sql, 
+                new SqlParameter("@TenSinhVien", tensv));
+            return dt;
+        }
+        public DataTable searchMaSinhVien(string masv)
+        {
+            string sql = "SELECT * FROM fn_SearchMaSV(@MaSinhVien)";
+            DataTable dt = new DataTable();
+            dt = dal.getTableFunc(sql,
+                new SqlParameter("@MaSinhVien", masv));
+            return dt;
+        }
+
     }
 }

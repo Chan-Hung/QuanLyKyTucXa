@@ -20,7 +20,7 @@ namespace QuanLyKyTucXa.PresentationLayer
         }
 
         private void frmSinhVien_Load(object sender, EventArgs e)
-        { 
+        {
             dgvSinhvien.DataSource = bll.SelectSinhVien();
         }
 
@@ -38,66 +38,78 @@ namespace QuanLyKyTucXa.PresentationLayer
         {
 
         }
-
+        private void ClearBox()
+        {
+            txtMasv.Clear();
+            txtTensv.Clear();
+            cbGioitinh.Text = "";
+            txtSDT.Clear();
+            txtMaTruong.Clear();
+            txtMaPhong.Clear();
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
             string err = "";
             if (!bll.insertSinhVien(ref err, txtMasv.Text, txtTensv.Text, cbGioitinh.Text, txtSDT.Text, txtMaTruong.Text, txtMaPhong.Text))
-                MessageBox.Show(err);
-            else frmSinhVien_Load(sender, e);
+            {
+                if (err.Contains("PRIMARY KEY"))
+                {
+                    MessageBox.Show("Mã sinh viên không được trùng", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ClearBox();
+                }
+                else
+                    MessageBox.Show(err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else
+            {
+                frmSinhVien_Load(sender, e);
+                MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearBox();
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             string err = "";
-            if (txtMasv.Text == "")
-            {
-                MessageBox.Show("Vui lòng chọn 1 dòng để sửa",
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else if (txtTensv.Text == "")
-            {
-                MessageBox.Show("Bạn chưa nhập tên sinh viên!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else if (cbGioitinh.Text == "")
-            {
-                MessageBox.Show("Bạn chưa chọn giới tính!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else if (txtSDT.Text == " ")
-            {
-                MessageBox.Show("Bạn chưa nhập số điện thoại!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else if (txtMaTruong.Text == "")
-            {
-                MessageBox.Show("Bạn chưa chọn mã trường!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else if (txtMaPhong.Text == "")
-            {
-                MessageBox.Show("Bạn chưa nhập mã phòng!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             if (!bll.updateSinhVien(ref err, txtMasv.Text, txtTensv.Text, cbGioitinh.Text, txtSDT.Text, txtMaTruong.Text, txtMaPhong.Text))
-                MessageBox.Show(err);
-            else frmSinhVien_Load(sender, e);
+            {
+                if (err.Contains("PRIMARY KEY"))
+                {
+                    MessageBox.Show("Mã sinh viên không được trùng", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ClearBox();
+                }
+                else
+                    MessageBox.Show(err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else
+            {
+                frmSinhVien_Load(sender, e);
+                MessageBox.Show("Đã sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearBox();
+            }
         }
 
         private void btnXoa_Click_1(object sender, EventArgs e)
         {
-            string err = "";
-            if (txtMasv.Text == "")
+            DialogResult dlr = MessageBox.Show("Bạn có chắc chắn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlr == DialogResult.Yes)
             {
-                MessageBox.Show("Vui lòng chọn 1 dòng để sửa",
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                string err = "";
+                if (!bll.deleteSinhVien(ref err, txtMasv.Text))
+                {
+                    MessageBox.Show(err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    frmSinhVien_Load(sender, e);
+                    MessageBox.Show("Đã xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearBox();
+                }
             }
-            if (!bll.deleteSinhVien(ref err, txtMasv.Text))
-                MessageBox.Show(err);
-            else frmSinhVien_Load(sender, e);
+            else if (dlr == DialogResult.No)
+                return;
         }
 
         private void lblMaSV_Click(object sender, EventArgs e)
@@ -137,6 +149,11 @@ namespace QuanLyKyTucXa.PresentationLayer
 
         private void dgvSinhvien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void dgvSinhvien_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
             int vitri = e.RowIndex;
             if (vitri >= 0)
             {
@@ -146,6 +163,28 @@ namespace QuanLyKyTucXa.PresentationLayer
                 txtSDT.Text = dgvSinhvien.Rows[vitri].Cells[3].Value.ToString();
                 txtMaTruong.Text = dgvSinhvien.Rows[vitri].Cells[4].Value.ToString();
                 txtMaPhong.Text = dgvSinhvien.Rows[vitri].Cells[5].Value.ToString();
+            }
+        }
+
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+            if (txtTimkiem.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập trường tìm kiếm", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (rbSearchMaSV.Checked)
+            {
+                dgvSinhvien.DataSource = bll.searchMaSinhVien(txtTimkiem.Text);
+            }
+            else if (rbSearchTenSV.Checked)
+            {
+                dgvSinhvien.DataSource = bll.searchTenSinhVien(txtTimkiem.Text);
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn 1 trường để tìm kiếm", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
     }
