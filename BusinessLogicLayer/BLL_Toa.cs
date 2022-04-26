@@ -23,7 +23,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
 
         public bool insertToa(ref string err, string matoa, int sotang, int succhua, int sophongtoida)
         {
-            return dal.MyExecuteNonQuery("insertToa",
+            return dal.MyExecuteNonQuery("sp_InsertToa",
                 CommandType.StoredProcedure,
                 ref err,
                 new SqlParameter("@MaToa", matoa),
@@ -35,7 +35,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
 
         public bool updateToa(ref string err, string matoa, int sotang, int succhua, int sophongtoida)
         {
-            return dal.MyExecuteNonQuery("updateToa",
+            return dal.MyExecuteNonQuery("sp_UpdateToa",
                 CommandType.StoredProcedure,
                 ref err,
                 new SqlParameter("@MaToa", matoa),
@@ -47,7 +47,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
         public bool deleteToa(ref string err, string matoa)
         {
             return dal.MyExecuteNonQuery(
-                "deleteToa",
+                "sp_DeleteToa",
                 CommandType.StoredProcedure,
                 ref err,
                 new SqlParameter("@MaToa", matoa)

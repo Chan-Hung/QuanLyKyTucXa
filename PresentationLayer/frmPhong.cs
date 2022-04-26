@@ -45,9 +45,8 @@ namespace QuanLyKyTucXa.PresentationLayer
 
             else
             {
-                frmPhong_Load(sender, e);
+                btnRefresh_Click(sender, e);
                 MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearBox();
             }
         }
 
@@ -72,9 +71,8 @@ namespace QuanLyKyTucXa.PresentationLayer
 
             else
             {
-                frmPhong_Load(sender, e);
+               btnRefresh_Click(sender, e);
                 MessageBox.Show("Đã sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearBox();
             }
         }
 
@@ -108,13 +106,23 @@ namespace QuanLyKyTucXa.PresentationLayer
                 }
                 else
                 {
-                    frmPhong_Load(sender, e);
+                    btnRefresh_Click(sender, e);
                     MessageBox.Show("Đã xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ClearBox();
                 }
             }
             else if (dlr == DialogResult.No)
                 return;
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            frmPhong_Load(sender, e);
+            ClearBox();
+        }
+
+        private void btnPhongTrong_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

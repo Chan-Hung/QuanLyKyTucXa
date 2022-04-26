@@ -31,6 +31,10 @@ namespace QuanLyKyTucXa.PresentationLayer
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhong));
             this.dgvPhong = new System.Windows.Forms.DataGridView();
+            this.maphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maloaiphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -40,12 +44,10 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.lblMaLoaiPhong = new System.Windows.Forms.Label();
             this.lblMaToa = new System.Windows.Forms.Label();
             this.lblMaPhong = new System.Windows.Forms.Label();
-            this.maphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maloaiphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.matoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbMaLoaiPhong = new System.Windows.Forms.ComboBox();
             this.cbTrangThai = new System.Windows.Forms.ComboBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnPhongTrong = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +70,38 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.dgvPhong.TabIndex = 35;
             this.dgvPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhong_CellClick);
             // 
+            // maphong
+            // 
+            this.maphong.DataPropertyName = "maphong";
+            this.maphong.HeaderText = "Mã phòng";
+            this.maphong.MinimumWidth = 6;
+            this.maphong.Name = "maphong";
+            this.maphong.Width = 70;
+            // 
+            // maloaiphong
+            // 
+            this.maloaiphong.DataPropertyName = "maloaiphong";
+            this.maloaiphong.HeaderText = "Mã loại phòng";
+            this.maloaiphong.MinimumWidth = 6;
+            this.maloaiphong.Name = "maloaiphong";
+            this.maloaiphong.Width = 110;
+            // 
+            // matoa
+            // 
+            this.matoa.DataPropertyName = "matoa";
+            this.matoa.HeaderText = "Mã tòa";
+            this.matoa.MinimumWidth = 6;
+            this.matoa.Name = "matoa";
+            this.matoa.Width = 110;
+            // 
+            // trangthai
+            // 
+            this.trangthai.DataPropertyName = "trangthai";
+            this.trangthai.HeaderText = "Trạng thái";
+            this.trangthai.MinimumWidth = 6;
+            this.trangthai.Name = "trangthai";
+            this.trangthai.Width = 120;
+            // 
             // btnXoa
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -75,7 +109,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnXoa.FlatAppearance.BorderSize = 0;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXoa.Location = new System.Drawing.Point(629, 60);
+            this.btnXoa.Location = new System.Drawing.Point(554, 86);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
@@ -93,7 +127,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSua.Location = new System.Drawing.Point(487, 60);
+            this.btnSua.Location = new System.Drawing.Point(446, 86);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
@@ -111,7 +145,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThem.Location = new System.Drawing.Point(342, 60);
+            this.btnThem.Location = new System.Drawing.Point(339, 86);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
@@ -183,38 +217,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.lblMaPhong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblMaPhong.Click += new System.EventHandler(this.lblMaPhong_Click);
             // 
-            // maphong
-            // 
-            this.maphong.DataPropertyName = "maphong";
-            this.maphong.HeaderText = "Mã phòng";
-            this.maphong.MinimumWidth = 6;
-            this.maphong.Name = "maphong";
-            this.maphong.Width = 70;
-            // 
-            // maloaiphong
-            // 
-            this.maloaiphong.DataPropertyName = "maloaiphong";
-            this.maloaiphong.HeaderText = "Mã loại phòng";
-            this.maloaiphong.MinimumWidth = 6;
-            this.maloaiphong.Name = "maloaiphong";
-            this.maloaiphong.Width = 110;
-            // 
-            // matoa
-            // 
-            this.matoa.DataPropertyName = "matoa";
-            this.matoa.HeaderText = "Mã tòa";
-            this.matoa.MinimumWidth = 6;
-            this.matoa.Name = "matoa";
-            this.matoa.Width = 110;
-            // 
-            // trangthai
-            // 
-            this.trangthai.DataPropertyName = "trangthai";
-            this.trangthai.HeaderText = "Trạng thái";
-            this.trangthai.MinimumWidth = 6;
-            this.trangthai.Name = "trangthai";
-            this.trangthai.Width = 120;
-            // 
             // cbMaLoaiPhong
             // 
             this.cbMaLoaiPhong.FormattingEnabled = true;
@@ -239,12 +241,44 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.cbTrangThai.Size = new System.Drawing.Size(159, 24);
             this.cbTrangThai.TabIndex = 63;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRefresh.Location = new System.Drawing.Point(657, 86);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.btnRefresh.Size = new System.Drawing.Size(80, 74);
+            this.btnRefresh.TabIndex = 65;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnPhongTrong
+            // 
+            this.btnPhongTrong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnPhongTrong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPhongTrong.Location = new System.Drawing.Point(772, 114);
+            this.btnPhongTrong.Name = "btnPhongTrong";
+            this.btnPhongTrong.Size = new System.Drawing.Size(134, 46);
+            this.btnPhongTrong.TabIndex = 66;
+            this.btnPhongTrong.Text = "Hiển thị danh sách phòng trống";
+            this.btnPhongTrong.UseVisualStyleBackColor = false;
+            this.btnPhongTrong.Click += new System.EventHandler(this.btnPhongTrong_Click);
+            // 
             // frmPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(979, 603);
+            this.Controls.Add(this.btnPhongTrong);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.cbTrangThai);
             this.Controls.Add(this.cbMaLoaiPhong);
             this.Controls.Add(this.txtMaToa);
@@ -284,5 +318,7 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.DataGridViewTextBoxColumn trangthai;
         private System.Windows.Forms.ComboBox cbMaLoaiPhong;
         private System.Windows.Forms.ComboBox cbTrangThai;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnPhongTrong;
     }
 }

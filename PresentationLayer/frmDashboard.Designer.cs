@@ -79,6 +79,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // btnDangXuat
             // 
             this.btnDangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnDangXuat.FlatAppearance.BorderSize = 0;
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -99,6 +100,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // btnDoiMatKhau
             // 
             this.btnDoiMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.btnDoiMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDoiMatKhau.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDoiMatKhau.FlatAppearance.BorderSize = 0;
             this.btnDoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -118,6 +120,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // btnDichVuSuDung
             // 
             this.btnDichVuSuDung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.btnDichVuSuDung.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDichVuSuDung.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDichVuSuDung.FlatAppearance.BorderSize = 0;
             this.btnDichVuSuDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -148,6 +151,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // btnQLPhong
             // 
             this.btnQLPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(147)))));
+            this.btnQLPhong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQLPhong.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnQLPhong.FlatAppearance.BorderSize = 0;
             this.btnQLPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -168,6 +172,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // btnQLToa
             // 
             this.btnQLToa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(147)))));
+            this.btnQLToa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQLToa.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnQLToa.FlatAppearance.BorderSize = 0;
             this.btnQLToa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -188,6 +193,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // btnToaVaPhong
             // 
             this.btnToaVaPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.btnToaVaPhong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnToaVaPhong.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnToaVaPhong.FlatAppearance.BorderSize = 0;
             this.btnToaVaPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -222,6 +228,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // btnQLHopDong
             // 
             this.btnQLHopDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(147)))));
+            this.btnQLHopDong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQLHopDong.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnQLHopDong.FlatAppearance.BorderSize = 0;
             this.btnQLHopDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -242,6 +249,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // btnQLTaiKhoan
             // 
             this.btnQLTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(147)))));
+            this.btnQLTaiKhoan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQLTaiKhoan.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnQLTaiKhoan.FlatAppearance.BorderSize = 0;
             this.btnQLTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -262,6 +270,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // btnQLSinhVien
             // 
             this.btnQLSinhVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(147)))));
+            this.btnQLSinhVien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQLSinhVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnQLSinhVien.FlatAppearance.BorderSize = 0;
             this.btnQLSinhVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -282,6 +291,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // btnQLNhanVien
             // 
             this.btnQLNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(147)))));
+            this.btnQLNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQLNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnQLNhanVien.FlatAppearance.BorderSize = 0;
             this.btnQLNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -302,6 +312,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // btnTuyChon
             // 
             this.btnTuyChon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.btnTuyChon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTuyChon.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTuyChon.FlatAppearance.BorderSize = 0;
             this.btnTuyChon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

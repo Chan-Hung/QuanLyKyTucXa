@@ -48,10 +48,10 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.lblMaSV = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.rbSearchMaSV = new System.Windows.Forms.RadioButton();
             this.rbSearchTenSV = new System.Windows.Forms.RadioButton();
             this.btnTimkiem = new System.Windows.Forms.Button();
+            this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.dgvSinhvien = new System.Windows.Forms.DataGridView();
             this.masv1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tensv1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -168,10 +168,10 @@ namespace QuanLyKyTucXa.PresentationLayer
             // lblSDT
             // 
             this.lblSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSDT.Location = new System.Drawing.Point(400, 67);
+            this.lblSDT.Location = new System.Drawing.Point(380, 67);
             this.lblSDT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSDT.Name = "lblSDT";
-            this.lblSDT.Size = new System.Drawing.Size(120, 21);
+            this.lblSDT.Size = new System.Drawing.Size(140, 21);
             this.lblSDT.TabIndex = 39;
             this.lblSDT.Text = "Số điện thoại";
             this.lblSDT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -288,15 +288,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.label11.TabIndex = 8;
             this.label11.Text = "Nhập thông tin tìm kiếm:";
             // 
-            // txtTimkiem
-            // 
-            this.txtTimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimkiem.Location = new System.Drawing.Point(24, 102);
-            this.txtTimkiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTimkiem.Name = "txtTimkiem";
-            this.txtTimkiem.Size = new System.Drawing.Size(184, 24);
-            this.txtTimkiem.TabIndex = 2;
-            // 
             // rbSearchMaSV
             // 
             this.rbSearchMaSV.AutoSize = true;
@@ -336,6 +327,15 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnTimkiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTimkiem.UseVisualStyleBackColor = true;
             this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
+            // 
+            // txtTimkiem
+            // 
+            this.txtTimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimkiem.Location = new System.Drawing.Point(24, 102);
+            this.txtTimkiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTimkiem.Name = "txtTimkiem";
+            this.txtTimkiem.Size = new System.Drawing.Size(184, 24);
+            this.txtTimkiem.TabIndex = 2;
             // 
             // dgvSinhvien
             // 
