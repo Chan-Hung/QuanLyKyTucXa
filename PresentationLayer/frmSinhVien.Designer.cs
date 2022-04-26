@@ -86,13 +86,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSinhvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSinhvien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.masv,
-            this.tensv,
-            this.gioitinh,
-            this.SDT,
-            this.MaTruong,
-            this.MaPhong});
             this.dgvSinhvien.Location = new System.Drawing.Point(7, 207);
             this.dgvSinhvien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvSinhvien.Name = "dgvSinhvien";
