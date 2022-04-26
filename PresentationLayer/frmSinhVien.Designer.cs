@@ -90,7 +90,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.cbGioitinh.Margin = new System.Windows.Forms.Padding(4);
             this.cbGioitinh.Name = "cbGioitinh";
             this.cbGioitinh.Size = new System.Drawing.Size(159, 24);
-            this.cbGioitinh.TabIndex = 19;
+            this.cbGioitinh.TabIndex = 17;
             this.cbGioitinh.SelectedIndexChanged += new System.EventHandler(this.cbGioitinh_SelectedIndexChanged);
             // 
             // txtMaTruong
@@ -99,7 +99,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtMaTruong.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaTruong.Name = "txtMaTruong";
             this.txtMaTruong.Size = new System.Drawing.Size(159, 22);
-            this.txtMaTruong.TabIndex = 23;
+            this.txtMaTruong.TabIndex = 19;
             this.txtMaTruong.TextChanged += new System.EventHandler(this.txtQuequan_TextChanged);
             // 
             // label8
@@ -163,7 +163,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtMaPhong.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaPhong.Name = "txtMaPhong";
             this.txtMaPhong.Size = new System.Drawing.Size(159, 22);
-            this.txtMaPhong.TabIndex = 38;
+            this.txtMaPhong.TabIndex = 20;
             // 
             // lblSDT
             // 
@@ -182,7 +182,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(159, 22);
-            this.txtSDT.TabIndex = 40;
+            this.txtSDT.TabIndex = 18;
             // 
             // btnSua
             // 

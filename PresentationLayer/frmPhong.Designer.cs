@@ -162,7 +162,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtMaToa.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaToa.Name = "txtMaToa";
             this.txtMaToa.Size = new System.Drawing.Size(159, 22);
-            this.txtMaToa.TabIndex = 61;
+            this.txtMaToa.TabIndex = 3;
             // 
             // lblTrangThai
             // 
@@ -181,7 +181,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtMaPhong.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaPhong.Name = "txtMaPhong";
             this.txtMaPhong.Size = new System.Drawing.Size(159, 22);
-            this.txtMaPhong.TabIndex = 55;
+            this.txtMaPhong.TabIndex = 1;
             // 
             // lblMaLoaiPhong
             // 
@@ -228,7 +228,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.cbMaLoaiPhong.Location = new System.Drawing.Point(161, 260);
             this.cbMaLoaiPhong.Name = "cbMaLoaiPhong";
             this.cbMaLoaiPhong.Size = new System.Drawing.Size(159, 24);
-            this.cbMaLoaiPhong.TabIndex = 62;
+            this.cbMaLoaiPhong.TabIndex = 2;
             // 
             // cbTrangThai
             // 
@@ -239,7 +239,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.cbTrangThai.Location = new System.Drawing.Point(161, 429);
             this.cbTrangThai.Name = "cbTrangThai";
             this.cbTrangThai.Size = new System.Drawing.Size(159, 24);
-            this.cbTrangThai.TabIndex = 63;
+            this.cbTrangThai.TabIndex = 4;
             // 
             // btnRefresh
             // 

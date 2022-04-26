@@ -46,6 +46,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnThem = new System.Windows.Forms.Button();
             this.dtpNgayky = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayketthuc = new System.Windows.Forms.DateTimePicker();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHopDong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtMaSV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaSV.Name = "txtMaSV";
             this.txtMaSV.Size = new System.Drawing.Size(159, 22);
-            this.txtMaSV.TabIndex = 56;
+            this.txtMaSV.TabIndex = 2;
             // 
             // txtMaHD
             // 
@@ -74,7 +75,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtMaHD.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(159, 22);
-            this.txtMaHD.TabIndex = 55;
+            this.txtMaHD.TabIndex = 1;
             // 
             // lblSucChua
             // 
@@ -127,6 +128,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.dgvHopDong.RowHeadersWidth = 51;
             this.dgvHopDong.Size = new System.Drawing.Size(627, 383);
             this.dgvHopDong.TabIndex = 62;
+            this.dgvHopDong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHopDong_CellClick);
             // 
             // mahd
             // 
@@ -167,7 +169,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnXoa.FlatAppearance.BorderSize = 0;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXoa.Location = new System.Drawing.Point(629, 98);
+            this.btnXoa.Location = new System.Drawing.Point(557, 98);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
@@ -185,7 +187,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSua.Location = new System.Drawing.Point(487, 98);
+            this.btnSua.Location = new System.Drawing.Point(449, 98);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
@@ -220,7 +222,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.dtpNgayky.Location = new System.Drawing.Point(165, 349);
             this.dtpNgayky.Name = "dtpNgayky";
             this.dtpNgayky.Size = new System.Drawing.Size(159, 22);
-            this.dtpNgayky.TabIndex = 66;
+            this.dtpNgayky.TabIndex = 3;
             // 
             // dtpNgayketthuc
             // 
@@ -228,7 +230,25 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.dtpNgayketthuc.Location = new System.Drawing.Point(165, 433);
             this.dtpNgayketthuc.Name = "dtpNgayketthuc";
             this.dtpNgayketthuc.Size = new System.Drawing.Size(159, 22);
-            this.dtpNgayketthuc.TabIndex = 67;
+            this.dtpNgayketthuc.TabIndex = 4;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRefresh.Location = new System.Drawing.Point(669, 98);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.btnRefresh.Size = new System.Drawing.Size(80, 74);
+            this.btnRefresh.TabIndex = 68;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // frmHopDong
             // 
@@ -236,6 +256,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(979, 603);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.dtpNgayketthuc);
             this.Controls.Add(this.dtpNgayky);
             this.Controls.Add(this.btnXoa);
@@ -274,5 +295,6 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.DataGridViewTextBoxColumn masv;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaykhd;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaykthd;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

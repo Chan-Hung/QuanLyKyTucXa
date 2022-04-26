@@ -42,9 +42,8 @@ namespace QuanLyKyTucXa.PresentationLayer
 
             else
             {
-                frmHopDong_Load(sender, e);
+                btnRefresh_Click(sender, e);
                 MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearBox();
             }
         }
 
@@ -69,9 +68,8 @@ namespace QuanLyKyTucXa.PresentationLayer
 
             else
             {
-                frmHopDong_Load(sender, e);
+                btnRefresh_Click(sender, e);
                 MessageBox.Show("Đã sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearBox();
             }
         }
 
@@ -87,14 +85,28 @@ namespace QuanLyKyTucXa.PresentationLayer
                 }
                 else
                 {
-                    frmHopDong_Load(sender, e);
+                    btnRefresh_Click(sender, e);
                     MessageBox.Show("Đã xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ClearBox();
                 }
             }
             else if (dlr == DialogResult.No)
                 return;
         }
 
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            frmHopDong_Load(sender, e);
+            ClearBox();
+        }
+
+        private void dgvHopDong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int vitri = e.RowIndex;
+            if (vitri >= 0)
+            {
+                txtMaHD.Text = dgvHopDong.Rows[vitri].Cells[0].Value.ToString();
+                txtMaSV.Text = dgvHopDong.Rows[vitri].Cells[1].Value.ToString();
+            }
+        }
     }
 }

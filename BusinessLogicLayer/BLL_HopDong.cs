@@ -23,7 +23,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
         public bool insertHopDong(ref string err, string mahd, string masv, DateTime ngaykhd, DateTime ngaykthd)
         {
             return dal.MyExecuteNonQuery(
-                "insertHopDong",
+                "sp_InsertHopDong",
                 CommandType.StoredProcedure,
                 ref err,
                 new SqlParameter("@MaHD", mahd),
@@ -35,7 +35,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
         public bool updateHopDong(ref string err, string mahd, string masv, DateTime ngaykhd, DateTime ngaykthd)
         {
             return dal.MyExecuteNonQuery(
-                "updateHopDong",
+                "sp_UpdateHopDong",
                 CommandType.StoredProcedure,
                 ref err,
                 new SqlParameter("@MaHD", mahd),
@@ -48,7 +48,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
         public bool deleteHopDong(ref string err, string mahd)
         {
             return dal.MyExecuteNonQuery(
-                "deleteHopDong",
+                "sp_DeleteHopDong",
                 CommandType.StoredProcedure,
                 ref err,
                 new SqlParameter("@MaHD", mahd)

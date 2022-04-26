@@ -107,7 +107,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtsptd.Margin = new System.Windows.Forms.Padding(4);
             this.txtsptd.Name = "txtsptd";
             this.txtsptd.Size = new System.Drawing.Size(159, 22);
-            this.txtsptd.TabIndex = 52;
+            this.txtsptd.TabIndex = 4;
             // 
             // lblSoPhongToiDa
             // 
@@ -125,7 +125,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtSoTang.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoTang.Name = "txtSoTang";
             this.txtSoTang.Size = new System.Drawing.Size(159, 22);
-            this.txtSoTang.TabIndex = 43;
+            this.txtSoTang.TabIndex = 2;
             // 
             // txtMaToa
             // 
@@ -133,7 +133,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtMaToa.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaToa.Name = "txtMaToa";
             this.txtMaToa.Size = new System.Drawing.Size(159, 22);
-            this.txtMaToa.TabIndex = 42;
+            this.txtMaToa.TabIndex = 1;
             // 
             // lblSucChua
             // 
@@ -173,7 +173,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtSucChua.Margin = new System.Windows.Forms.Padding(4);
             this.txtSucChua.Name = "txtSucChua";
             this.txtSucChua.Size = new System.Drawing.Size(159, 22);
-            this.txtSucChua.TabIndex = 53;
+            this.txtSucChua.TabIndex = 3;
             // 
             // btnXoa
             // 

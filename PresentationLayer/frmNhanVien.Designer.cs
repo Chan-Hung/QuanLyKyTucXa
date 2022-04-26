@@ -93,12 +93,13 @@ namespace QuanLyKyTucXa.PresentationLayer
             // lblMaLoaiNV
             // 
             this.lblMaLoaiNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaLoaiNV.Location = new System.Drawing.Point(13, 114);
+            this.lblMaLoaiNV.Location = new System.Drawing.Point(-8, 109);
             this.lblMaLoaiNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMaLoaiNV.Name = "lblMaLoaiNV";
-            this.lblMaLoaiNV.Size = new System.Drawing.Size(130, 22);
+            this.lblMaLoaiNV.Size = new System.Drawing.Size(150, 22);
             this.lblMaLoaiNV.TabIndex = 23;
             this.lblMaLoaiNV.Text = "Mã loại nhân viên";
+            this.lblMaLoaiNV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblMaNV
             // 
@@ -116,7 +117,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(159, 22);
-            this.txtSDT.TabIndex = 28;
+            this.txtSDT.TabIndex = 25;
             // 
             // txtTenNV
             // 
@@ -124,7 +125,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtTenNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(159, 22);
-            this.txtTenNV.TabIndex = 27;
+            this.txtTenNV.TabIndex = 24;
             // 
             // lblLuong
             // 
@@ -287,7 +288,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtMaToa.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaToa.Name = "txtMaToa";
             this.txtMaToa.Size = new System.Drawing.Size(159, 22);
-            this.txtMaToa.TabIndex = 46;
+            this.txtMaToa.TabIndex = 23;
             // 
             // txtLuong
             // 
@@ -295,7 +296,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtLuong.Margin = new System.Windows.Forms.Padding(4);
             this.txtLuong.Name = "txtLuong";
             this.txtLuong.Size = new System.Drawing.Size(159, 22);
-            this.txtLuong.TabIndex = 47;
+            this.txtLuong.TabIndex = 26;
             // 
             // groupBox1
             // 
