@@ -46,6 +46,9 @@ namespace QuanLyKyTucXa.PresentationLayer
             txtSDT.Clear();
             txtMaTruong.Clear();
             txtMaPhong.Clear();
+            txtTimkiem.Clear();
+            rbSearchMaSV.Checked = false;
+            rbSearchTenSV.Checked = false;
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -63,9 +66,8 @@ namespace QuanLyKyTucXa.PresentationLayer
 
             else
             {
-                frmSinhVien_Load(sender, e);
+                btnRefresh_Click(sender, e);
                 MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearBox();
             }
         }
 
@@ -85,9 +87,8 @@ namespace QuanLyKyTucXa.PresentationLayer
 
             else
             {
-                frmSinhVien_Load(sender, e);
+                btnRefresh_Click(sender, e);
                 MessageBox.Show("Đã sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearBox();
             }
         }
 
@@ -103,9 +104,8 @@ namespace QuanLyKyTucXa.PresentationLayer
                 }
                 else
                 {
-                    frmSinhVien_Load(sender, e);
+                    btnRefresh_Click(sender,e);
                     MessageBox.Show("Đã xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ClearBox();
                 }
             }
             else if (dlr == DialogResult.No)
@@ -186,6 +186,12 @@ namespace QuanLyKyTucXa.PresentationLayer
                 MessageBox.Show("Vui lòng chọn 1 trường để tìm kiếm", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            frmSinhVien_Load(sender, e);
+            ClearBox();
         }
     }
 }
