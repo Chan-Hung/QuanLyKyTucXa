@@ -117,74 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="masv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="taikhoan.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="tensv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="matkhau.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="gioitinh.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="SDT.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="MaTruong.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="MaPhong.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="maloaitaikhoan.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnThem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        3QAAAN0BcFOiBwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHXSURBVFhH7ZfR
-        K0NRHMf3wN/i2R+g2GaihFKilDx59yAPal7l2p1WLIsXIhIlD0Qa8oCSiBSxLCQRM2y283V+N2P0O0NN
-        5+Xe+txbv3N/5/f9nXPP79zjAPBnykwUVfeLhUo/7itM3LoNzJCNe/cnWGMu2kZTdR5TiHIf0DH1ivaJ
-        V7j7ALcPSVcfSjifXLBGFcFtFNYPiERDMI390xjOLx8sxtefURsQ8JiIlnpRwPmqYI0qeuYTjU4DCK28
-        fAQnFnfi6JSjQW1yOoo5XxWsUUX3bHKQguyefGZPhPfiCC69WAKcvWjmfFWwRhXemWSIgmQPP7EqBQwt
-        vwsw0ML5qmCNKmwBtoB/FUAFhNYwLSPqhKNlJBWWz5wCygyQSNaf+qYY2cXKulEJlaU1Il/KZKGkql/g
-        +PyrgMOzGDYOHlHpF6zPd2TpjmTKtrWxSEOiaQjpyS0hs4tbGar4HjwbauN8MmwePaJrOomagEi7DCQo
-        tkMGny43IW7jwM3dE9txPtk9jlnTJTcv4ZSxHR4frr1zcjDkFb1SZ5cvIhcPGFt7RutwiqbiWr8A7VOg
-        /SOUI693GdKN0FqIfou9GdkCbAHaf8u1H0y0H80IrYfTDLSJ5Od4Dscb57lbAVPpQbMAAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <data name="btnSua.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        sQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANsSURBVFhHpZZL
-        bExRGMe/EkE90nik1YnEs0RDaiMhkVhgJ5HMTNi495YI6YK1sLAhHmFFF8TOQqhUjU7bedUw2mqKCJPO
-        GDpPj1QJFkXT9jqnnTM9c+5/RofFL7nnf77z/e7jzMmQaZr/DXmCYWrpGCFf6CaaLwYMS4GCXduoyWXm
-        6Ag+Q3WFgGEpkP/JqbwbmLyJPlSLgOF0oFhsNkVT26ktELPcAMcT7EXrVGBYCOqP76Bo4gxF4o8okvjF
-        sIplPMGnqI8MDFUoHK9i4rsTQhUklvEEu1FPAQxl2FPrTPTVIhYgqUogdAL15sCQQ9EPSyiSbIdSGSRU
-        cQc+IgenUDiD+hNeKFRBQhWX5yfycHDYHz8NZQgkVPGFbiEPxxq8Se5kjccsokIgocx9zzD1vKpUPYL8
-        QSRVzZoOWiTFQFIBl/v7VssOlfxBJNFoEchEEzGKxj3s+jpFk2fZPrlGD3w//lXOmbp4+Wkea/w9TzjJ
-        e3bwnKNYcoO8MLcOHcVF5HWdRsW6R9omMc5NZH/vsniUic9TPD5H1CCos+vIdOU1IW3frGZtfIFLGxZZ
-        bpIJb0jyAYoObBFzKs60sdGZds7l19TTs5Dud/yekLf6PxeSrw0Zu2Y3a2N0RzMXt+k/RJ4rYN/3dVbO
-        XnlipchlnOlDi5i83ZE2THvaeCtycrnK6WH3HrlWZm1IOzLnnjbK5ZzVj/WQmMsVsQ0VZuIhCidrRSbD
-        5Y50/XMuF9jTU98Swb+3za/3lmXFgq0vjOOiJlfMfv+r+PErxjJInmUHqq/pMvba/EaP/NSC+S5t1Igb
-        uX1lWaxSRG46MvrjZT49bPNpXVVeLbqoTf9S3qKPqFKZar+W92clT6ZSVJ4FSQrB30hNn7FeduQJZZyD
-        DfP/JucgEaKsaWLzHVM9eQMZR8poQEIVJEPYApoXeSyBgDV/qcoQSKZS4daG6LZzJvJYAoEjU9+ChCpI
-        KFPp1TN13cYK5ODAkONI6buRUAVJOfzIXRU0rqLeMjAUMME5VaiC5BWt2uCa4KHNqKcKDGXYkXsBiQVc
-        yHd4hVv/tvyh3lnbbRwmk8pQLwQMVRxp/SKSM67Y/AdOVrmdS9G66QBDhD1jXAI3AI/iUoBhIdjGvCzJ
-        x/enDlajulKAYTHYmzjK5O/sGb0RzZeGSX8AnGKkLZJ3WGIAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnXoa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAH7SURBVFhHzZU7
-        SwNBFIUvZne0UCRgYyX4QHut/AFWgmAKQYvYWoignZWFVlY2WtkJgoWVIv4EH7VaWIhNQJDgozKbrOfG
-        W81c2dnJgh44ZJkz95vLZGeHfJWSmUgorsNphus8V8qKU0Kmoiz2i01FyorTnzeQEhm47GkjZfmF4lJK
-        PUPwcMEGk0qyjK4viqewfTV9W4uwqWGNSVnOFSac64VF2pzJcq6aFN/qRcWZ15DlXP15A/9GKXWP8ctS
-        pMEcFXy2EopOte3r0CeCzxYmH1rFRfhA8NlqkNlVAG03KL7D77s9Dr8hu1fG2wZzR/DZalK0qUHgF3zN
-        uvBbtcZhs8RfOjy/uhm//dGG4LOFo7KiQeAnzrHYvJuZuZ8sfnaztqucewmwBQXA7qCB0iznXmpQNKND
-        whsAc5pzL+Hc4lJyIXBwA/gOjHPuJUwe0SBwBw3QAOdewuSyBoFDG2iBGXHuJTlqiQVhhzZQ5yyXUKSd
-        59AGHjnLJS6yIOzQBq44yyUUXVsQdmAD5oKzXELRpQsK3oEjznIJRccWhB3UAC6pPc5yCYX7Ngj+wAnp
-        w8Wybme4P9aQ9eP5085wE24J1l8o2rZBYr6KW9YYm8e0a5qbWxWsv/j61GBhNouC9RcKl11QmPlyE6y/
-        8H8O4uV50IA5fQNWr2AtEX0D2mdj5YLicBoAAAAASUVORK5CYII=
+        wQAAAMEB4jA9ugAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADOSURBVFhH7ZdB
+        DoIwEEV7HeUo0JReFIh75ACC19CF8QaNzjezMKULaTINifOTv5kB5jUpnY7JkT3ZqunbKzmwFze4I6fl
+        RQUn8uvbtvNnTsurGdwtBkCM0/KigvcVAMU4LS8Ui4orgAIogALkA3Bjwdn+ID9/s0cDigA+scSzSaPW
+        hNpYDbpa9LFingGQWE0xh10ALFGwmOu+vRjcZHCZoEDpTTjWnT/wv7BN9LIeRAqgAArw7wA7GM1Wwyl5
+        5LS8+BY1k9GAArpa3nhuzBuNaguTvoITogAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

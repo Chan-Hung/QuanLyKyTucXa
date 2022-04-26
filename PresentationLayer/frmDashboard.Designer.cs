@@ -29,27 +29,25 @@ namespace QuanLyKyTucXa.PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.pnlToaPhongSubMenu = new System.Windows.Forms.Panel();
+            this.pnlTuyChonSubMenu = new System.Windows.Forms.Panel();
+            this.panelTime = new System.Windows.Forms.Panel();
+            this.pnlChildForm = new System.Windows.Forms.Panel();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnDoiMatKhau = new System.Windows.Forms.Button();
             this.btnDichVuSuDung = new System.Windows.Forms.Button();
-            this.pnlToaPhongSubMenu = new System.Windows.Forms.Panel();
             this.btnQLPhong = new System.Windows.Forms.Button();
             this.btnQLToa = new System.Windows.Forms.Button();
             this.btnToaVaPhong = new System.Windows.Forms.Button();
-            this.pnlTuyChonSubMenu = new System.Windows.Forms.Panel();
             this.btnQLHopDong = new System.Windows.Forms.Button();
             this.btnQLTaiKhoan = new System.Windows.Forms.Button();
             this.btnQLSinhVien = new System.Windows.Forms.Button();
             this.btnQLNhanVien = new System.Windows.Forms.Button();
             this.btnTuyChon = new System.Windows.Forms.Button();
-            this.panelTime = new System.Windows.Forms.Panel();
             this.DateLabel = new System.Windows.Forms.Label();
             this.ClockLabel = new System.Windows.Forms.Label();
-            this.pnlChildForm = new System.Windows.Forms.Panel();
-            this.ClockTimer = new System.Windows.Forms.Timer(this.components);
             this.panelSideMenu.SuspendLayout();
             this.pnlToaPhongSubMenu.SuspendLayout();
             this.pnlTuyChonSubMenu.SuspendLayout();
@@ -75,6 +73,52 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(313, 681);
             this.panelSideMenu.TabIndex = 0;
+            // 
+            // pnlToaPhongSubMenu
+            // 
+            this.pnlToaPhongSubMenu.Controls.Add(this.btnQLPhong);
+            this.pnlToaPhongSubMenu.Controls.Add(this.btnQLToa);
+            this.pnlToaPhongSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlToaPhongSubMenu.Location = new System.Drawing.Point(0, 403);
+            this.pnlToaPhongSubMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlToaPhongSubMenu.Name = "pnlToaPhongSubMenu";
+            this.pnlToaPhongSubMenu.Size = new System.Drawing.Size(313, 76);
+            this.pnlToaPhongSubMenu.TabIndex = 6;
+            // 
+            // pnlTuyChonSubMenu
+            // 
+            this.pnlTuyChonSubMenu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlTuyChonSubMenu.Controls.Add(this.btnQLHopDong);
+            this.pnlTuyChonSubMenu.Controls.Add(this.btnQLTaiKhoan);
+            this.pnlTuyChonSubMenu.Controls.Add(this.btnQLSinhVien);
+            this.pnlTuyChonSubMenu.Controls.Add(this.btnQLNhanVien);
+            this.pnlTuyChonSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTuyChonSubMenu.Location = new System.Drawing.Point(0, 192);
+            this.pnlTuyChonSubMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlTuyChonSubMenu.Name = "pnlTuyChonSubMenu";
+            this.pnlTuyChonSubMenu.Size = new System.Drawing.Size(313, 156);
+            this.pnlTuyChonSubMenu.TabIndex = 2;
+            // 
+            // panelTime
+            // 
+            this.panelTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(147)))));
+            this.panelTime.Controls.Add(this.DateLabel);
+            this.panelTime.Controls.Add(this.ClockLabel);
+            this.panelTime.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTime.Location = new System.Drawing.Point(0, 0);
+            this.panelTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelTime.Name = "panelTime";
+            this.panelTime.Size = new System.Drawing.Size(313, 137);
+            this.panelTime.TabIndex = 0;
+            // 
+            // pnlChildForm
+            // 
+            this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlChildForm.Location = new System.Drawing.Point(313, 0);
+            this.pnlChildForm.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlChildForm.Name = "pnlChildForm";
+            this.pnlChildForm.Size = new System.Drawing.Size(999, 681);
+            this.pnlChildForm.TabIndex = 1;
             // 
             // btnDangXuat
             // 
@@ -133,17 +177,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnDichVuSuDung.Text = "Dịch vụ sử dụng";
             this.btnDichVuSuDung.UseVisualStyleBackColor = false;
             // 
-            // pnlToaPhongSubMenu
-            // 
-            this.pnlToaPhongSubMenu.Controls.Add(this.btnQLPhong);
-            this.pnlToaPhongSubMenu.Controls.Add(this.btnQLToa);
-            this.pnlToaPhongSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlToaPhongSubMenu.Location = new System.Drawing.Point(0, 403);
-            this.pnlToaPhongSubMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlToaPhongSubMenu.Name = "pnlToaPhongSubMenu";
-            this.pnlToaPhongSubMenu.Size = new System.Drawing.Size(313, 76);
-            this.pnlToaPhongSubMenu.TabIndex = 6;
-            // 
             // btnQLPhong
             // 
             this.btnQLPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(147)))));
@@ -162,6 +195,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnQLPhong.TabIndex = 1;
             this.btnQLPhong.Text = "Quản lý phòng";
             this.btnQLPhong.UseVisualStyleBackColor = false;
+            this.btnQLPhong.Click += new System.EventHandler(this.btnQLPhong_Click);
             // 
             // btnQLToa
             // 
@@ -181,6 +215,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnQLToa.TabIndex = 0;
             this.btnQLToa.Text = "Quản lý tòa";
             this.btnQLToa.UseVisualStyleBackColor = false;
+            this.btnQLToa.Click += new System.EventHandler(this.btnQLToa_Click);
             // 
             // btnToaVaPhong
             // 
@@ -202,20 +237,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnToaVaPhong.UseVisualStyleBackColor = false;
             this.btnToaVaPhong.Click += new System.EventHandler(this.btnToaVaPhong_Click);
             // 
-            // pnlTuyChonSubMenu
-            // 
-            this.pnlTuyChonSubMenu.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlTuyChonSubMenu.Controls.Add(this.btnQLHopDong);
-            this.pnlTuyChonSubMenu.Controls.Add(this.btnQLTaiKhoan);
-            this.pnlTuyChonSubMenu.Controls.Add(this.btnQLSinhVien);
-            this.pnlTuyChonSubMenu.Controls.Add(this.btnQLNhanVien);
-            this.pnlTuyChonSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTuyChonSubMenu.Location = new System.Drawing.Point(0, 192);
-            this.pnlTuyChonSubMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlTuyChonSubMenu.Name = "pnlTuyChonSubMenu";
-            this.pnlTuyChonSubMenu.Size = new System.Drawing.Size(313, 156);
-            this.pnlTuyChonSubMenu.TabIndex = 2;
-            // 
             // btnQLHopDong
             // 
             this.btnQLHopDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(147)))));
@@ -234,6 +255,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnQLHopDong.TabIndex = 3;
             this.btnQLHopDong.Text = "Theo dõi hợp đồng";
             this.btnQLHopDong.UseVisualStyleBackColor = false;
+            this.btnQLHopDong.Click += new System.EventHandler(this.btnQLHopDong_Click);
             // 
             // btnQLTaiKhoan
             // 
@@ -314,18 +336,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnTuyChon.UseVisualStyleBackColor = false;
             this.btnTuyChon.Click += new System.EventHandler(this.btnTuyChon_Click);
             // 
-            // panelTime
-            // 
-            this.panelTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(147)))));
-            this.panelTime.Controls.Add(this.DateLabel);
-            this.panelTime.Controls.Add(this.ClockLabel);
-            this.panelTime.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTime.Location = new System.Drawing.Point(0, 0);
-            this.panelTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelTime.Name = "panelTime";
-            this.panelTime.Size = new System.Drawing.Size(313, 137);
-            this.panelTime.TabIndex = 0;
-            // 
             // DateLabel
             // 
             this.DateLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
@@ -354,21 +364,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.ClockLabel.TabIndex = 0;
             this.ClockLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pnlChildForm
-            // 
-            this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlChildForm.Location = new System.Drawing.Point(313, 0);
-            this.pnlChildForm.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(999, 681);
-            this.pnlChildForm.TabIndex = 1;
-            // 
-            // ClockTimer
-            // 
-            this.ClockTimer.Enabled = true;
-            this.ClockTimer.Interval = 1;
-            this.ClockTimer.Tick += new System.EventHandler(this.ClockTimer_Tick);
-            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -379,7 +374,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDashboard";
+            this.Text = "QUẢN LÝ KÝ TÚC XÁ";
             this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.panelSideMenu.ResumeLayout(false);
             this.pnlToaPhongSubMenu.ResumeLayout(false);
@@ -408,7 +403,6 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.Button btnQLHopDong;
         private System.Windows.Forms.Panel pnlChildForm;
         private System.Windows.Forms.Label ClockLabel;
-        private System.Windows.Forms.Timer ClockTimer;
         private System.Windows.Forms.Label DateLabel;
     }
 }
