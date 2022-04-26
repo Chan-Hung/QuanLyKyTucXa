@@ -13,7 +13,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
     class BLL_TaiKhoan
     {
         DataAccessLayer.DAL dal = new DataAccessLayer.DAL();
-        public DataTable SelectNguoiDung()
+        public DataTable SelectTaiKhoan()
         {
             string sql = "select * from TaiKhoan";
             DataTable dt = new DataTable();

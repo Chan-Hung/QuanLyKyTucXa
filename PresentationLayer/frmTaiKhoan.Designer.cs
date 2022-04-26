@@ -31,25 +31,19 @@ namespace QuanLyKyTucXa.PresentationLayer
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTaiKhoan));
             this.dgvNguoidung = new System.Windows.Forms.DataGridView();
-            this.btnTimkiem = new System.Windows.Forms.Button();
+            this.taikhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matkhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maloaitaikhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMatkhau = new System.Windows.Forms.TextBox();
-            this.btnCapnhat = new System.Windows.Forms.Button();
             this.txtTendangnhap = new System.Windows.Forms.TextBox();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btnThem = new System.Windows.Forms.Button();
-            this.rbManv = new System.Windows.Forms.RadioButton();
-            this.rbTendangnhap = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbQuyen = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.taikhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.matkhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maloaitaikhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguoidung)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvNguoidung
@@ -70,20 +64,29 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.dgvNguoidung.Size = new System.Drawing.Size(613, 382);
             this.dgvNguoidung.TabIndex = 34;
             // 
-            // btnTimkiem
+            // taikhoan
             // 
-            this.btnTimkiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTimkiem.FlatAppearance.BorderSize = 0;
-            this.btnTimkiem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTimkiem.Location = new System.Drawing.Point(883, 470);
-            this.btnTimkiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTimkiem.Name = "btnTimkiem";
-            this.btnTimkiem.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.btnTimkiem.Size = new System.Drawing.Size(84, 78);
-            this.btnTimkiem.TabIndex = 33;
-            this.btnTimkiem.Text = "Tìm kiếm";
-            this.btnTimkiem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnTimkiem.UseVisualStyleBackColor = true;
+            this.taikhoan.DataPropertyName = "taikhoan";
+            this.taikhoan.HeaderText = "Tài khoản";
+            this.taikhoan.MinimumWidth = 8;
+            this.taikhoan.Name = "taikhoan";
+            this.taikhoan.Width = 125;
+            // 
+            // matkhau
+            // 
+            this.matkhau.DataPropertyName = "matkhau";
+            this.matkhau.HeaderText = "Mật khẩu";
+            this.matkhau.MinimumWidth = 8;
+            this.matkhau.Name = "matkhau";
+            this.matkhau.Width = 130;
+            // 
+            // maloaitaikhoan
+            // 
+            this.maloaitaikhoan.DataPropertyName = "maloaitaikhoan";
+            this.maloaitaikhoan.HeaderText = "Mã loại tài khoản";
+            this.maloaitaikhoan.MinimumWidth = 20;
+            this.maloaitaikhoan.Name = "maloaitaikhoan";
+            this.maloaitaikhoan.Width = 90;
             // 
             // txtMatkhau
             // 
@@ -93,21 +96,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtMatkhau.Name = "txtMatkhau";
             this.txtMatkhau.Size = new System.Drawing.Size(160, 24);
             this.txtMatkhau.TabIndex = 26;
-            // 
-            // btnCapnhat
-            // 
-            this.btnCapnhat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCapnhat.FlatAppearance.BorderSize = 0;
-            this.btnCapnhat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCapnhat.Location = new System.Drawing.Point(751, 470);
-            this.btnCapnhat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCapnhat.Name = "btnCapnhat";
-            this.btnCapnhat.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.btnCapnhat.Size = new System.Drawing.Size(84, 78);
-            this.btnCapnhat.TabIndex = 32;
-            this.btnCapnhat.Text = "Cập nhật";
-            this.btnCapnhat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCapnhat.UseVisualStyleBackColor = true;
             // 
             // txtTendangnhap
             // 
@@ -184,44 +172,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnThem.UseVisualStyleBackColor = true;
             // 
-            // rbManv
-            // 
-            this.rbManv.AutoSize = true;
-            this.rbManv.Location = new System.Drawing.Point(7, 22);
-            this.rbManv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbManv.Name = "rbManv";
-            this.rbManv.Size = new System.Drawing.Size(116, 22);
-            this.rbManv.TabIndex = 0;
-            this.rbManv.TabStop = true;
-            this.rbManv.Text = "Mã nhân viên";
-            this.rbManv.UseVisualStyleBackColor = true;
-            // 
-            // rbTendangnhap
-            // 
-            this.rbTendangnhap.AutoSize = true;
-            this.rbTendangnhap.Location = new System.Drawing.Point(140, 22);
-            this.rbTendangnhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbTendangnhap.Name = "rbTendangnhap";
-            this.rbTendangnhap.Size = new System.Drawing.Size(126, 22);
-            this.rbTendangnhap.TabIndex = 1;
-            this.rbTendangnhap.TabStop = true;
-            this.rbTendangnhap.Text = "Tên đăng nhập";
-            this.rbTendangnhap.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbTendangnhap);
-            this.groupBox1.Controls.Add(this.rbManv);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(15, 379);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(279, 73);
-            this.groupBox1.TabIndex = 28;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tìm kiếm theo";
-            // 
             // cbQuyen
             // 
             this.cbQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -245,41 +195,14 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.label8.TabIndex = 35;
             this.label8.Text = "Mã loại tài khoản";
             // 
-            // taikhoan
-            // 
-            this.taikhoan.DataPropertyName = "taikhoan";
-            this.taikhoan.HeaderText = "Tài khoản";
-            this.taikhoan.MinimumWidth = 8;
-            this.taikhoan.Name = "taikhoan";
-            this.taikhoan.Width = 125;
-            // 
-            // matkhau
-            // 
-            this.matkhau.DataPropertyName = "matkhau";
-            this.matkhau.HeaderText = "Mật khẩu";
-            this.matkhau.MinimumWidth = 8;
-            this.matkhau.Name = "matkhau";
-            this.matkhau.Width = 130;
-            // 
-            // maloaitaikhoan
-            // 
-            this.maloaitaikhoan.DataPropertyName = "maloaitaikhoan";
-            this.maloaitaikhoan.HeaderText = "Mã loại tài khoản";
-            this.maloaitaikhoan.MinimumWidth = 20;
-            this.maloaitaikhoan.Name = "maloaitaikhoan";
-            this.maloaitaikhoan.Width = 90;
-            // 
             // frmTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(979, 603);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvNguoidung);
             this.Controls.Add(this.cbQuyen);
-            this.Controls.Add(this.btnTimkiem);
             this.Controls.Add(this.txtMatkhau);
-            this.Controls.Add(this.btnCapnhat);
             this.Controls.Add(this.txtTendangnhap);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
@@ -290,8 +213,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.Name = "frmTaiKhoan";
             this.Text = "frmTaiKhoan";
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguoidung)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,18 +220,13 @@ namespace QuanLyKyTucXa.PresentationLayer
 
         #endregion
         private System.Windows.Forms.DataGridView dgvNguoidung;
-        private System.Windows.Forms.Button btnTimkiem;
         private System.Windows.Forms.TextBox txtMatkhau;
-        private System.Windows.Forms.Button btnCapnhat;
         private System.Windows.Forms.TextBox txtTendangnhap;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RadioButton rbManv;
-        private System.Windows.Forms.RadioButton rbTendangnhap;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cbQuyen;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridViewTextBoxColumn taikhoan;

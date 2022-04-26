@@ -20,18 +20,39 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
             return dt;
         }
 
-        //public bool insertHopDong(ref string err, string maphong, string matoa, string maloaiphong, string trangthai)
-        //{
-        //    return dal.MyExecuteNonQuery(
-        //        "insertPhong",
-        //        CommandType.StoredProcedure,
-        //        ref err,
-        //        new SqlParameter("@MaPhong", maphong),
-        //        new SqlParameter("@MaToa", matoa),
-        //        new SqlParameter("@MaLoaiPhong", maloaiphong),
-        //        new SqlParameter("@TrangThai", trangthai)
-        //        );
-        //}
+        public bool insertHopDong(ref string err, string mahd, string masv, DateTime ngaykhd, DateTime ngaykthd)
+        {
+            return dal.MyExecuteNonQuery(
+                "insertHopDong",
+                CommandType.StoredProcedure,
+                ref err,
+                new SqlParameter("@MaHD", mahd),
+                new SqlParameter("@MaSV", masv),
+                new SqlParameter("@NgayKHD", ngaykhd),
+                new SqlParameter("@NgayKTHD", ngaykthd)
+                );
+        }
+        public bool updateHopDong(ref string err, string mahd, string masv, DateTime ngaykhd, DateTime ngaykthd)
+        {
+            return dal.MyExecuteNonQuery(
+                "updateHopDong",
+                CommandType.StoredProcedure,
+                ref err,
+                new SqlParameter("@MaHD", mahd),
+                new SqlParameter("@MaSV", masv),
+                new SqlParameter("@NgayKHD", ngaykhd),
+                new SqlParameter("@NgayKTHD", ngaykthd)
+                );
+        }
 
+        public bool deleteHopDong(ref string err, string mahd)
+        {
+            return dal.MyExecuteNonQuery(
+                "deleteHopDong",
+                CommandType.StoredProcedure,
+                ref err,
+                new SqlParameter("@MaHD", mahd)
+                );
+        }
     }
 }
