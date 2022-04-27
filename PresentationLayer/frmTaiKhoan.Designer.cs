@@ -30,10 +30,7 @@ namespace QuanLyKyTucXa.PresentationLayer
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTaiKhoan));
-            this.dgvNguoidung = new System.Windows.Forms.DataGridView();
-            this.taikhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.matkhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maloaitaikhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTaiKhoan = new System.Windows.Forms.DataGridView();
             this.txtMatkhau = new System.Windows.Forms.TextBox();
             this.txtTendangnhap = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -44,50 +41,30 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNguoidung)).BeginInit();
+            this.mataikhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tendangnhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvNguoidung
+            // dgvTaiKhoan
             // 
-            this.dgvNguoidung.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvTaiKhoan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvNguoidung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNguoidung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.taikhoan,
-            this.matkhau,
-            this.maloaitaikhoan});
-            this.dgvNguoidung.Location = new System.Drawing.Point(354, 177);
-            this.dgvNguoidung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvNguoidung.Name = "dgvNguoidung";
-            this.dgvNguoidung.RowHeadersWidth = 62;
-            this.dgvNguoidung.RowTemplate.Height = 28;
-            this.dgvNguoidung.Size = new System.Drawing.Size(613, 382);
-            this.dgvNguoidung.TabIndex = 34;
-            // 
-            // taikhoan
-            // 
-            this.taikhoan.DataPropertyName = "taikhoan";
-            this.taikhoan.HeaderText = "Tài khoản";
-            this.taikhoan.MinimumWidth = 8;
-            this.taikhoan.Name = "taikhoan";
-            this.taikhoan.Width = 125;
-            // 
-            // matkhau
-            // 
-            this.matkhau.DataPropertyName = "matkhau";
-            this.matkhau.HeaderText = "Mật khẩu";
-            this.matkhau.MinimumWidth = 8;
-            this.matkhau.Name = "matkhau";
-            this.matkhau.Width = 130;
-            // 
-            // maloaitaikhoan
-            // 
-            this.maloaitaikhoan.DataPropertyName = "maloaitaikhoan";
-            this.maloaitaikhoan.HeaderText = "Mã loại tài khoản";
-            this.maloaitaikhoan.MinimumWidth = 20;
-            this.maloaitaikhoan.Name = "maloaitaikhoan";
-            this.maloaitaikhoan.Width = 90;
+            this.dgvTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTaiKhoan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mataikhoan,
+            this.manv,
+            this.tendangnhap});
+            this.dgvTaiKhoan.Location = new System.Drawing.Point(354, 177);
+            this.dgvTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvTaiKhoan.Name = "dgvTaiKhoan";
+            this.dgvTaiKhoan.RowHeadersWidth = 62;
+            this.dgvTaiKhoan.RowTemplate.Height = 28;
+            this.dgvTaiKhoan.Size = new System.Drawing.Size(613, 382);
+            this.dgvTaiKhoan.TabIndex = 34;
+            this.dgvTaiKhoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTaiKhoan_CellContentClick);
             // 
             // txtMatkhau
             // 
@@ -218,6 +195,30 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnThem.UseVisualStyleBackColor = true;
             // 
+            // mataikhoan
+            // 
+            this.mataikhoan.DataPropertyName = "mataikhoan";
+            this.mataikhoan.HeaderText = "Mã tài khoản";
+            this.mataikhoan.MinimumWidth = 8;
+            this.mataikhoan.Name = "mataikhoan";
+            this.mataikhoan.Width = 125;
+            // 
+            // manv
+            // 
+            this.manv.DataPropertyName = "manv";
+            this.manv.HeaderText = "Mã nhân viên";
+            this.manv.MinimumWidth = 8;
+            this.manv.Name = "manv";
+            this.manv.Width = 130;
+            // 
+            // tendangnhap
+            // 
+            this.tendangnhap.DataPropertyName = "tendangnhap";
+            this.tendangnhap.HeaderText = "Tên đăng nhập";
+            this.tendangnhap.MinimumWidth = 20;
+            this.tendangnhap.Name = "tendangnhap";
+            this.tendangnhap.Width = 90;
+            // 
             // frmTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -227,7 +228,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dgvNguoidung);
+            this.Controls.Add(this.dgvTaiKhoan);
             this.Controls.Add(this.cbQuyen);
             this.Controls.Add(this.txtMatkhau);
             this.Controls.Add(this.txtTendangnhap);
@@ -236,26 +237,27 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.Controls.Add(this.label10);
             this.Name = "frmTaiKhoan";
             this.Text = "frmTaiKhoan";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNguoidung)).EndInit();
+            this.Load += new System.EventHandler(this.frmTaiKhoan_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvNguoidung;
+        private System.Windows.Forms.DataGridView dgvTaiKhoan;
         private System.Windows.Forms.TextBox txtMatkhau;
         private System.Windows.Forms.TextBox txtTendangnhap;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbQuyen;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn taikhoan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn matkhau;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maloaitaikhoan;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mataikhoan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tendangnhap;
     }
 }
