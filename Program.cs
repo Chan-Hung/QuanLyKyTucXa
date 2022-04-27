@@ -13,7 +13,7 @@ namespace QuanLyKyTucXa
         /// </summary>
         [STAThread]
         static void Main()
-        {
+        {   //Git test
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new PresentationLayer.frmLogin());
