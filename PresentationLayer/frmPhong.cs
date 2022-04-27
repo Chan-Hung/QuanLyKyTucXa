@@ -27,7 +27,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             txtMaPhong.Clear();
             txtMaToa.Clear();
             cbMaLoaiPhong.Text = "";
-            cbTrangThai.Text = "";
+            cbTrangThai.Text = "Còn";
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -53,6 +53,7 @@ namespace QuanLyKyTucXa.PresentationLayer
         private void frmPhong_Load(object sender, EventArgs e)
         {
             dgvPhong.DataSource = bll.SelectPhong();
+            cbTrangThai.Text = "Còn";
         }
 
         private void btnSua_Click(object sender, EventArgs e)
