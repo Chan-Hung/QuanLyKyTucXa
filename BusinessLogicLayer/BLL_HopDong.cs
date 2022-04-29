@@ -19,19 +19,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
             dt = dal.GetTable(sql);
             return dt;
         }
-
-        public bool insertHopDong(ref string err, string mahd, string masv, DateTime ngaykhd, DateTime ngaykthd)
-        {
-            return dal.MyExecuteNonQuery(
-                "sp_InsertHopDong",
-                CommandType.StoredProcedure,
-                ref err,
-                new SqlParameter("@MaHD", mahd),
-                new SqlParameter("@MaSV", masv),
-                new SqlParameter("@NgayKHD", ngaykhd),
-                new SqlParameter("@NgayKTHD", ngaykthd)
-                );
-        }
+   
         public bool updateHopDong(ref string err, string mahd, string masv, DateTime ngaykhd, DateTime ngaykthd)
         {
             return dal.MyExecuteNonQuery(
@@ -44,15 +32,6 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
                 new SqlParameter("@NgayKTHD", ngaykthd)
                 );
         }
-
-        public bool deleteHopDong(ref string err, string mahd)
-        {
-            return dal.MyExecuteNonQuery(
-                "sp_DeleteHopDong",
-                CommandType.StoredProcedure,
-                ref err,
-                new SqlParameter("@MaHD", mahd)
-                );
-        }
+       
     }
 }
