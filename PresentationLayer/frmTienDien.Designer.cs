@@ -30,11 +30,11 @@ namespace QuanLyKyTucXa.PresentationLayer
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTienDien));
-            this.txtSucChua = new System.Windows.Forms.TextBox();
-            this.txtsptd = new System.Windows.Forms.TextBox();
-            this.lblSoPhongToiDa = new System.Windows.Forms.Label();
-            this.txtSoTang = new System.Windows.Forms.TextBox();
-            this.txtMaToa = new System.Windows.Forms.TextBox();
+            this.txtSoDienTieuThu = new System.Windows.Forms.TextBox();
+            this.txtTongGiaTri = new System.Windows.Forms.TextBox();
+            this.lblGiaTri = new System.Windows.Forms.Label();
+            this.txtMaPhong = new System.Windows.Forms.TextBox();
+            this.txtMaHoaDon = new System.Windows.Forms.TextBox();
             this.lblSoDienTieuThu = new System.Windows.Forms.Label();
             this.lblMaPhong = new System.Windows.Forms.Label();
             this.lblMaHoaDon = new System.Windows.Forms.Label();
@@ -43,8 +43,8 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblNgayLap = new System.Windows.Forms.Label();
+            this.dtpNgaylap = new System.Windows.Forms.DateTimePicker();
             this.mahoadon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaylap = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,48 +53,48 @@ namespace QuanLyKyTucXa.PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.dgvSoDienTieuThu)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtSucChua
+            // txtSoDienTieuThu
             // 
-            this.txtSucChua.Location = new System.Drawing.Point(165, 387);
-            this.txtSucChua.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSucChua.Name = "txtSucChua";
-            this.txtSucChua.Size = new System.Drawing.Size(159, 22);
-            this.txtSucChua.TabIndex = 54;
+            this.txtSoDienTieuThu.Location = new System.Drawing.Point(165, 387);
+            this.txtSoDienTieuThu.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoDienTieuThu.Name = "txtSoDienTieuThu";
+            this.txtSoDienTieuThu.Size = new System.Drawing.Size(159, 22);
+            this.txtSoDienTieuThu.TabIndex = 54;
             // 
-            // txtsptd
+            // txtTongGiaTri
             // 
-            this.txtsptd.Location = new System.Drawing.Point(165, 461);
-            this.txtsptd.Margin = new System.Windows.Forms.Padding(4);
-            this.txtsptd.Name = "txtsptd";
-            this.txtsptd.Size = new System.Drawing.Size(159, 22);
-            this.txtsptd.TabIndex = 55;
+            this.txtTongGiaTri.Location = new System.Drawing.Point(165, 461);
+            this.txtTongGiaTri.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTongGiaTri.Name = "txtTongGiaTri";
+            this.txtTongGiaTri.Size = new System.Drawing.Size(159, 22);
+            this.txtTongGiaTri.TabIndex = 55;
             // 
-            // lblSoPhongToiDa
+            // lblGiaTri
             // 
-            this.lblSoPhongToiDa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoPhongToiDa.Location = new System.Drawing.Point(13, 465);
-            this.lblSoPhongToiDa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblSoPhongToiDa.Name = "lblSoPhongToiDa";
-            this.lblSoPhongToiDa.Size = new System.Drawing.Size(130, 18);
-            this.lblSoPhongToiDa.TabIndex = 59;
-            this.lblSoPhongToiDa.Text = "Số phòng tối đa";
-            this.lblSoPhongToiDa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblGiaTri.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiaTri.Location = new System.Drawing.Point(13, 465);
+            this.lblGiaTri.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGiaTri.Name = "lblGiaTri";
+            this.lblGiaTri.Size = new System.Drawing.Size(130, 18);
+            this.lblGiaTri.TabIndex = 59;
+            this.lblGiaTri.Text = "Tổng giá trị";
+            this.lblGiaTri.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtSoTang
+            // txtMaPhong
             // 
-            this.txtSoTang.Location = new System.Drawing.Point(165, 245);
-            this.txtSoTang.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSoTang.Name = "txtSoTang";
-            this.txtSoTang.Size = new System.Drawing.Size(159, 22);
-            this.txtSoTang.TabIndex = 53;
+            this.txtMaPhong.Location = new System.Drawing.Point(165, 245);
+            this.txtMaPhong.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaPhong.Name = "txtMaPhong";
+            this.txtMaPhong.Size = new System.Drawing.Size(159, 22);
+            this.txtMaPhong.TabIndex = 53;
             // 
-            // txtMaToa
+            // txtMaHoaDon
             // 
-            this.txtMaToa.Location = new System.Drawing.Point(165, 178);
-            this.txtMaToa.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMaToa.Name = "txtMaToa";
-            this.txtMaToa.Size = new System.Drawing.Size(159, 22);
-            this.txtMaToa.TabIndex = 52;
+            this.txtMaHoaDon.Location = new System.Drawing.Point(165, 178);
+            this.txtMaHoaDon.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaHoaDon.Name = "txtMaHoaDon";
+            this.txtMaHoaDon.Size = new System.Drawing.Size(159, 22);
+            this.txtMaHoaDon.TabIndex = 52;
             // 
             // lblSoDienTieuThu
             // 
@@ -149,6 +149,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.dgvSoDienTieuThu.RowHeadersWidth = 51;
             this.dgvSoDienTieuThu.Size = new System.Drawing.Size(627, 383);
             this.dgvSoDienTieuThu.TabIndex = 60;
+            this.dgvSoDienTieuThu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSoDienTieuThu_CellClick);
             this.dgvSoDienTieuThu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSoDienTieuThu_CellContentClick);
             // 
             // btnRefresh
@@ -167,6 +168,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnXoa
             // 
@@ -184,6 +186,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -201,6 +204,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -218,25 +222,26 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnThem.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(165, 315);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 22);
-            this.textBox1.TabIndex = 65;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // lblNgayLap
             // 
             this.lblNgayLap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayLap.Location = new System.Drawing.Point(13, 314);
+            this.lblNgayLap.Location = new System.Drawing.Point(8, 315);
             this.lblNgayLap.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNgayLap.Name = "lblNgayLap";
-            this.lblNgayLap.Size = new System.Drawing.Size(127, 22);
+            this.lblNgayLap.Size = new System.Drawing.Size(150, 22);
             this.lblNgayLap.TabIndex = 66;
             this.lblNgayLap.Text = "Ngày lập hóa đơn";
             this.lblNgayLap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // dtpNgaylap
+            // 
+            this.dtpNgaylap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgaylap.Location = new System.Drawing.Point(165, 314);
+            this.dtpNgaylap.Name = "dtpNgaylap";
+            this.dtpNgaylap.Size = new System.Drawing.Size(159, 22);
+            this.dtpNgaylap.TabIndex = 67;
             // 
             // mahoadon
             // 
@@ -252,7 +257,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.maphong.HeaderText = "Mã phòng";
             this.maphong.MinimumWidth = 6;
             this.maphong.Name = "maphong";
-            this.maphong.Width = 110;
+            this.maphong.Width = 60;
             // 
             // ngaylap
             // 
@@ -268,7 +273,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.sodientieuthu.HeaderText = "Số điện tiêu thụ";
             this.sodientieuthu.MinimumWidth = 6;
             this.sodientieuthu.Name = "sodientieuthu";
-            this.sodientieuthu.Width = 120;
+            this.sodientieuthu.Width = 90;
             // 
             // tonggiatri
             // 
@@ -276,7 +281,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.tonggiatri.HeaderText = "Tổng giá trị";
             this.tonggiatri.MinimumWidth = 6;
             this.tonggiatri.Name = "tonggiatri";
-            this.tonggiatri.Width = 125;
+            this.tonggiatri.Width = 95;
             // 
             // frmTienDien
             // 
@@ -284,18 +289,18 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(979, 603);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dtpNgaylap);
             this.Controls.Add(this.lblNgayLap);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvSoDienTieuThu);
-            this.Controls.Add(this.txtSucChua);
-            this.Controls.Add(this.txtsptd);
-            this.Controls.Add(this.lblSoPhongToiDa);
-            this.Controls.Add(this.txtSoTang);
-            this.Controls.Add(this.txtMaToa);
+            this.Controls.Add(this.txtSoDienTieuThu);
+            this.Controls.Add(this.txtTongGiaTri);
+            this.Controls.Add(this.lblGiaTri);
+            this.Controls.Add(this.txtMaPhong);
+            this.Controls.Add(this.txtMaHoaDon);
             this.Controls.Add(this.lblSoDienTieuThu);
             this.Controls.Add(this.lblMaPhong);
             this.Controls.Add(this.lblMaHoaDon);
@@ -310,11 +315,11 @@ namespace QuanLyKyTucXa.PresentationLayer
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtSucChua;
-        private System.Windows.Forms.TextBox txtsptd;
-        private System.Windows.Forms.Label lblSoPhongToiDa;
-        private System.Windows.Forms.TextBox txtSoTang;
-        private System.Windows.Forms.TextBox txtMaToa;
+        private System.Windows.Forms.TextBox txtSoDienTieuThu;
+        private System.Windows.Forms.TextBox txtTongGiaTri;
+        private System.Windows.Forms.Label lblGiaTri;
+        private System.Windows.Forms.TextBox txtMaPhong;
+        private System.Windows.Forms.TextBox txtMaHoaDon;
         private System.Windows.Forms.Label lblSoDienTieuThu;
         private System.Windows.Forms.Label lblMaPhong;
         private System.Windows.Forms.Label lblMaHoaDon;
@@ -323,8 +328,8 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblNgayLap;
+        private System.Windows.Forms.DateTimePicker dtpNgaylap;
         private System.Windows.Forms.DataGridViewTextBoxColumn mahoadon;
         private System.Windows.Forms.DataGridViewTextBoxColumn maphong;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaylap;
