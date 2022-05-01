@@ -135,5 +135,10 @@ namespace QuanLyKyTucXa.PresentationLayer
         {
             openChildForm(new frmTienDien());
         }
+
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmDoiMatKhau());
+        }
     }
 }

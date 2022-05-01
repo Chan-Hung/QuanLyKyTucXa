@@ -13,6 +13,7 @@ namespace QuanLyKyTucXa.PresentationLayer
 {
     public partial class frmLogin : Form
     {
+        public string tendangnhap = "";
         public frmLogin()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace QuanLyKyTucXa.PresentationLayer
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "QL_AuthoLogin";
                 cmd.Parameters.AddWithValue("@UserName", txtTaiKhoan.Text);
+                tendangnhap = txtTaiKhoan.Text;
                 cmd.Parameters.AddWithValue("@Password", txtMatKhau.Text);
                 cmd.Connection = conn;
                 object kq = cmd.ExecuteScalar();

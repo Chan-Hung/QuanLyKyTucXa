@@ -116,6 +116,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnDoiMatKhau.TabIndex = 8;
             this.btnDoiMatKhau.Text = "Đổi mật khẩu";
             this.btnDoiMatKhau.UseVisualStyleBackColor = false;
+            this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
             // 
             // btnDichVuSuDung
             // 

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\BLL_DoiMatKhau.cs" />
     <Compile Include="BusinessLogicLayer\BLL_HopDong.cs" />
     <Compile Include="BusinessLogicLayer\BLL_Phong.cs" />
     <Compile Include="BusinessLogicLayer\BLL_SinhVien.cs" />
@@ -59,6 +60,12 @@
     </Compile>
     <Compile Include="PresentationLayer\frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\frmHopDong.cs">
       <SubType>Form</SubType>
@@ -112,6 +119,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PresentationLayer\frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmHopDong.resx">
       <DependentUpon>frmHopDong.cs</DependentUpon>
