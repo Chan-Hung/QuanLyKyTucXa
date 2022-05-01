@@ -12,6 +12,7 @@ namespace QuanLyKyTucXa.PresentationLayer
 {
     public partial class frmTienDien : Form
     {
+        BusinessLogicLayer.BLL_TienDien bll = new BusinessLogicLayer.BLL_TienDien();
         public frmTienDien()
         {
             InitializeComponent();
@@ -24,6 +25,16 @@ namespace QuanLyKyTucXa.PresentationLayer
 
         private void lblSoDienTieuThu_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dgvSoDienTieuThu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void frmTienDien_Load(object sender, EventArgs e)
+        {
+            dgvSoDienTieuThu.DataSource = bll.SelectTienDien();
 
         }
     }

@@ -39,16 +39,17 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.lblMaPhong = new System.Windows.Forms.Label();
             this.lblMaHoaDon = new System.Windows.Forms.Label();
             this.dgvSoDienTieuThu = new System.Windows.Forms.DataGridView();
-            this.matoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sotang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.succhua = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sophongtoida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblNgayLap = new System.Windows.Forms.Label();
+            this.mahoadon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaylap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sodientieuthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tonggiatri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSoDienTieuThu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,48 +138,18 @@ namespace QuanLyKyTucXa.PresentationLayer
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSoDienTieuThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSoDienTieuThu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.matoa,
-            this.sotang,
-            this.succhua,
-            this.sophongtoida});
+            this.mahoadon,
+            this.maphong,
+            this.ngaylap,
+            this.sodientieuthu,
+            this.tonggiatri});
             this.dgvSoDienTieuThu.Location = new System.Drawing.Point(348, 178);
             this.dgvSoDienTieuThu.Margin = new System.Windows.Forms.Padding(4);
             this.dgvSoDienTieuThu.Name = "dgvSoDienTieuThu";
             this.dgvSoDienTieuThu.RowHeadersWidth = 51;
             this.dgvSoDienTieuThu.Size = new System.Drawing.Size(627, 383);
             this.dgvSoDienTieuThu.TabIndex = 60;
-            // 
-            // matoa
-            // 
-            this.matoa.DataPropertyName = "matoa";
-            this.matoa.HeaderText = "Mã tòa";
-            this.matoa.MinimumWidth = 6;
-            this.matoa.Name = "matoa";
-            this.matoa.Width = 70;
-            // 
-            // sotang
-            // 
-            this.sotang.DataPropertyName = "sotang";
-            this.sotang.HeaderText = "Số tầng";
-            this.sotang.MinimumWidth = 6;
-            this.sotang.Name = "sotang";
-            this.sotang.Width = 110;
-            // 
-            // succhua
-            // 
-            this.succhua.DataPropertyName = "succhua";
-            this.succhua.HeaderText = "Sức chứa";
-            this.succhua.MinimumWidth = 6;
-            this.succhua.Name = "succhua";
-            this.succhua.Width = 110;
-            // 
-            // sophongtoida
-            // 
-            this.sophongtoida.DataPropertyName = "sophongtoida";
-            this.sophongtoida.HeaderText = "Số phòng tối đa";
-            this.sophongtoida.MinimumWidth = 6;
-            this.sophongtoida.Name = "sophongtoida";
-            this.sophongtoida.Width = 120;
+            this.dgvSoDienTieuThu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSoDienTieuThu_CellContentClick);
             // 
             // btnRefresh
             // 
@@ -267,6 +238,46 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.lblNgayLap.Text = "Ngày lập hóa đơn";
             this.lblNgayLap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // mahoadon
+            // 
+            this.mahoadon.DataPropertyName = "mahoadon";
+            this.mahoadon.HeaderText = "Mã hóa đơn";
+            this.mahoadon.MinimumWidth = 6;
+            this.mahoadon.Name = "mahoadon";
+            this.mahoadon.Width = 70;
+            // 
+            // maphong
+            // 
+            this.maphong.DataPropertyName = "maphong";
+            this.maphong.HeaderText = "Mã phòng";
+            this.maphong.MinimumWidth = 6;
+            this.maphong.Name = "maphong";
+            this.maphong.Width = 110;
+            // 
+            // ngaylap
+            // 
+            this.ngaylap.DataPropertyName = "ngaylap";
+            this.ngaylap.HeaderText = "Ngày lập";
+            this.ngaylap.MinimumWidth = 6;
+            this.ngaylap.Name = "ngaylap";
+            this.ngaylap.Width = 110;
+            // 
+            // sodientieuthu
+            // 
+            this.sodientieuthu.DataPropertyName = "sodientieuthu";
+            this.sodientieuthu.HeaderText = "Số điện tiêu thụ";
+            this.sodientieuthu.MinimumWidth = 6;
+            this.sodientieuthu.Name = "sodientieuthu";
+            this.sodientieuthu.Width = 120;
+            // 
+            // tonggiatri
+            // 
+            this.tonggiatri.DataPropertyName = "tonggiatri";
+            this.tonggiatri.HeaderText = "Tổng giá trị";
+            this.tonggiatri.MinimumWidth = 6;
+            this.tonggiatri.Name = "tonggiatri";
+            this.tonggiatri.Width = 125;
+            // 
             // frmTienDien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -290,6 +301,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.Controls.Add(this.lblMaHoaDon);
             this.Name = "frmTienDien";
             this.Text = "frmTienDien";
+            this.Load += new System.EventHandler(this.frmTienDien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSoDienTieuThu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -307,15 +319,16 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.Label lblMaPhong;
         private System.Windows.Forms.Label lblMaHoaDon;
         private System.Windows.Forms.DataGridView dgvSoDienTieuThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn matoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sotang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn succhua;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sophongtoida;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblNgayLap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mahoadon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maphong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaylap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sodientieuthu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tonggiatri;
     }
 }

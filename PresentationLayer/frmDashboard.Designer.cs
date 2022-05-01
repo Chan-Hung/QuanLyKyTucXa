@@ -136,6 +136,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnDichVuSuDung.TabIndex = 7;
             this.btnDichVuSuDung.Text = "Tiền điện sử dụng";
             this.btnDichVuSuDung.UseVisualStyleBackColor = false;
+            this.btnDichVuSuDung.Click += new System.EventHandler(this.btnDichVuSuDung_Click);
             // 
             // pnlToaPhongSubMenu
             // 
