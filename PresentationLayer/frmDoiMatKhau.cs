@@ -23,16 +23,16 @@ namespace QuanLyKyTucXa.PresentationLayer
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
             string err = "";
-            if (txtMatkhaucu.Text != bll.SelectMatKhauCu(lg.tendangnhap).Rows[1][0].ToString())
-            {
-                MessageBox.Show("Mật khẩu cũ không chính xác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (txtMatkhaumoi.Text != txtXacnhan.Text)
-            {
-                MessageBox.Show("Xác nhận mật khẩu không chính xác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            //if (txtMatkhaucu.Text != bll.SelectMatKhauCu().Rows[0][0].ToString())
+            //{
+            //    MessageBox.Show("Mật khẩu cũ không chính xác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
+            //if (txtMatkhaumoi.Text != txtXacnhan.Text)
+            //{
+            //    MessageBox.Show("Xác nhận mật khẩu không chính xác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
             bll.updateMatKhau(ref err, lg.tendangnhap, txtMatkhaumoi.Text);
             Close();
         }
@@ -42,6 +42,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             txtMatkhaucu.Text = "";
             txtMatkhaumoi.Text = "";
             txtXacnhan.Text = "";
+           //Console.WriteLine( bll.SelectMatKhauCu(lg.tendangnhap).Rows[0][0].ToString());
         }
     }
 }
