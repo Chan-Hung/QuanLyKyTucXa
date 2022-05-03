@@ -14,7 +14,7 @@ namespace QuanLyKyTucXa.DataAccessLayer
         SqlConnection cnn;
         SqlCommand cmd;
         SqlDataAdapter adp;
-        String connString = @"Data Source=(local);Initial Catalog=QuanLyKTX;Integrated Security=True";
+        String connString = @"Data Source= DESKTOP-07KO9B1\SQLEXPRESS; Initial Catalog=QuanLyKTX;Integrated Security=True";
             /*"Data Source=JINKKY\\SQLEXPRESS;" +
             "Initial Catalog=QuanLyKTX;Integrated Security=True";*/
 
@@ -114,6 +114,72 @@ namespace QuanLyKyTucXa.DataAccessLayer
                 cmd.ExecuteNonQuery();
                 //Thuc thi tot
                 f = true;
+            }
+            catch (SqlException ex)
+            {
+                error = ex.Message;
+            }
+            finally
+            {
+                cnn.Close();
+            }
+            return f;
+        }
+        public string loginForm(string strSQL,
+            CommandType ct, ref string error,
+            params SqlParameter[] param)
+        {
+            //bool f = false;
+            string f = "";
+            if (cnn.State == ConnectionState.Open)
+                cnn.Close();
+            cnn.Open();
+            // cmd
+            cmd.Parameters.Clear();
+            cmd.CommandText = strSQL;
+            cmd.CommandType = ct;
+            cmd.Connection = cnn;
+            // add parameters
+            foreach (SqlParameter p in param)
+                cmd.Parameters.Add(p);
+            object kq = cmd.ExecuteScalar();
+            string code = Convert.ToString(kq);
+            // run command
+            try
+            {
+                if (code == "01")
+                {
+                    //MessageBox.Show("Chào mừng Admin đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //frmDashboard dashBoard = new frmDashboard();
+                    //this.Hide();
+                    //dashBoard.ShowDialog();
+                    //this.Close();
+                    f = "01";
+
+                }
+                else if (code == "02")
+                {
+                    //MessageBox.Show("Chào mừng Sinh viên KTX đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    f = "02";
+                }
+                else if (code == "03")
+                {
+                    //MessageBox.Show("Chào mừng Nhân viên đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    f = "03";
+                }
+                else if (code == "04")
+                {
+                    //MessageBox.Show("Tài khoản hoặc mật khẩu không đúng !!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    f = "04";
+                }
+                else
+                {
+                    //MessageBox.Show("Tài khoản không tồn tại !!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    f = "05";
+                }
+                cmd.ExecuteNonQuery();
+                //Thuc thi tot
+                //f = true;
             }
             catch (SqlException ex)
             {
