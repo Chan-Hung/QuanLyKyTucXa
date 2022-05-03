@@ -74,28 +74,10 @@ namespace QuanLyKyTucXa.DataAccessLayer
             }
             return dt;
         }
-
-        public void ExecNonQuery(String sql)
-        {
-            SqlConnection conn = GetConnection();
-            if (conn.State == ConnectionState.Closed)
-                conn.Open();
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            /*
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            */
-        }
-        
         public bool MyExecuteNonQuery(string strSQL,
             CommandType ct, ref string error,
             params SqlParameter[] param)
         {
-
             //Co f la gia tri tra ve
             bool f = false;
             if (cnn.State == ConnectionState.Open)
@@ -125,18 +107,5 @@ namespace QuanLyKyTucXa.DataAccessLayer
             }
             return f;
         }
-        public Boolean login(string sql)
-        {
-            SqlConnection conn = GetConnection();
-            if (conn.State == ConnectionState.Closed)
-                conn.Open();
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            SqlDataReader reader = cmd.ExecuteReader();
-            if (reader.Read() == true)
-                return true;
-            else
-                return false;
-        }
-
     }
 }
