@@ -25,11 +25,11 @@ namespace QuanLyKyTucXa.PresentationLayer
         private void ClearBox()
         {
             txtMaNV.Clear();
-            txtMaLoaiNV.Clear();
+            cbMaLoaiNV.Text = "";
             txtMaToa.Clear();
             txtTenNV.Clear();
             txtSDT.Clear();
-            txtLuong.Clear();
+            txtLuong.Text = "0";
             txtTimkiem.Clear();
             rbSearchTenNV.Checked = false;
             rbSearchMaNV.Checked = false;
@@ -37,7 +37,7 @@ namespace QuanLyKyTucXa.PresentationLayer
         private void btnThem_Click(object sender, EventArgs e)
         {
             string err = "";
-            if (!bll.insertNhanVien(ref err,txtMaNV.Text,txtMaLoaiNV.Text,txtMaToa.Text, txtTenNV.Text, txtSDT.Text, Convert.ToInt32(txtLuong.Text)))
+            if (!bll.insertNhanVien(ref err,txtMaNV.Text,cbMaLoaiNV.Text,txtMaToa.Text, txtTenNV.Text, txtSDT.Text, Convert.ToInt32(txtLuong.Text)))
             {
                 if (err.Contains("PRIMARY KEY"))
                 {
@@ -59,7 +59,7 @@ namespace QuanLyKyTucXa.PresentationLayer
         private void btnSua_Click(object sender, EventArgs e)
         {
             string err = "";
-            if (!bll.updateNhanVien(ref err, txtMaNV.Text, txtMaLoaiNV.Text, txtMaToa.Text, txtTenNV.Text, txtSDT.Text, Convert.ToInt32(txtLuong.Text)))
+            if (!bll.updateNhanVien(ref err, txtMaNV.Text, cbMaLoaiNV.Text, txtMaToa.Text, txtTenNV.Text, txtSDT.Text, Convert.ToInt32(txtLuong.Text)))
             {
                 if (err.Contains("PRIMARY KEY"))
                 {
@@ -108,7 +108,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             if (vitri >= 0)
             {
                 txtMaNV.Text = dgvNhanvien.Rows[vitri].Cells[0].Value.ToString();
-                txtMaLoaiNV.Text = dgvNhanvien.Rows[vitri].Cells[1].Value.ToString();
+                cbMaLoaiNV.Text = dgvNhanvien.Rows[vitri].Cells[1].Value.ToString();
                 txtMaToa.Text = dgvNhanvien.Rows[vitri].Cells[2].Value.ToString();
                 txtTenNV.Text = dgvNhanvien.Rows[vitri].Cells[3].Value.ToString();
                 txtSDT.Text = dgvNhanvien.Rows[vitri].Cells[4].Value.ToString();
