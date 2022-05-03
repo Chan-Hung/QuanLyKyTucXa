@@ -13,7 +13,6 @@ namespace QuanLyKyTucXa.DataAccessLayer
     {
         SqlConnection cnn;
         SqlCommand cmd;
-        SqlDataAdapter adp;
         String connString = @"Data Source=(local);Initial Catalog=QuanLyKTX;Integrated Security=True";
             /*"Data Source=JINKKY\\SQLEXPRESS;" +
             "Initial Catalog=QuanLyKTX;Integrated Security=True";*/
