@@ -16,7 +16,7 @@ namespace QuanLyKyTucXa
         {   //Git test
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PresentationLayer.frmLogin());
+            Application.Run(new PresentationLayer.frmDashboard());
         }
     }
 }
