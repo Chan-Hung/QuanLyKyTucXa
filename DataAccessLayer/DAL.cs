@@ -106,5 +106,84 @@ namespace QuanLyKyTucXa.DataAccessLayer
             }
             return f;
         }
+        public string loginForm(string strSQL,
+            CommandType ct, ref string error,
+            params SqlParameter[] param)
+        {
+            //bool f = false;
+            string f = "";
+            if (cnn.State == ConnectionState.Open)
+                cnn.Close();
+            cnn.Open();
+            // cmd
+            cmd.Parameters.Clear();
+            cmd.CommandText = strSQL;
+            cmd.CommandType = ct;
+            cmd.Connection = cnn;
+            // add parameters
+            foreach (SqlParameter p in param)
+                cmd.Parameters.Add(p);
+            object kq = cmd.ExecuteScalar();
+            string code = Convert.ToString(kq);
+            // run command
+            try
+            {
+                if (code == "01")
+                {
+                    //MessageBox.Show("Chào mừng Admin đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //frmDashboard dashBoard = new frmDashboard();
+                    //this.Hide();
+                    //dashBoard.ShowDialog();
+                    //this.Close();
+                    f = "01";
+
+                }
+                else if (code == "02")
+                {
+                    //MessageBox.Show("Chào mừng Sinh viên KTX đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    f = "02";
+                }
+                else if (code == "03")
+                {
+                    //MessageBox.Show("Chào mừng Nhân viên đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    f = "03";
+                }
+                else if (code == "04")
+                {
+                    //MessageBox.Show("Tài khoản hoặc mật khẩu không đúng !!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    f = "04";
+                }
+                else
+                {
+                    //MessageBox.Show("Tài khoản không tồn tại !!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    f = "05";
+                }
+                cmd.ExecuteNonQuery();
+                //Thuc thi tot
+                //f = true;
+            }
+            catch (SqlException ex)
+            {
+                error = ex.Message;
+            }
+            finally
+            {
+                cnn.Close();
+            }
+            return f;
+        }
+        public Boolean login(string sql)
+        {
+            SqlConnection conn = GetConnection();
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read() == true)
+                return true;
+            else
+                return false;
+        }
+
     }
 }
