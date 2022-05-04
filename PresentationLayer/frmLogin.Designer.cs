@@ -37,7 +37,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.lblMatKhau = new System.Windows.Forms.Label();
             this.pbBigImage = new System.Windows.Forms.PictureBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
-            this.btnDangKy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBigImage)).BeginInit();
             this.SuspendLayout();
@@ -47,9 +46,10 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.pbLoginLogo.BackColor = System.Drawing.SystemColors.Window;
             this.pbLoginLogo.Image = global::QuanLyKyTucXa.Properties.Resources.loginlogo;
             this.pbLoginLogo.InitialImage = global::QuanLyKyTucXa.Properties.Resources.loginlogo;
-            this.pbLoginLogo.Location = new System.Drawing.Point(78, -9);
+            this.pbLoginLogo.Location = new System.Drawing.Point(45, -3);
+            this.pbLoginLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbLoginLogo.Name = "pbLoginLogo";
-            this.pbLoginLogo.Size = new System.Drawing.Size(202, 162);
+            this.pbLoginLogo.Size = new System.Drawing.Size(165, 132);
             this.pbLoginLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLoginLogo.TabIndex = 0;
             this.pbLoginLogo.TabStop = false;
@@ -59,7 +59,8 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.lblTaiKhoan.AutoSize = true;
             this.lblTaiKhoan.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblTaiKhoan.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblTaiKhoan.Location = new System.Drawing.Point(53, 161);
+            this.lblTaiKhoan.Location = new System.Drawing.Point(40, 131);
+            this.lblTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTaiKhoan.Name = "lblTaiKhoan";
             this.lblTaiKhoan.Size = new System.Drawing.Size(109, 29);
             this.lblTaiKhoan.TabIndex = 1;
@@ -67,16 +68,18 @@ namespace QuanLyKyTucXa.PresentationLayer
             // 
             // txtTaiKhoan
             // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(53, 193);
+            this.txtTaiKhoan.Location = new System.Drawing.Point(40, 157);
+            this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(227, 22);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(171, 20);
             this.txtTaiKhoan.TabIndex = 2;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(53, 261);
+            this.txtMatKhau.Location = new System.Drawing.Point(40, 212);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(227, 22);
+            this.txtMatKhau.Size = new System.Drawing.Size(171, 20);
             this.txtMatKhau.TabIndex = 4;
             // 
             // lblMatKhau
@@ -84,7 +87,8 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.lblMatKhau.AutoSize = true;
             this.lblMatKhau.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblMatKhau.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblMatKhau.Location = new System.Drawing.Point(53, 229);
+            this.lblMatKhau.Location = new System.Drawing.Point(40, 186);
+            this.lblMatKhau.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMatKhau.Name = "lblMatKhau";
             this.lblMatKhau.Size = new System.Drawing.Size(109, 29);
             this.lblMatKhau.TabIndex = 3;
@@ -93,10 +97,10 @@ namespace QuanLyKyTucXa.PresentationLayer
             // pbBigImage
             // 
             this.pbBigImage.Image = ((System.Drawing.Image)(resources.GetObject("pbBigImage.Image")));
-            this.pbBigImage.Location = new System.Drawing.Point(351, -9);
+            this.pbBigImage.Location = new System.Drawing.Point(263, -7);
             this.pbBigImage.Margin = new System.Windows.Forms.Padding(0);
             this.pbBigImage.Name = "pbBigImage";
-            this.pbBigImage.Size = new System.Drawing.Size(684, 444);
+            this.pbBigImage.Size = new System.Drawing.Size(513, 361);
             this.pbBigImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbBigImage.TabIndex = 5;
             this.pbBigImage.TabStop = false;
@@ -108,35 +112,21 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangNhap.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.Location = new System.Drawing.Point(53, 304);
+            this.btnDangNhap.Location = new System.Drawing.Point(40, 260);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(227, 46);
+            this.btnDangNhap.Size = new System.Drawing.Size(170, 37);
             this.btnDangNhap.TabIndex = 6;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // btnDangKy
-            // 
-            this.btnDangKy.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnDangKy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangKy.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnDangKy.ForeColor = System.Drawing.Color.White;
-            this.btnDangKy.Location = new System.Drawing.Point(109, 387);
-            this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(228, 36);
-            this.btnDangKy.TabIndex = 7;
-            this.btnDangKy.Text = "Đăng ký ở Ký túc xá";
-            this.btnDangKy.UseVisualStyleBackColor = false;
-            // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(742, 435);
-            this.Controls.Add(this.btnDangKy);
+            this.ClientSize = new System.Drawing.Size(556, 353);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.pbBigImage);
             this.Controls.Add(this.txtMatKhau);
@@ -144,6 +134,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.lblTaiKhoan);
             this.Controls.Add(this.pbLoginLogo);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogin";
@@ -166,6 +157,5 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.Label lblMatKhau;
         private System.Windows.Forms.PictureBox pbBigImage;
         private System.Windows.Forms.Button btnDangNhap;
-        private System.Windows.Forms.Button btnDangKy;
     }
 }

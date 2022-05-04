@@ -13,8 +13,7 @@ namespace QuanLyKyTucXa.DataAccessLayer
     {
         SqlConnection cnn;
         SqlCommand cmd;
-        SqlDataAdapter adp;
-        String connString = @"Data Source= DESKTOP-07KO9B1\SQLEXPRESS; Initial Catalog=QuanLyKTX;Integrated Security=True";
+        String connString = @"Data Source=(local);Initial Catalog=QuanLyKTX;Integrated Security=True";
             /*"Data Source=JINKKY\\SQLEXPRESS;" +
             "Initial Catalog=QuanLyKTX;Integrated Security=True";*/
 
@@ -74,28 +73,10 @@ namespace QuanLyKyTucXa.DataAccessLayer
             }
             return dt;
         }
-
-        public void ExecNonQuery(String sql)
-        {
-            SqlConnection conn = GetConnection();
-            if (conn.State == ConnectionState.Closed)
-                conn.Open();
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            /*
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            */
-        }
-        
         public bool MyExecuteNonQuery(string strSQL,
             CommandType ct, ref string error,
             params SqlParameter[] param)
         {
-
             //Co f la gia tri tra ve
             bool f = false;
             if (cnn.State == ConnectionState.Open)

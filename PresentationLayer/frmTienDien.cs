@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace QuanLyKyTucXa.PresentationLayer
 {
-    public partial class frmPhong : Form
+    public partial class frmTienDien : Form
     {
-        BusinessLogicLayer.BLL_Phong bll = new BusinessLogicLayer.BLL_Phong();
-        public frmPhong()
+        BusinessLogicLayer.BLL_TienDien bll = new BusinessLogicLayer.BLL_TienDien();
+        public frmTienDien()
         {
             InitializeComponent();
         }
@@ -22,21 +22,36 @@ namespace QuanLyKyTucXa.PresentationLayer
         {
 
         }
+
+        private void lblSoDienTieuThu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvSoDienTieuThu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
         private void ClearBox()
         {
+            txtMaHoaDon.Clear();
             txtMaPhong.Clear();
-            txtMaToa.Clear();
-            cbMaLoaiPhong.Text = "";
-            cbTrangThai.Text = "Còn";
+            txtSoDienTieuThu.Clear();
+            txtTongGiaTri.Clear();
+            dtpNgaylap.Value = DateTime.Now;
         }
+        private void frmTienDien_Load(object sender, EventArgs e)
+        {
+            dgvSoDienTieuThu.DataSource = bll.SelectTienDien();
+        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             string err = "";
-            if (!bll.insertPhong(ref err, txtMaPhong.Text, txtMaToa.Text, cbMaLoaiPhong.Text,cbTrangThai.Text))
+            if (!bll.insertTienDien(ref err, txtMaHoaDon.Text, txtMaPhong.Text, dtpNgaylap.Value,Convert.ToInt32(txtSoDienTieuThu.Text), Convert.ToInt32(txtTongGiaTri.Text)))
             {
                 if (err.Contains("PRIMARY KEY"))
                 {
-                    MessageBox.Show("Mã phòng không được trùng", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Mã hợp đồng không được trùng", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ClearBox();
                 }
                 else
@@ -50,20 +65,14 @@ namespace QuanLyKyTucXa.PresentationLayer
             }
         }
 
-        private void frmPhong_Load(object sender, EventArgs e)
-        {
-            dgvPhong.DataSource = bll.SelectPhong();
-            cbTrangThai.Text = "Còn";
-        }
-
         private void btnSua_Click(object sender, EventArgs e)
         {
             string err = "";
-            if (!bll.updatePhong(ref err, txtMaPhong.Text, txtMaToa.Text, cbMaLoaiPhong.Text, cbTrangThai.Text))
+            if (!bll.updateTienDien(ref err, txtMaHoaDon.Text, txtMaPhong.Text, dtpNgaylap.Value, Convert.ToInt32(txtSoDienTieuThu.Text), Convert.ToInt32(txtTongGiaTri.Text)))
             {
                 if (err.Contains("PRIMARY KEY"))
                 {
-                    MessageBox.Show("Mã phòng không được trùng", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Mã hợp đồng không được trùng", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ClearBox();
                 }
                 else
@@ -72,36 +81,18 @@ namespace QuanLyKyTucXa.PresentationLayer
 
             else
             {
-               btnRefresh_Click(sender, e);
+                btnRefresh_Click(sender, e);
                 MessageBox.Show("Đã sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-           
-        }
-
-        private void dgvPhong_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int vitri = e.RowIndex;
-            if (vitri >= 0)
-            {
-                txtMaPhong.Text = dgvPhong.Rows[vitri].Cells[0].Value.ToString();
-                cbMaLoaiPhong.Text = dgvPhong.Rows[vitri].Cells[2].Value.ToString();
-                txtMaToa.Text = dgvPhong.Rows[vitri].Cells[1].Value.ToString();
-                cbTrangThai.Text = dgvPhong.Rows[vitri].Cells[3].Value.ToString();
-              
-            }
-        }
-
-        private void btnXoa_Click_1(object sender, EventArgs e)
-        {
             DialogResult dlr = MessageBox.Show("Bạn có chắc chắn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dlr == DialogResult.Yes)
             {
                 string err = "";
-                if (!bll.deletePhong(ref err, txtMaPhong.Text))
+                if (!bll.deleteTienDien(ref err, txtMaHoaDon.Text))
                 {
                     MessageBox.Show(err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -117,13 +108,21 @@ namespace QuanLyKyTucXa.PresentationLayer
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            frmPhong_Load(sender, e);
+            frmTienDien_Load(sender,e);
             ClearBox();
+            
         }
 
-        private void btnPhongTrong_Click(object sender, EventArgs e)
+        private void dgvSoDienTieuThu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            int vitri = e.RowIndex;
+            if (vitri >= 0)
+            {
+                txtMaHoaDon.Text = dgvSoDienTieuThu.Rows[vitri].Cells[0].Value.ToString();
+                txtMaPhong.Text = dgvSoDienTieuThu.Rows[vitri].Cells[1].Value.ToString();
+                txtSoDienTieuThu.Text = dgvSoDienTieuThu.Rows[vitri].Cells[2].Value.ToString();
+                txtTongGiaTri.Text = dgvSoDienTieuThu.Rows[vitri].Cells[3].Value.ToString();
+            }
         }
     }
 }

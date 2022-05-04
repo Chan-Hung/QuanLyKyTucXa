@@ -46,11 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\BLL_DoiMatKhau.cs" />
     <Compile Include="BusinessLogicLayer\BLL_HopDong.cs" />
     <Compile Include="BusinessLogicLayer\BLL_Login.cs" />
     <Compile Include="BusinessLogicLayer\BLL_Phong.cs" />
     <Compile Include="BusinessLogicLayer\BLL_SinhVien.cs" />
     <Compile Include="BusinessLogicLayer\BLL_TaiKhoan.cs" />
+    <Compile Include="BusinessLogicLayer\BLL_TienDien.cs" />
     <Compile Include="BusinessLogicLayer\BLL_Toa.cs" />
     <Compile Include="BusinessLogicLayer\BLL_NhanVien.cs" />
     <Compile Include="DataAccessLayer\DAL.cs" />
@@ -59,6 +61,12 @@
     </Compile>
     <Compile Include="PresentationLayer\frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\frmHopDong.cs">
       <SubType>Form</SubType>
@@ -96,6 +104,12 @@
     <Compile Include="PresentationLayer\frmTaiKhoan.Designer.cs">
       <DependentUpon>frmTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\frmTienDien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmTienDien.Designer.cs">
+      <DependentUpon>frmTienDien.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\frmToa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +120,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PresentationLayer\frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmHopDong.resx">
       <DependentUpon>frmHopDong.cs</DependentUpon>
@@ -124,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmTaiKhoan.resx">
       <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmTienDien.resx">
+      <DependentUpon>frmTienDien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmToa.resx">
       <DependentUpon>frmToa.cs</DependentUpon>

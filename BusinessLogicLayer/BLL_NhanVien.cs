@@ -70,7 +70,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
         }
         public DataTable searchMaNhanVien(string manv)
         {
-            string sql = "SELECT * FROM fn_SearchMaSV(@MaNV)";
+            string sql = "SELECT * FROM fn_SearchMaNV(@MaNV)";
             DataTable dt = new DataTable();
             dt = dal.getTableFunc(sql,
                 new SqlParameter("@MaNV", manv));

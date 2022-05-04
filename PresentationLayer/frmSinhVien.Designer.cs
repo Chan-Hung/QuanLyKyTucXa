@@ -291,6 +291,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // rbSearchMaSV
             // 
             this.rbSearchMaSV.AutoSize = true;
+            this.rbSearchMaSV.Checked = true;
             this.rbSearchMaSV.Location = new System.Drawing.Point(28, 23);
             this.rbSearchMaSV.Margin = new System.Windows.Forms.Padding(4);
             this.rbSearchMaSV.Name = "rbSearchMaSV";
@@ -308,7 +309,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.rbSearchTenSV.Name = "rbSearchTenSV";
             this.rbSearchTenSV.Size = new System.Drawing.Size(163, 21);
             this.rbSearchTenSV.TabIndex = 1;
-            this.rbSearchTenSV.TabStop = true;
             this.rbSearchTenSV.Text = "Tìm kiếm theo tên SV";
             this.rbSearchTenSV.UseVisualStyleBackColor = true;
             // 

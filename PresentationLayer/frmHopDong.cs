@@ -28,23 +28,7 @@ namespace QuanLyKyTucXa.PresentationLayer
         //Tự động thêm -> cần disable nút này
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string err = "";
-            if (!bll.insertHopDong(ref err, txtMaHD.Text, txtMaSV.Text, dtpNgayky.Value, dtpNgayketthuc.Value))
-            {
-                if (err.Contains("PRIMARY KEY"))
-                {
-                    MessageBox.Show("Mã hợp đồng không được trùng", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    ClearBox();
-                }
-                else
-                    MessageBox.Show(err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            else
-            {
-                btnRefresh_Click(sender, e);
-                MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            
         }
 
         private void frmHopDong_Load(object sender, EventArgs e)
@@ -75,22 +59,7 @@ namespace QuanLyKyTucXa.PresentationLayer
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            DialogResult dlr = MessageBox.Show("Bạn có chắc chắn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlr == DialogResult.Yes)
-            {
-                string err = "";
-                if (!bll.deleteHopDong(ref err, txtMaHD.Text))
-                {
-                    MessageBox.Show(err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    btnRefresh_Click(sender, e);
-                    MessageBox.Show("Đã xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            else if (dlr == DialogResult.No)
-                return;
+           
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

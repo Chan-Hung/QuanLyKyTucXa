@@ -3,35 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Data.SqlClient;
 using System.Data;
+
 namespace QuanLyKyTucXa.BusinessLogicLayer
 {
-    class BLL_HopDong
+    class BLL_DoiMatKhau
     {
         DataAccessLayer.DAL dal = new DataAccessLayer.DAL();
 
-        public DataTable SelectHopDong()
+        public DataTable SelectMatKhauCu()
         {
-            string sql = "select * from HopDongThuePhong";
+            string sql = "Select * from TaiKhoan where tendangnhap = admin1";
             DataTable dt = new DataTable();
             dt = dal.GetTable(sql);
             return dt;
         }
-   
-        public bool updateHopDong(ref string err, string mahd, string masv, DateTime ngaykhd, DateTime ngaykthd)
+
+        public bool updateMatKhau(ref string err, string tendangnhap, string matkhau)
         {
             return dal.MyExecuteNonQuery(
-                "sp_UpdateHopDong",
+                "sp_UpdateMatKhau",
                 CommandType.StoredProcedure,
                 ref err,
-                new SqlParameter("@MaHD", mahd),
-                new SqlParameter("@MaSV", masv),
-                new SqlParameter("@NgayKHD", ngaykhd),
-                new SqlParameter("@NgayKTHD", ngaykthd)
+                new SqlParameter("@TenDangNhap", tendangnhap),
+                new SqlParameter("@MatKhau", matkhau)
                 );
         }
-       
     }
 }
