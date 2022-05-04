@@ -33,7 +33,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             //    MessageBox.Show("Xác nhận mật khẩu không chính xác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             //    return;
             //}
-            bll.updateMatKhau(ref err, lg.tendangnhap, txtMatkhaumoi.Text);
+            //bll.updateMatKhau(ref err, lg.tendangnhap, txtMatkhaumoi.Text);
             Close();
         }
 
