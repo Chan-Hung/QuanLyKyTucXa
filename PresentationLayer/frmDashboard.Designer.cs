@@ -135,7 +135,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnDichVuSuDung.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnDichVuSuDung.Size = new System.Drawing.Size(292, 51);
             this.btnDichVuSuDung.TabIndex = 7;
-            this.btnDichVuSuDung.Text = "Tiền điện sử dụng";
+            this.btnDichVuSuDung.Text = "Điện nước sử dụng";
             this.btnDichVuSuDung.UseVisualStyleBackColor = false;
             this.btnDichVuSuDung.Click += new System.EventHandler(this.btnDichVuSuDung_Click);
             // 
