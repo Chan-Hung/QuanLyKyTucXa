@@ -300,6 +300,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.rbSearchMaSV.TabStop = true;
             this.rbSearchMaSV.Text = "Tìm kiếm theo mã SV";
             this.rbSearchMaSV.UseVisualStyleBackColor = true;
+            this.rbSearchMaSV.CheckedChanged += new System.EventHandler(this.rbSearchMaSV_CheckedChanged);
             // 
             // rbSearchTenSV
             // 

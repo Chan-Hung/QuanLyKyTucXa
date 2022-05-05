@@ -53,6 +53,13 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
                 new SqlParameter("@MaPhong", maphong)
                 );
         }
-
+        public DataTable searchPhongTrong()
+        {
+            string sql = "SELECT * FROM fn_ShowPhongTrong()";
+            DataTable dt = new DataTable();
+            dt = dal.getTableFunc(sql,
+                new SqlParameter("","Còn" ));
+            return dt;
+        }
     }
 }

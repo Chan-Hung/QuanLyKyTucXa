@@ -193,5 +193,10 @@ namespace QuanLyKyTucXa.PresentationLayer
             frmSinhVien_Load(sender, e);
             ClearBox();
         }
+
+        private void rbSearchMaSV_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -123,7 +123,7 @@ namespace QuanLyKyTucXa.PresentationLayer
 
         private void btnPhongTrong_Click(object sender, EventArgs e)
         {
-
+            dgvPhong.DataSource = bll.searchPhongTrong();
         }
     }
 }
