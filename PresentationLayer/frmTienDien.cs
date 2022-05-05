@@ -36,7 +36,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             txtMaHoaDon.Clear();
             txtMaPhong.Clear();
             txtSoDienTieuThu.Clear();
-            txtTongGiaTri.Clear();
+            txtSoNuocTieuThu.Clear();
             dtpNgaylap.Value = DateTime.Now;
         }
         private void frmTienDien_Load(object sender, EventArgs e)
@@ -47,11 +47,11 @@ namespace QuanLyKyTucXa.PresentationLayer
         private void btnThem_Click(object sender, EventArgs e)
         {
             string err = "";
-            if (!bll.insertTienDien(ref err, txtMaHoaDon.Text, txtMaPhong.Text, dtpNgaylap.Value,Convert.ToInt32(txtSoDienTieuThu.Text), Convert.ToInt32(txtTongGiaTri.Text)))
+            if (!bll.insertDienNuoc(ref err, txtMaHoaDon.Text, txtMaPhong.Text, dtpNgaylap.Value,Convert.ToInt32(txtSoDienTieuThu.Text), Convert.ToInt32(txtSoNuocTieuThu.Text), cbTrangThai.Text))
             {
                 if (err.Contains("PRIMARY KEY"))
                 {
-                    MessageBox.Show("Mã hợp đồng không được trùng", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Mã hóa đơn không được trùng", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ClearBox();
                 }
                 else
@@ -68,11 +68,11 @@ namespace QuanLyKyTucXa.PresentationLayer
         private void btnSua_Click(object sender, EventArgs e)
         {
             string err = "";
-            if (!bll.updateTienDien(ref err, txtMaHoaDon.Text, txtMaPhong.Text, dtpNgaylap.Value, Convert.ToInt32(txtSoDienTieuThu.Text), Convert.ToInt32(txtTongGiaTri.Text)))
+            if (!bll.updateDienNuoc(ref err, txtMaHoaDon.Text, txtMaPhong.Text, dtpNgaylap.Value, Convert.ToInt32(txtSoDienTieuThu.Text), Convert.ToInt32(txtSoNuocTieuThu.Text), cbTrangThai.Text))
             {
                 if (err.Contains("PRIMARY KEY"))
                 {
-                    MessageBox.Show("Mã hợp đồng không được trùng", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Mã hóa đơn không được trùng", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ClearBox();
                 }
                 else
@@ -92,7 +92,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             if (dlr == DialogResult.Yes)
             {
                 string err = "";
-                if (!bll.deleteTienDien(ref err, txtMaHoaDon.Text))
+                if (!bll.deleteDienNuoc(ref err, txtMaHoaDon.Text))
                 {
                     MessageBox.Show(err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -120,8 +120,9 @@ namespace QuanLyKyTucXa.PresentationLayer
             {
                 txtMaHoaDon.Text = dgvSoDienTieuThu.Rows[vitri].Cells[0].Value.ToString();
                 txtMaPhong.Text = dgvSoDienTieuThu.Rows[vitri].Cells[1].Value.ToString();
-                txtSoDienTieuThu.Text = dgvSoDienTieuThu.Rows[vitri].Cells[2].Value.ToString();
-                txtTongGiaTri.Text = dgvSoDienTieuThu.Rows[vitri].Cells[3].Value.ToString();
+                txtSoDienTieuThu.Text = dgvSoDienTieuThu.Rows[vitri].Cells[3].Value.ToString();
+                txtSoNuocTieuThu.Text = dgvSoDienTieuThu.Rows[vitri].Cells[4].Value.ToString();
+                cbTrangThai.Text = dgvSoDienTieuThu.Rows[vitri].Cells[5].Value.ToString();
             }
         }
     }
