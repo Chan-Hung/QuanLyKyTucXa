@@ -14,7 +14,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
 
         public DataTable SelectMatKhauCu()
         {
-            string sql = "Select * from TaiKhoan where tendangnhap = admin1";
+            string sql = "Select * from TaiKhoan where TenDangNhap = " + "'" + Program.userName + "'";
             DataTable dt = new DataTable();
             dt = dal.GetTable(sql);
             return dt;

@@ -12,40 +12,42 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
         DataAccessLayer.DAL dal = new DataAccessLayer.DAL();
         public DataTable SelectTienDien()
         {
-            string sql = "select * from TienDienSuDung";
+            string sql = "select * from DienNuocSuDung";
             DataTable dt = new DataTable();
             dt = dal.GetTable(sql);
             return dt;
         }
-        public bool insertTienDien(ref string err, string mahoadon, string maphong, DateTime ngaylap, int sodientieuthu, int tonggiatri)
+        public bool insertDienNuoc(ref string err, string mahoadon, string maphong, DateTime ngaylap, int sodientieuthu, int sonuoctieuthu, string trangthai)
         {
-            return dal.MyExecuteNonQuery("sp_InsertTienDien",
+            return dal.MyExecuteNonQuery("sp_InsertDienNuoc",
                 CommandType.StoredProcedure,
                 ref err,
                 new SqlParameter("@MaHoaDon", mahoadon),
                 new SqlParameter("@MaPhong", maphong),
                 new SqlParameter("@ngaylap", ngaylap),
                 new SqlParameter("@sodientieuthu", sodientieuthu),
-                new SqlParameter("@tonggiatri", tonggiatri)
+                new SqlParameter("@sonuoctieuthu", sonuoctieuthu),
+                new SqlParameter("@trangthai", trangthai)
                 );
         }
 
-        public bool updateTienDien(ref string err, string mahoadon, string maphong, DateTime ngaylap, int sodientieuthu, int tonggiatri)
+        public bool updateDienNuoc(ref string err, string mahoadon, string maphong, DateTime ngaylap, int sodientieuthu, int sonuoctieuthu, string trangthai)
         {
-            return dal.MyExecuteNonQuery("sp_UpdateTienDien",
+            return dal.MyExecuteNonQuery("sp_UpdateDienNuoc",
                 CommandType.StoredProcedure,
                 ref err,
                 new SqlParameter("@MaHoaDon", mahoadon),
                 new SqlParameter("@MaPhong", maphong),
                 new SqlParameter("@ngaylap", ngaylap),
                 new SqlParameter("@sodientieuthu", sodientieuthu),
-                new SqlParameter("@tonggiatri", tonggiatri)
+                new SqlParameter("@sonuoctieuthu", sonuoctieuthu),
+                new SqlParameter("@trangthai", trangthai)
                 );
         }
-        public bool deleteTienDien(ref string err, string mahoadon)
+        public bool deleteDienNuoc(ref string err, string mahoadon)
         {
             return dal.MyExecuteNonQuery(
-                "sp_DeleteTienDien",
+                "sp_DeleteDienNuoc",
                 CommandType.StoredProcedure,
                 ref err,
                 new SqlParameter("@MaHoaDon", mahoadon)

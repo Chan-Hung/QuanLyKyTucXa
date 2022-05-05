@@ -14,7 +14,7 @@ namespace QuanLyKyTucXa.PresentationLayer
     {
         BusinessLogicLayer.BLL_DoiMatKhau bll = new BusinessLogicLayer.BLL_DoiMatKhau();
         PresentationLayer.frmLogin lg = new PresentationLayer.frmLogin();
-
+        
         public frmDoiMatKhau()
         {
             InitializeComponent();
@@ -23,17 +23,19 @@ namespace QuanLyKyTucXa.PresentationLayer
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
             string err = "";
-            //if (txtMatkhaucu.Text != bll.SelectMatKhauCu().Rows[0][0].ToString())
-            //{
-            //    MessageBox.Show("Mật khẩu cũ không chính xác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-            //if (txtMatkhaumoi.Text != txtXacnhan.Text)
-            //{
-            //    MessageBox.Show("Xác nhận mật khẩu không chính xác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-            //bll.updateMatKhau(ref err, lg.tendangnhap, txtMatkhaumoi.Text);
+            if (txtMatkhaucu.Text != bll.SelectMatKhauCu().Rows[0]["MatKhau"].ToString())
+            {
+                MessageBox.Show("Mật khẩu cũ không chính xác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtMatkhaumoi.Text != txtXacnhan.Text)
+            {
+                MessageBox.Show("Xác nhận mật khẩu không chính xác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if(bll.updateMatKhau(ref err, Program.userName, txtMatkhaumoi.Text))
+                MessageBox.Show("Cập nhật mật khẩu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return;
             Close();
         }
 
@@ -41,8 +43,6 @@ namespace QuanLyKyTucXa.PresentationLayer
         {
             txtMatkhaucu.Text = "";
             txtMatkhaumoi.Text = "";
-            txtXacnhan.Text = "";
-           //Console.WriteLine( bll.SelectMatKhauCu(lg.tendangnhap).Rows[0][0].ToString());
-        }
+            txtXacnhan.Text = "";        }
     }
 }

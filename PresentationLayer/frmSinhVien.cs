@@ -82,7 +82,10 @@ namespace QuanLyKyTucXa.PresentationLayer
                     ClearBox();
                 }
                 else
+                {
                     MessageBox.Show(err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ClearBox();
+                }
             }
 
             else
