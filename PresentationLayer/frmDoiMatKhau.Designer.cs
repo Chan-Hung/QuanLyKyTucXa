@@ -82,7 +82,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtMatkhaumoi.Location = new System.Drawing.Point(473, 259);
             this.txtMatkhaumoi.Margin = new System.Windows.Forms.Padding(4);
             this.txtMatkhaumoi.Name = "txtMatkhaumoi";
-            this.txtMatkhaumoi.PasswordChar = '*';
             this.txtMatkhaumoi.Size = new System.Drawing.Size(196, 22);
             this.txtMatkhaumoi.TabIndex = 7;
             // 
@@ -91,7 +90,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtXacnhan.Location = new System.Drawing.Point(473, 311);
             this.txtXacnhan.Margin = new System.Windows.Forms.Padding(4);
             this.txtXacnhan.Name = "txtXacnhan";
-            this.txtXacnhan.PasswordChar = '*';
             this.txtXacnhan.Size = new System.Drawing.Size(196, 22);
             this.txtXacnhan.TabIndex = 8;
             // 

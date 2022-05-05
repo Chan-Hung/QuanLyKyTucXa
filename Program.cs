@@ -8,6 +8,7 @@ namespace QuanLyKyTucXa
 {
     static class Program
     {
+        public static string userName;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +17,7 @@ namespace QuanLyKyTucXa
         {   //Git test
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PresentationLayer.frmDashboard());
+            Application.Run(new PresentationLayer.frmLogin());
         }
     }
 }

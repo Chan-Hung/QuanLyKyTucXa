@@ -78,6 +78,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             {
                 //MessageBox.Show("Đã thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmDashboard dashBoard = new frmDashboard();
+                Program.userName = txtTaiKhoan.Text;
                 this.Hide();
                 dashBoard.ShowDialog();
                 this.Close();
