@@ -53,9 +53,9 @@ namespace QuanLyKyTucXa.PresentationLayer
         private void ClearBox()
         {
             txtMaToa.Clear();
-            txtSoTang.Clear();
-            txtsptd.Clear();
-            txtSucChua.Clear();
+            txtSoTang.Text = "0";
+            txtsptd.Text = "0";
+            txtSucChua.Text = "0";
         }
 
         private void btnSua_Click(object sender, EventArgs e)

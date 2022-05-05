@@ -397,6 +397,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.ClientSize = new System.Drawing.Size(1312, 683);
             this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.panelSideMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

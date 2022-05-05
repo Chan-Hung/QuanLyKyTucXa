@@ -25,7 +25,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             dtpNgayketthuc.Value = DateTime.Now;
         }
 
-        //Tự động thêm -> cần disable nút này
         private void btnThem_Click(object sender, EventArgs e)
         {
             

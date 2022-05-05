@@ -12,9 +12,9 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
     {
         DataAccessLayer.DAL dal = new DataAccessLayer.DAL();
 
-        public DataTable SelectMatKhauCu(string tendangnhap)
+        public DataTable SelectMatKhauCu()
         {
-            string sql = "Select MatKhau from TaiKhoan where tendangnhap = '" + tendangnhap + "'";
+            string sql = "Select * from TaiKhoan where tendangnhap = admin1";
             DataTable dt = new DataTable();
             dt = dal.GetTable(sql);
             return dt;

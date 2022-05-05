@@ -30,7 +30,6 @@ namespace QuanLyKyTucXa.PresentationLayer
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanVien));
-            this.txtMaLoaiNV = new System.Windows.Forms.TextBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.lblMaToa = new System.Windows.Forms.Label();
             this.lblMaLoaiNV = new System.Windows.Forms.Label();
@@ -41,12 +40,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.lblSDT = new System.Windows.Forms.Label();
             this.lblTenNV = new System.Windows.Forms.Label();
             this.dgvNhanvien = new System.Windows.Forms.DataGridView();
-            this.manv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maloainv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.matoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tennv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -59,17 +52,16 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnTimkiem = new System.Windows.Forms.Button();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.manv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maloainv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tennv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbMaLoaiNV = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanvien)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtMaLoaiNV
-            // 
-            this.txtMaLoaiNV.Location = new System.Drawing.Point(139, 110);
-            this.txtMaLoaiNV.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMaLoaiNV.Name = "txtMaLoaiNV";
-            this.txtMaLoaiNV.Size = new System.Drawing.Size(159, 22);
-            this.txtMaLoaiNV.TabIndex = 22;
             // 
             // txtMaNV
             // 
@@ -93,7 +85,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // lblMaLoaiNV
             // 
             this.lblMaLoaiNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaLoaiNV.Location = new System.Drawing.Point(-8, 109);
+            this.lblMaLoaiNV.Location = new System.Drawing.Point(-9, 109);
             this.lblMaLoaiNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMaLoaiNV.Name = "lblMaLoaiNV";
             this.lblMaLoaiNV.Size = new System.Drawing.Size(150, 22);
@@ -180,54 +172,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.dgvNhanvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanvien_CellClick);
             this.dgvNhanvien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanvien_CellContentClick);
             // 
-            // manv
-            // 
-            this.manv.DataPropertyName = "manv";
-            this.manv.HeaderText = "Mã nhân viên";
-            this.manv.MinimumWidth = 6;
-            this.manv.Name = "manv";
-            this.manv.Width = 125;
-            // 
-            // maloainv
-            // 
-            this.maloainv.DataPropertyName = "maloainv";
-            this.maloainv.HeaderText = "Mã loại nhân viên";
-            this.maloainv.MinimumWidth = 6;
-            this.maloainv.Name = "maloainv";
-            this.maloainv.Width = 70;
-            // 
-            // matoa
-            // 
-            this.matoa.DataPropertyName = "matoa";
-            this.matoa.HeaderText = "Mã tòa";
-            this.matoa.MinimumWidth = 6;
-            this.matoa.Name = "matoa";
-            this.matoa.Width = 40;
-            // 
-            // tennv
-            // 
-            this.tennv.DataPropertyName = "tennv";
-            this.tennv.HeaderText = "Tên nhân viên";
-            this.tennv.MinimumWidth = 6;
-            this.tennv.Name = "tennv";
-            this.tennv.Width = 120;
-            // 
-            // SDT
-            // 
-            this.SDT.DataPropertyName = "SDT";
-            this.SDT.HeaderText = "Số điện thoại";
-            this.SDT.MinimumWidth = 6;
-            this.SDT.Name = "SDT";
-            this.SDT.Width = 125;
-            // 
-            // luong
-            // 
-            this.luong.DataPropertyName = "luong";
-            this.luong.HeaderText = "Lương";
-            this.luong.MinimumWidth = 6;
-            this.luong.Name = "luong";
-            this.luong.Width = 50;
-            // 
             // btnXoa
             // 
             this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -297,6 +241,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtLuong.Name = "txtLuong";
             this.txtLuong.Size = new System.Drawing.Size(159, 22);
             this.txtLuong.TabIndex = 26;
+            this.txtLuong.Text = "0";
             // 
             // groupBox1
             // 
@@ -391,12 +336,77 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // manv
+            // 
+            this.manv.DataPropertyName = "manv";
+            this.manv.HeaderText = "Mã nhân viên";
+            this.manv.MinimumWidth = 6;
+            this.manv.Name = "manv";
+            this.manv.Width = 85;
+            // 
+            // maloainv
+            // 
+            this.maloainv.DataPropertyName = "maloainv";
+            this.maloainv.HeaderText = "Mã loại nhân viên";
+            this.maloainv.MinimumWidth = 6;
+            this.maloainv.Name = "maloainv";
+            this.maloainv.Width = 70;
+            // 
+            // matoa
+            // 
+            this.matoa.DataPropertyName = "matoa";
+            this.matoa.HeaderText = "Mã tòa";
+            this.matoa.MinimumWidth = 6;
+            this.matoa.Name = "matoa";
+            this.matoa.Width = 40;
+            // 
+            // tennv
+            // 
+            this.tennv.DataPropertyName = "tennv";
+            this.tennv.HeaderText = "Tên nhân viên";
+            this.tennv.MinimumWidth = 6;
+            this.tennv.Name = "tennv";
+            this.tennv.Width = 120;
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "Số điện thoại";
+            this.SDT.MinimumWidth = 6;
+            this.SDT.Name = "SDT";
+            this.SDT.Width = 125;
+            // 
+            // luong
+            // 
+            this.luong.DataPropertyName = "luong";
+            this.luong.HeaderText = "Lương";
+            this.luong.MinimumWidth = 6;
+            this.luong.Name = "luong";
+            this.luong.Width = 65;
+            // 
+            // cbMaLoaiNV
+            // 
+            this.cbMaLoaiNV.FormattingEnabled = true;
+            this.cbMaLoaiNV.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07"});
+            this.cbMaLoaiNV.Location = new System.Drawing.Point(139, 109);
+            this.cbMaLoaiNV.Name = "cbMaLoaiNV";
+            this.cbMaLoaiNV.Size = new System.Drawing.Size(159, 24);
+            this.cbMaLoaiNV.TabIndex = 50;
+            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(979, 603);
+            this.Controls.Add(this.cbMaLoaiNV);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.txtLuong);
             this.Controls.Add(this.txtMaToa);
@@ -409,7 +419,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.Controls.Add(this.lblLuong);
             this.Controls.Add(this.lblSDT);
             this.Controls.Add(this.lblTenNV);
-            this.Controls.Add(this.txtMaLoaiNV);
             this.Controls.Add(this.txtMaNV);
             this.Controls.Add(this.lblMaToa);
             this.Controls.Add(this.lblMaLoaiNV);
@@ -427,7 +436,6 @@ namespace QuanLyKyTucXa.PresentationLayer
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtMaLoaiNV;
         private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.Label lblMaToa;
         private System.Windows.Forms.Label lblMaLoaiNV;
@@ -443,12 +451,6 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.TextBox txtMaToa;
         private System.Windows.Forms.TextBox txtLuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn manv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maloainv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn matoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tennv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn luong;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.RadioButton rbSearchMaNV;
@@ -456,5 +458,12 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.Button btnTimkiem;
         private System.Windows.Forms.TextBox txtTimkiem;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maloainv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn matoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tennv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn luong;
+        private System.Windows.Forms.ComboBox cbMaLoaiNV;
     }
 }
