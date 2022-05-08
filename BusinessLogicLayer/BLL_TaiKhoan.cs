@@ -20,6 +20,35 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
             dt = dal.GetTable(sql);
             return dt;
         }
-       
+       public bool insertTaiKhoan(ref string err, string manv, string tendangnhap, string matkhau,string maloaitaikhoan)
+        {
+            return dal.MyExecuteNonQuery("sp_InsertTaiKhoan",
+                CommandType.StoredProcedure,
+                ref err,
+                new SqlParameter("@manv", manv),
+                new SqlParameter("@tendangnhap", tendangnhap),
+                new SqlParameter("@matkhau", matkhau),
+                new SqlParameter("@MaLoaiTaiKhoan", maloaitaikhoan)
+                );
+        }
+        public bool updateTaiKhoan(ref string err, string manv, string tendangnhap, string maloaitaikhoan)
+        {
+            return dal.MyExecuteNonQuery("sp_UpdateTaiKhoan",
+                CommandType.StoredProcedure,
+                ref err,
+                new SqlParameter("@manv", manv),
+                new SqlParameter("@tendangnhap", tendangnhap),
+                new SqlParameter("@MaLoaiTaiKhoan", maloaitaikhoan)
+                );
+        }
+        public bool deleteTaiKhoan(ref string err, string manv)
+        {
+            return dal.MyExecuteNonQuery(
+                "sp_DeleteTaiKhoan",
+                CommandType.StoredProcedure,
+                ref err,
+                new SqlParameter("@manv", manv)
+                );
+        }
     }
 }

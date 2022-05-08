@@ -9,6 +9,7 @@ namespace QuanLyKyTucXa
     static class Program
     {
         public static string userName;
+        public static string userLogin;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
