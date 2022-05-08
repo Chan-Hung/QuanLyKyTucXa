@@ -75,6 +75,14 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
                 new SqlParameter("@MaSinhVien", masv));
             return dt;
         }
+        public DataTable searchTenToa(string toa)
+        {
+            string sql = "SELECT * FROM fn_SearchSVToa(@MaToa)";
+            DataTable dt = new DataTable();
+            dt = dal.getTableFunc(sql,
+                new SqlParameter("@MaToa", toa));
+            return dt;
+        }
 
     }
 }

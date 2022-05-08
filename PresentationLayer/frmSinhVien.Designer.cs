@@ -60,6 +60,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.matruong1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maphong1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.rbSearchToa = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhvien)).BeginInit();
             this.SuspendLayout();
@@ -265,16 +266,17 @@ namespace QuanLyKyTucXa.PresentationLayer
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.rbSearchToa);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.rbSearchMaSV);
             this.groupBox1.Controls.Add(this.rbSearchTenSV);
             this.groupBox1.Controls.Add(this.btnTimkiem);
             this.groupBox1.Controls.Add(this.txtTimkiem);
-            this.groupBox1.Location = new System.Drawing.Point(739, 65);
+            this.groupBox1.Location = new System.Drawing.Point(739, 37);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(227, 194);
+            this.groupBox1.Size = new System.Drawing.Size(227, 222);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TÌM KIẾM";
@@ -282,7 +284,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(26, 83);
+            this.label11.Location = new System.Drawing.Point(25, 109);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(160, 17);
             this.label11.TabIndex = 8;
@@ -318,7 +320,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnTimkiem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTimkiem.FlatAppearance.BorderSize = 0;
             this.btnTimkiem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTimkiem.Location = new System.Drawing.Point(24, 132);
+            this.btnTimkiem.Location = new System.Drawing.Point(24, 168);
             this.btnTimkiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimkiem.Name = "btnTimkiem";
             this.btnTimkiem.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -332,7 +334,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // txtTimkiem
             // 
             this.txtTimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimkiem.Location = new System.Drawing.Point(24, 102);
+            this.txtTimkiem.Location = new System.Drawing.Point(24, 138);
             this.txtTimkiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(184, 24);
@@ -425,6 +427,17 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // rbSearchToa
+            // 
+            this.rbSearchToa.AutoSize = true;
+            this.rbSearchToa.Location = new System.Drawing.Point(28, 81);
+            this.rbSearchToa.Margin = new System.Windows.Forms.Padding(4);
+            this.rbSearchToa.Name = "rbSearchToa";
+            this.rbSearchToa.Size = new System.Drawing.Size(141, 21);
+            this.rbSearchToa.TabIndex = 9;
+            this.rbSearchToa.Text = "Tìm kiếm theo tòa";
+            this.rbSearchToa.UseVisualStyleBackColor = true;
+            // 
             // frmSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -501,5 +514,6 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.DataGridViewTextBoxColumn matruong1;
         private System.Windows.Forms.DataGridViewTextBoxColumn maphong1;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.RadioButton rbSearchToa;
     }
 }

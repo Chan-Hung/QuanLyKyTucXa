@@ -49,6 +49,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             txtTimkiem.Clear();
             rbSearchMaSV.Checked = false;
             rbSearchTenSV.Checked = false;
+            rbSearchToa.Checked = false;
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -183,6 +184,10 @@ namespace QuanLyKyTucXa.PresentationLayer
             else if (rbSearchTenSV.Checked)
             {
                 dgvSinhvien.DataSource = bll.searchTenSinhVien(txtTimkiem.Text);
+            }
+            else if (rbSearchToa.Checked)
+            {
+                dgvSinhvien.DataSource = bll.searchTenToa(txtTimkiem.Text);
             }
             else
             {
