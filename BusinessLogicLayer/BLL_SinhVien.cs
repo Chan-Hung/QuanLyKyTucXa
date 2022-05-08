@@ -83,6 +83,22 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
                 new SqlParameter("@MaToa", toa));
             return dt;
         }
+        public DataTable tienPhongCuaSV()
+        {
+            string sql = "select * from TienPhongMoiSV";
+            DataTable dt = new DataTable();
+            dt = dal.GetTable(sql);
+            return dt;
+        }
+        public bool thanhToanPhong(ref string err, string maPhong)
+        {
+            return dal.MyExecuteNonQuery(
+                "sp_UpdateThanhToan",
+                CommandType.StoredProcedure,
+                ref err,
+                new SqlParameter("@MaPhong", maPhong)
+                );
+        }
 
     }
 }

@@ -125,5 +125,10 @@ namespace QuanLyKyTucXa.PresentationLayer
                 cbTrangThai.Text = dgvSoDienTieuThu.Rows[vitri].Cells[5].Value.ToString();
             }
         }
+
+        private void btnPhongTrong_Click(object sender, EventArgs e)
+        {
+            dgvSoDienTieuThu.DataSource = bll.PhongChuaThanhToan();
+        }
     }
 }

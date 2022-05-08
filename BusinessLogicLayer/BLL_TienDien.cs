@@ -12,7 +12,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
         DataAccessLayer.DAL dal = new DataAccessLayer.DAL();
         public DataTable SelectTienDien()
         {
-            string sql = "select * from DienNuocSuDung";
+            string sql = "select * from HoaDonTienDienNuoc";
             DataTable dt = new DataTable();
             dt = dal.GetTable(sql);
             return dt;
@@ -52,6 +52,14 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
                 ref err,
                 new SqlParameter("@MaHoaDon", mahoadon)
                 );
+        }
+        public DataTable PhongChuaThanhToan()
+        {
+            string sql = "SELECT * FROM fn_ShowPhongChuaThanhToan()";
+            DataTable dt = new DataTable();
+            dt = dal.getTableFunc(sql,
+                new SqlParameter("", "Chưa thanh toán"));
+            return dt;
         }
     }
 }

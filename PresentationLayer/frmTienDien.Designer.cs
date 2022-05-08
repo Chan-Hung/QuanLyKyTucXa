@@ -39,6 +39,12 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.lblMaPhong = new System.Windows.Forms.Label();
             this.lblMaHoaDon = new System.Windows.Forms.Label();
             this.dgvSoDienTieuThu = new System.Windows.Forms.DataGridView();
+            this.mahoadon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaylap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sodientieuthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sonuoctieuthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -47,12 +53,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.dtpNgaylap = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.cbTrangThai = new System.Windows.Forms.ComboBox();
-            this.mahoadon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaylap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sodientieuthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sonuoctieuthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPhongChuaThanhToan = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSoDienTieuThu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,6 +158,54 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.dgvSoDienTieuThu.TabIndex = 60;
             this.dgvSoDienTieuThu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSoDienTieuThu_CellClick);
             this.dgvSoDienTieuThu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSoDienTieuThu_CellContentClick);
+            // 
+            // mahoadon
+            // 
+            this.mahoadon.DataPropertyName = "mahoadon";
+            this.mahoadon.HeaderText = "Mã hóa đơn";
+            this.mahoadon.MinimumWidth = 6;
+            this.mahoadon.Name = "mahoadon";
+            this.mahoadon.Width = 70;
+            // 
+            // maphong
+            // 
+            this.maphong.DataPropertyName = "maphong";
+            this.maphong.HeaderText = "Mã phòng";
+            this.maphong.MinimumWidth = 6;
+            this.maphong.Name = "maphong";
+            this.maphong.Width = 60;
+            // 
+            // ngaylap
+            // 
+            this.ngaylap.DataPropertyName = "ngaylap";
+            this.ngaylap.HeaderText = "Ngày lập";
+            this.ngaylap.MinimumWidth = 6;
+            this.ngaylap.Name = "ngaylap";
+            this.ngaylap.Width = 110;
+            // 
+            // sodientieuthu
+            // 
+            this.sodientieuthu.DataPropertyName = "sodientieuthu";
+            this.sodientieuthu.HeaderText = "Số điện tiêu thụ";
+            this.sodientieuthu.MinimumWidth = 6;
+            this.sodientieuthu.Name = "sodientieuthu";
+            this.sodientieuthu.Width = 70;
+            // 
+            // sonuoctieuthu
+            // 
+            this.sonuoctieuthu.DataPropertyName = "sonuoctieuthu";
+            this.sonuoctieuthu.HeaderText = "Số nước tiêu thụ";
+            this.sonuoctieuthu.MinimumWidth = 6;
+            this.sonuoctieuthu.Name = "sonuoctieuthu";
+            this.sonuoctieuthu.Width = 70;
+            // 
+            // trangthai
+            // 
+            this.trangthai.DataPropertyName = "trangthai";
+            this.trangthai.HeaderText = "Trạng thái";
+            this.trangthai.MinimumWidth = 6;
+            this.trangthai.Name = "trangthai";
+            this.trangthai.Width = 125;
             // 
             // btnRefresh
             // 
@@ -272,53 +321,17 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.cbTrangThai.TabIndex = 70;
             this.cbTrangThai.Text = "Chưa thanh toán";
             // 
-            // mahoadon
+            // btnPhongChuaThanhToan
             // 
-            this.mahoadon.DataPropertyName = "mahoadon";
-            this.mahoadon.HeaderText = "Mã hóa đơn";
-            this.mahoadon.MinimumWidth = 6;
-            this.mahoadon.Name = "mahoadon";
-            this.mahoadon.Width = 70;
-            // 
-            // maphong
-            // 
-            this.maphong.DataPropertyName = "maphong";
-            this.maphong.HeaderText = "Mã phòng";
-            this.maphong.MinimumWidth = 6;
-            this.maphong.Name = "maphong";
-            this.maphong.Width = 60;
-            // 
-            // ngaylap
-            // 
-            this.ngaylap.DataPropertyName = "ngaylap";
-            this.ngaylap.HeaderText = "Ngày lập";
-            this.ngaylap.MinimumWidth = 6;
-            this.ngaylap.Name = "ngaylap";
-            this.ngaylap.Width = 110;
-            // 
-            // sodientieuthu
-            // 
-            this.sodientieuthu.DataPropertyName = "sodientieuthu";
-            this.sodientieuthu.HeaderText = "Số điện tiêu thụ";
-            this.sodientieuthu.MinimumWidth = 6;
-            this.sodientieuthu.Name = "sodientieuthu";
-            this.sodientieuthu.Width = 70;
-            // 
-            // sonuoctieuthu
-            // 
-            this.sonuoctieuthu.DataPropertyName = "sonuoctieuthu";
-            this.sonuoctieuthu.HeaderText = "Số nước tiêu thụ";
-            this.sonuoctieuthu.MinimumWidth = 6;
-            this.sonuoctieuthu.Name = "sonuoctieuthu";
-            this.sonuoctieuthu.Width = 70;
-            // 
-            // trangthai
-            // 
-            this.trangthai.DataPropertyName = "trangthai";
-            this.trangthai.HeaderText = "Trạng thái";
-            this.trangthai.MinimumWidth = 6;
-            this.trangthai.Name = "trangthai";
-            this.trangthai.Width = 125;
+            this.btnPhongChuaThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnPhongChuaThanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPhongChuaThanhToan.Location = new System.Drawing.Point(789, 124);
+            this.btnPhongChuaThanhToan.Name = "btnPhongChuaThanhToan";
+            this.btnPhongChuaThanhToan.Size = new System.Drawing.Size(134, 46);
+            this.btnPhongChuaThanhToan.TabIndex = 71;
+            this.btnPhongChuaThanhToan.Text = "Hiển thị danh sách phòng chưa thanh toán";
+            this.btnPhongChuaThanhToan.UseVisualStyleBackColor = false;
+            this.btnPhongChuaThanhToan.Click += new System.EventHandler(this.btnPhongTrong_Click);
             // 
             // frmTienDien
             // 
@@ -326,6 +339,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(979, 603);
+            this.Controls.Add(this.btnPhongChuaThanhToan);
             this.Controls.Add(this.cbTrangThai);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpNgaylap);
@@ -377,5 +391,6 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.DataGridViewTextBoxColumn sodientieuthu;
         private System.Windows.Forms.DataGridViewTextBoxColumn sonuoctieuthu;
         private System.Windows.Forms.DataGridViewTextBoxColumn trangthai;
+        private System.Windows.Forms.Button btnPhongChuaThanhToan;
     }
 }

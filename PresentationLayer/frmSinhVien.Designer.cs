@@ -47,6 +47,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtMasv = new System.Windows.Forms.TextBox();
             this.lblMaSV = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbSearchToa = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
             this.rbSearchMaSV = new System.Windows.Forms.RadioButton();
             this.rbSearchTenSV = new System.Windows.Forms.RadioButton();
@@ -60,7 +61,8 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.matruong1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maphong1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.rbSearchToa = new System.Windows.Forms.RadioButton();
+            this.btnTien = new System.Windows.Forms.Button();
+            this.btnThanhToan = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhvien)).BeginInit();
             this.SuspendLayout();
@@ -281,6 +283,17 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TÌM KIẾM";
             // 
+            // rbSearchToa
+            // 
+            this.rbSearchToa.AutoSize = true;
+            this.rbSearchToa.Location = new System.Drawing.Point(28, 81);
+            this.rbSearchToa.Margin = new System.Windows.Forms.Padding(4);
+            this.rbSearchToa.Name = "rbSearchToa";
+            this.rbSearchToa.Size = new System.Drawing.Size(141, 21);
+            this.rbSearchToa.TabIndex = 9;
+            this.rbSearchToa.Text = "Tìm kiếm theo tòa";
+            this.rbSearchToa.UseVisualStyleBackColor = true;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -427,16 +440,42 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // rbSearchToa
+            // btnTien
             // 
-            this.rbSearchToa.AutoSize = true;
-            this.rbSearchToa.Location = new System.Drawing.Point(28, 81);
-            this.rbSearchToa.Margin = new System.Windows.Forms.Padding(4);
-            this.rbSearchToa.Name = "rbSearchToa";
-            this.rbSearchToa.Size = new System.Drawing.Size(141, 21);
-            this.rbSearchToa.TabIndex = 9;
-            this.rbSearchToa.Text = "Tìm kiếm theo tòa";
-            this.rbSearchToa.UseVisualStyleBackColor = true;
+            this.btnTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTien.FlatAppearance.BorderSize = 0;
+            this.btnTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTien.Image = ((System.Drawing.Image)(resources.GetObject("btnTien.Image")));
+            this.btnTien.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTien.Location = new System.Drawing.Point(867, 267);
+            this.btnTien.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTien.Name = "btnTien";
+            this.btnTien.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.btnTien.Size = new System.Drawing.Size(80, 74);
+            this.btnTien.TabIndex = 100;
+            this.btnTien.Text = "Tiền Phòng";
+            this.btnTien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTien.UseVisualStyleBackColor = true;
+            this.btnTien.Click += new System.EventHandler(this.btnTien_Click);
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThanhToan.FlatAppearance.BorderSize = 0;
+            this.btnThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("btnThanhToan.Image")));
+            this.btnThanhToan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnThanhToan.Location = new System.Drawing.Point(867, 349);
+            this.btnThanhToan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.btnThanhToan.Size = new System.Drawing.Size(80, 74);
+            this.btnThanhToan.TabIndex = 101;
+            this.btnThanhToan.Text = "Pay";
+            this.btnThanhToan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // frmSinhVien
             // 
@@ -444,6 +483,8 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(979, 603);
+            this.Controls.Add(this.btnThanhToan);
+            this.Controls.Add(this.btnTien);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.dgvSinhvien);
@@ -515,5 +556,7 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.DataGridViewTextBoxColumn maphong1;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.RadioButton rbSearchToa;
+        private System.Windows.Forms.Button btnTien;
+        private System.Windows.Forms.Button btnThanhToan;
     }
 }
