@@ -47,6 +47,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtMasv = new System.Windows.Forms.TextBox();
             this.lblMaSV = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbSearchToa = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
             this.rbSearchMaSV = new System.Windows.Forms.RadioButton();
             this.rbSearchTenSV = new System.Windows.Forms.RadioButton();
@@ -60,7 +61,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.matruong1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maphong1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.rbSearchToa = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhvien)).BeginInit();
             this.SuspendLayout();
@@ -281,6 +281,18 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TÌM KIẾM";
             // 
+            // rbSearchToa
+            // 
+            this.rbSearchToa.AutoSize = true;
+            this.rbSearchToa.Location = new System.Drawing.Point(28, 81);
+            this.rbSearchToa.Margin = new System.Windows.Forms.Padding(4);
+            this.rbSearchToa.Name = "rbSearchToa";
+            this.rbSearchToa.Size = new System.Drawing.Size(141, 21);
+            this.rbSearchToa.TabIndex = 9;
+            this.rbSearchToa.Text = "Tìm kiếm theo tòa";
+            this.rbSearchToa.UseVisualStyleBackColor = true;
+            this.rbSearchToa.CheckedChanged += new System.EventHandler(this.rbSearchToa_CheckedChanged);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -426,17 +438,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // rbSearchToa
-            // 
-            this.rbSearchToa.AutoSize = true;
-            this.rbSearchToa.Location = new System.Drawing.Point(28, 81);
-            this.rbSearchToa.Margin = new System.Windows.Forms.Padding(4);
-            this.rbSearchToa.Name = "rbSearchToa";
-            this.rbSearchToa.Size = new System.Drawing.Size(141, 21);
-            this.rbSearchToa.TabIndex = 9;
-            this.rbSearchToa.Text = "Tìm kiếm theo tòa";
-            this.rbSearchToa.UseVisualStyleBackColor = true;
             // 
             // frmSinhVien
             // 

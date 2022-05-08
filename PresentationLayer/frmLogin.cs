@@ -14,7 +14,7 @@ namespace QuanLyKyTucXa.PresentationLayer
     public partial class frmLogin : Form
     {
         BusinessLogicLayer.BLL_Login bll = new BusinessLogicLayer.BLL_Login();
-        public frmLogin()
+         public frmLogin()
         {
             InitializeComponent();
         }
@@ -73,32 +73,30 @@ namespace QuanLyKyTucXa.PresentationLayer
 
           
             string err = "";
-            string check = bll.loginForm(ref err, txtTaiKhoan.Text, txtMatKhau.Text);
-            if (check=="01")
+            Program.userLogin = bll.loginForm(ref err, txtTaiKhoan.Text, txtMatKhau.Text);
+            if (Program.userLogin == "01")
             {
-                //MessageBox.Show("Đã thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Chào mừng Admin đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmDashboard dashBoard = new frmDashboard();
                 Program.userName = txtTaiKhoan.Text;
                 this.Hide();
                 dashBoard.ShowDialog();
                 this.Close();
             }
-            else if(check == "02")
+            
+            else if (Program.userLogin == "02")
             {
-                MessageBox.Show("Chào mừng Sinh viên KTX đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Chào mừng Employee đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmDashboard dashBoard = new frmDashboard();
+                Program.userName = txtTaiKhoan.Text;
+                this.Hide();
+                dashBoard.ShowDialog();
+                this.Close();
 
             }
-            else if (check == "03")
-            {
-                MessageBox.Show("Chào mừng Nhân viên đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-            }
-            else if (check == "04")
+            else if (Program.userLogin == "03")
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng !!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
             }
             else
             {

@@ -13,7 +13,6 @@ namespace QuanLyKyTucXa.PresentationLayer
     public partial class frmDoiMatKhau : Form
     {
         BusinessLogicLayer.BLL_DoiMatKhau bll = new BusinessLogicLayer.BLL_DoiMatKhau();
-        PresentationLayer.frmLogin lg = new PresentationLayer.frmLogin();
         
         public frmDoiMatKhau()
         {

@@ -53,8 +53,11 @@ namespace QuanLyKyTucXa.PresentationLayer
 
         private void btnQLNhanVien_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmNhanVien());
-            //hideSubMenu();
+
+            if (Program.userLogin == "01")
+                openChildForm(new frmNhanVien());
+            else
+                MessageBox.Show("Bạn không có quyền thao tác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnToaVaPhong_Click(object sender, EventArgs e)
@@ -128,7 +131,10 @@ namespace QuanLyKyTucXa.PresentationLayer
 
         private void btnQLTaiKhoan_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmTaiKhoan());
+            if (Program.userLogin == "01")
+                openChildForm(new frmTaiKhoan());
+            else
+                MessageBox.Show("Bạn không có quyền thao tác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnDichVuSuDung_Click(object sender, EventArgs e)

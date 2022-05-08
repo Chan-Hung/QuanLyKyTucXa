@@ -206,5 +206,10 @@ namespace QuanLyKyTucXa.PresentationLayer
         {
 
         }
+
+        private void rbSearchToa_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
