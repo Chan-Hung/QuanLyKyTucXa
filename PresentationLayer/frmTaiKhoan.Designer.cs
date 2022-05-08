@@ -205,7 +205,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.MaLoaiTaiKhoan.HeaderText = "Mã loại tài khoản";
             this.MaLoaiTaiKhoan.MinimumWidth = 6;
             this.MaLoaiTaiKhoan.Name = "MaLoaiTaiKhoan";
-            this.MaLoaiTaiKhoan.Width = 125;
+            this.MaLoaiTaiKhoan.Width = 85;
             // 
             // mataikhoan
             // 
@@ -213,7 +213,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.mataikhoan.HeaderText = "Mã tài khoản";
             this.mataikhoan.MinimumWidth = 8;
             this.mataikhoan.Name = "mataikhoan";
-            this.mataikhoan.Width = 125;
+            this.mataikhoan.Width = 85;
             // 
             // manv
             // 
@@ -221,7 +221,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.manv.HeaderText = "Mã nhân viên";
             this.manv.MinimumWidth = 8;
             this.manv.Name = "manv";
-            this.manv.Width = 130;
+            this.manv.Width = 70;
             // 
             // tendangnhap
             // 
@@ -229,7 +229,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.tendangnhap.HeaderText = "Tên đăng nhập";
             this.tendangnhap.MinimumWidth = 20;
             this.tendangnhap.Name = "tendangnhap";
-            this.tendangnhap.Width = 90;
+            this.tendangnhap.Width = 75;
             // 
             // MatKhau
             // 
@@ -237,7 +237,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.MatKhau.HeaderText = "Mật khẩu";
             this.MatKhau.MinimumWidth = 6;
             this.MatKhau.Name = "MatKhau";
-            this.MatKhau.Width = 125;
+            this.MatKhau.Width = 75;
             // 
             // frmTaiKhoan
             // 
