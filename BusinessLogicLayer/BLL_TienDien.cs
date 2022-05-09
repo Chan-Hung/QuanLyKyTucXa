@@ -12,7 +12,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
         DataAccessLayer.DAL dal = new DataAccessLayer.DAL();
         public DataTable SelectTienDien()
         {
-            string sql = "select * from HoaDonTienDien";
+            string sql = "select * from HoaDonTienDienNuoc";
             DataTable dt = new DataTable();
             dt = dal.GetTable(sql);
             return dt;
