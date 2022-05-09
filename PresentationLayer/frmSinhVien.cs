@@ -212,10 +212,5 @@ namespace QuanLyKyTucXa.PresentationLayer
         {
             dgvSinhvien.DataSource = bll.tienPhongCuaSV();   
         }
-
-        private void btnThanhToan_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }
