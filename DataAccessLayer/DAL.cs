@@ -141,13 +141,9 @@ namespace QuanLyKyTucXa.DataAccessLayer
                 {
                     f = "03";
                 }
-                else if (code == "04")
-                {
-                    f = "04";
-                }
                 else
                 {
-                    f = "05";
+                    f = "04";
                 }
                 cmd.ExecuteNonQuery();
                 //Thuc thi tot
