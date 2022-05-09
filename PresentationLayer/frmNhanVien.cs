@@ -113,7 +113,6 @@ namespace QuanLyKyTucXa.PresentationLayer
                 txtTenNV.Text = dgvNhanvien.Rows[vitri].Cells[3].Value.ToString();
                 txtSDT.Text = dgvNhanvien.Rows[vitri].Cells[4].Value.ToString();
                 txtLuong.Text = dgvNhanvien.Rows[vitri].Cells[5].Value.ToString();
-                txtMaNV.ReadOnly = true;
             }
         }
 

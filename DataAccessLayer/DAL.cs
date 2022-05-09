@@ -13,9 +13,9 @@ namespace QuanLyKyTucXa.DataAccessLayer
     {
         SqlConnection cnn;
         SqlCommand cmd;
-        String connString = @"Data Source=(local);Initial Catalog=QuanLyKTX;Integrated Security=True";
-            /*"Data Source=JINKKY\\SQLEXPRESS;" +
-            "Initial Catalog=QuanLyKTX;Integrated Security=True";*/
+        String connString = /*@"Data Source=(local);Initial Catalog=QuanLyKTX;Integrated Security=True";*/
+            "Data Source=JINKKY\\SQLEXPRESS;" +
+            "Initial Catalog=QuanLyKTX;Integrated Security=True";
 
         public DAL()
         {

@@ -99,7 +99,6 @@ namespace QuanLyKyTucXa.PresentationLayer
                 txtSoTang.Text = dgvToa.Rows[vitri].Cells[1].Value.ToString();
                 txtSucChua.Text = dgvToa.Rows[vitri].Cells[2].Value.ToString();
                 txtsptd.Text = dgvToa.Rows[vitri].Cells[3].Value.ToString();
-                txtMaToa.ReadOnly = true;
             }
         }
     }

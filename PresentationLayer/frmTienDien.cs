@@ -123,7 +123,6 @@ namespace QuanLyKyTucXa.PresentationLayer
                 txtSoDienTieuThu.Text = dgvSoDienTieuThu.Rows[vitri].Cells[3].Value.ToString();
                 txtSoNuocTieuThu.Text = dgvSoDienTieuThu.Rows[vitri].Cells[4].Value.ToString();
                 cbTrangThai.Text = dgvSoDienTieuThu.Rows[vitri].Cells[5].Value.ToString();
-                txtMaHoaDon.ReadOnly = true;
             }
         }
 

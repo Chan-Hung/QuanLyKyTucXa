@@ -102,7 +102,6 @@ namespace QuanLyKyTucXa.PresentationLayer
                 txtMaNV.Text = dgvTaiKhoan.Rows[vitri].Cells[1].Value.ToString();
                 txtTenDangNhap.Text = dgvTaiKhoan.Rows[vitri].Cells[2].Value.ToString();
                 txtMatkhau.Text = dgvTaiKhoan.Rows[vitri].Cells[3].Value.ToString();
-                txtMaNV.ReadOnly = true;
             }
         }
     }
