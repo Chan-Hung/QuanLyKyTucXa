@@ -74,6 +74,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             {
                 txtMaHD.Text = dgvHopDong.Rows[vitri].Cells[0].Value.ToString();
                 txtMaSV.Text = dgvHopDong.Rows[vitri].Cells[1].Value.ToString();
+                txtMaHD.ReadOnly = true;
             }
         }
     }

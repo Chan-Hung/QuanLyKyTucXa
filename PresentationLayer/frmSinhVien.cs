@@ -167,6 +167,7 @@ namespace QuanLyKyTucXa.PresentationLayer
                 txtSDT.Text = dgvSinhvien.Rows[vitri].Cells[3].Value.ToString();
                 txtMaTruong.Text = dgvSinhvien.Rows[vitri].Cells[4].Value.ToString();
                 txtMaPhong.Text = dgvSinhvien.Rows[vitri].Cells[5].Value.ToString();
+                txtMasv.ReadOnly = true;
             }
         }
 
