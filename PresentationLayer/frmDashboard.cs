@@ -140,6 +140,7 @@ namespace QuanLyKyTucXa.PresentationLayer
         private void btnDichVuSuDung_Click(object sender, EventArgs e)
         {
             openChildForm(new frmTienDien());
+            hideSubMenu();
         }
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)

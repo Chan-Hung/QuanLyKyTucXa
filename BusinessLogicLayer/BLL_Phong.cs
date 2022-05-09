@@ -44,15 +44,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
                 new SqlParameter("@TrangThai", trangthai)
                 );
         }
-        public bool deletePhong(ref string err, string maphong)
-        {
-            return dal.MyExecuteNonQuery(
-                "sp_DeletePhong",
-                CommandType.StoredProcedure,
-                ref err,
-                new SqlParameter("@MaPhong", maphong)
-                );
-        }
+ 
         public DataTable searchPhongTrong()
         {
             string sql = "SELECT * FROM fn_ShowPhongTrong()";

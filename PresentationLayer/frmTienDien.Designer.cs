@@ -54,6 +54,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.label1 = new System.Windows.Forms.Label();
             this.cbTrangThai = new System.Windows.Forms.ComboBox();
             this.btnPhongChuaThanhToan = new System.Windows.Forms.Button();
+            this.btnThanhToan = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSoDienTieuThu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -325,13 +326,31 @@ namespace QuanLyKyTucXa.PresentationLayer
             // 
             this.btnPhongChuaThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnPhongChuaThanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPhongChuaThanhToan.Location = new System.Drawing.Point(789, 124);
+            this.btnPhongChuaThanhToan.Location = new System.Drawing.Point(800, 112);
             this.btnPhongChuaThanhToan.Name = "btnPhongChuaThanhToan";
-            this.btnPhongChuaThanhToan.Size = new System.Drawing.Size(134, 46);
+            this.btnPhongChuaThanhToan.Size = new System.Drawing.Size(132, 43);
             this.btnPhongChuaThanhToan.TabIndex = 71;
-            this.btnPhongChuaThanhToan.Text = "Hiển thị danh sách phòng chưa thanh toán";
+            this.btnPhongChuaThanhToan.Text = "Hiển thị phòng chưa thanh toán";
             this.btnPhongChuaThanhToan.UseVisualStyleBackColor = false;
             this.btnPhongChuaThanhToan.Click += new System.EventHandler(this.btnPhongTrong_Click);
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThanhToan.FlatAppearance.BorderSize = 0;
+            this.btnThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("btnThanhToan.Image")));
+            this.btnThanhToan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnThanhToan.Location = new System.Drawing.Point(225, 96);
+            this.btnThanhToan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.btnThanhToan.Size = new System.Drawing.Size(99, 74);
+            this.btnThanhToan.TabIndex = 102;
+            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // frmTienDien
             // 
@@ -339,6 +358,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(979, 603);
+            this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.btnPhongChuaThanhToan);
             this.Controls.Add(this.cbTrangThai);
             this.Controls.Add(this.label1);
@@ -392,5 +412,6 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.DataGridViewTextBoxColumn sonuoctieuthu;
         private System.Windows.Forms.DataGridViewTextBoxColumn trangthai;
         private System.Windows.Forms.Button btnPhongChuaThanhToan;
+        private System.Windows.Forms.Button btnThanhToan;
     }
 }

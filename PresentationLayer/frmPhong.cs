@@ -97,22 +97,7 @@ namespace QuanLyKyTucXa.PresentationLayer
 
         private void btnXoa_Click_1(object sender, EventArgs e)
         {
-            DialogResult dlr = MessageBox.Show("Bạn có chắc chắn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlr == DialogResult.Yes)
-            {
-                string err = "";
-                if (!bll.deletePhong(ref err, txtMaPhong.Text))
-                {
-                    MessageBox.Show(err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    btnRefresh_Click(sender, e);
-                    MessageBox.Show("Đã xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            else if (dlr == DialogResult.No)
-                return;
+           
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

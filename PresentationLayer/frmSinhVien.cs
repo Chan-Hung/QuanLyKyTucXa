@@ -214,12 +214,7 @@ namespace QuanLyKyTucXa.PresentationLayer
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            string err = "";
-            if(bll.thanhToanPhong(ref err, txtMaPhong.Text))
-            {
-                MessageBox.Show("Phòng "+ txtMaPhong.Text.ToString() + " thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btnRefresh_Click(sender, e);
-            }
+            
         }
     }
 }

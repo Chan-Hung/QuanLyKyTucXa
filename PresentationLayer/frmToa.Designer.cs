@@ -43,7 +43,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.lblSoTang = new System.Windows.Forms.Label();
             this.lblMaToa = new System.Windows.Forms.Label();
             this.txtSucChua = new System.Windows.Forms.TextBox();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -178,24 +177,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtSucChua.TabIndex = 3;
             this.txtSucChua.Text = "0";
             // 
-            // btnXoa
-            // 
-            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.FlatAppearance.BorderSize = 0;
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXoa.Location = new System.Drawing.Point(578, 84);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            this.btnXoa.Size = new System.Drawing.Size(80, 74);
-            this.btnXoa.TabIndex = 0;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
             // btnSua
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -203,7 +184,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSua.Location = new System.Drawing.Point(462, 84);
+            this.btnSua.Location = new System.Drawing.Point(449, 84);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
@@ -239,7 +220,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnRefresh.FlatAppearance.BorderSize = 0;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRefresh.Location = new System.Drawing.Point(691, 84);
+            this.btnRefresh.Location = new System.Drawing.Point(553, 84);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
@@ -257,7 +238,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(979, 603);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.txtSucChua);
@@ -293,7 +273,6 @@ namespace QuanLyKyTucXa.PresentationLayer
         private System.Windows.Forms.DataGridViewTextBoxColumn sotang;
         private System.Windows.Forms.DataGridViewTextBoxColumn succhua;
         private System.Windows.Forms.DataGridViewTextBoxColumn sophongtoida;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnRefresh;

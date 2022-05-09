@@ -35,7 +35,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.maloaiphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.txtMaToa = new System.Windows.Forms.TextBox();
@@ -101,24 +100,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.trangthai.MinimumWidth = 6;
             this.trangthai.Name = "trangthai";
             this.trangthai.Width = 120;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.FlatAppearance.BorderSize = 0;
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXoa.Location = new System.Drawing.Point(554, 86);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            this.btnXoa.Size = new System.Drawing.Size(80, 74);
-            this.btnXoa.TabIndex = 36;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click_1);
             // 
             // btnSua
             // 
@@ -248,7 +229,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.btnRefresh.FlatAppearance.BorderSize = 0;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRefresh.Location = new System.Drawing.Point(657, 86);
+            this.btnRefresh.Location = new System.Drawing.Point(558, 86);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
@@ -263,7 +244,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             // 
             this.btnPhongTrong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnPhongTrong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPhongTrong.Location = new System.Drawing.Point(772, 114);
+            this.btnPhongTrong.Location = new System.Drawing.Point(753, 115);
             this.btnPhongTrong.Name = "btnPhongTrong";
             this.btnPhongTrong.Size = new System.Drawing.Size(134, 46);
             this.btnPhongTrong.TabIndex = 66;
@@ -287,7 +268,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.Controls.Add(this.lblMaLoaiPhong);
             this.Controls.Add(this.lblMaToa);
             this.Controls.Add(this.lblMaPhong);
-            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvPhong);
@@ -303,7 +283,6 @@ namespace QuanLyKyTucXa.PresentationLayer
         #endregion
 
         private System.Windows.Forms.DataGridView dgvPhong;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.TextBox txtMaToa;

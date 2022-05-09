@@ -78,6 +78,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.txtMatKhau.Location = new System.Drawing.Point(53, 261);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(227, 22);
             this.txtMatKhau.TabIndex = 4;
             // 
@@ -102,7 +103,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.pbBigImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbBigImage.TabIndex = 5;
             this.pbBigImage.TabStop = false;
-            //this.pbBigImage.Click += new System.EventHandler(this.pbBigImage_Click);
             // 
             // btnDangNhap
             // 
@@ -133,6 +133,7 @@ namespace QuanLyKyTucXa.PresentationLayer
             this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.lblTaiKhoan);
             this.Controls.Add(this.pbLoginLogo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

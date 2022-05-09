@@ -90,15 +90,7 @@ namespace QuanLyKyTucXa.BusinessLogicLayer
             dt = dal.GetTable(sql);
             return dt;
         }
-        public bool thanhToanPhong(ref string err, string maPhong)
-        {
-            return dal.MyExecuteNonQuery(
-                "sp_UpdateThanhToan",
-                CommandType.StoredProcedure,
-                ref err,
-                new SqlParameter("@MaPhong", maPhong)
-                );
-        }
+        
 
     }
 }
