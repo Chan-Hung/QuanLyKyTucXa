@@ -13,9 +13,9 @@ namespace QuanLyKyTucXa.DataAccessLayer
     {
         SqlConnection cnn;
         SqlCommand cmd;
-        String connString = @"Data Source=(local);Initial Catalog=QuanLyKTX;Integrated Security=True";
-            /*"Data Source=JINKKY\\SQLEXPRESS;" +
-            "Initial Catalog=QuanLyKTX;Integrated Security=True";*/
+        String connString = /*@"Data Source=(local);Initial Catalog=QuanLyKTX;Integrated Security=True";*/
+            "Data Source=JINKKY\\SQLEXPRESS;" +
+            "Initial Catalog=QuanLyKTX;Integrated Security=True";
 
         public DAL()
         {
@@ -141,13 +141,9 @@ namespace QuanLyKyTucXa.DataAccessLayer
                 {
                     f = "03";
                 }
-                else if (code == "04")
-                {
-                    f = "04";
-                }
                 else
                 {
-                    f = "05";
+                    f = "04";
                 }
                 cmd.ExecuteNonQuery();
                 //Thuc thi tot

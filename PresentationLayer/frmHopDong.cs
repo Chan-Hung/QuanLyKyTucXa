@@ -55,12 +55,6 @@ namespace QuanLyKyTucXa.PresentationLayer
                 MessageBox.Show("Đã sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             frmHopDong_Load(sender, e);
@@ -74,7 +68,6 @@ namespace QuanLyKyTucXa.PresentationLayer
             {
                 txtMaHD.Text = dgvHopDong.Rows[vitri].Cells[0].Value.ToString();
                 txtMaSV.Text = dgvHopDong.Rows[vitri].Cells[1].Value.ToString();
-                txtMaHD.ReadOnly = true;
             }
         }
     }

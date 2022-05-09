@@ -91,7 +91,6 @@ namespace QuanLyKyTucXa.PresentationLayer
                 cbMaLoaiPhong.Text = dgvPhong.Rows[vitri].Cells[2].Value.ToString();
                 txtMaToa.Text = dgvPhong.Rows[vitri].Cells[1].Value.ToString();
                 cbTrangThai.Text = dgvPhong.Rows[vitri].Cells[3].Value.ToString();
-                txtMaPhong.ReadOnly = true;
             }
         }
 

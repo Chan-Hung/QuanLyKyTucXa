@@ -167,7 +167,6 @@ namespace QuanLyKyTucXa.PresentationLayer
                 txtSDT.Text = dgvSinhvien.Rows[vitri].Cells[3].Value.ToString();
                 txtMaTruong.Text = dgvSinhvien.Rows[vitri].Cells[4].Value.ToString();
                 txtMaPhong.Text = dgvSinhvien.Rows[vitri].Cells[5].Value.ToString();
-                txtMasv.ReadOnly = true;
             }
         }
 
@@ -211,11 +210,6 @@ namespace QuanLyKyTucXa.PresentationLayer
         private void btnTien_Click(object sender, EventArgs e)
         {
             dgvSinhvien.DataSource = bll.tienPhongCuaSV();   
-        }
-
-        private void btnThanhToan_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }
